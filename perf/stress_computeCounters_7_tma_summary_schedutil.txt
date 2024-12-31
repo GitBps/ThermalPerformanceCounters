@@ -1,0 +1,761 @@
+drdang@drdang-Inspiron-14-7430-2-in-1:~/phD/thesis/tools/perf$ sudo /home/drdang/phD/thesis/linux-6.6.8/tools/perf/perf stat -I 1000 -M Summary  /usr/bin/stress-ng --matrix 35 --timeout 50s --thermalstat 1 
+stress-ng: info:  [235421] setting to a 50 secs run per stressor
+stress-ng: info:  [235421] dispatching hogs: 35 matrix
+#           time             counts unit events
+     1.011497577    31,12,65,92,264      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.61%)
+     1.011497577    48,33,02,32,195      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    48.34 tma_info_system_average_frequency  (33.39%)
+     1.011497577    31,13,60,36,048      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.39%)
+     1.011497577    31,14,51,07,158      TSC                                                                   
+     1.011497577     1,01,14,97,577 ns   duration_time                                                         
+     1.011497577    24,62,62,98,112      cpu_atom/INST_RETIRED.ANY/                                              (66.61%)
+     1.011497577    57,48,75,75,683      cpu_core/INST_RETIRED.ANY/       #     1.19 tma_info_thread_ipc         (33.39%)
+     1.011497577    48,34,17,35,817      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.39%)
+     1.011497577     1,01,14,97,577 ns   duration_time                                                         
+     1.011497577    37,62,40,92,983      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.06 tma_info_system_kernel_utilization  (66.61%)
+     1.011497577     2,09,92,94,708      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.61%)
+     1.011497577     1,01,14,97,577 ns   duration_time                                                         
+     1.011497577    57,48,91,37,532      cpu_core/INST_RETIRED.ANY/       # 57489137532.00 tma_info_inst_mix_instructions  (33.39%)
+     1.011497577     1,01,14,97,577 ns   duration_time                                                         
+stress-ng: info:  [235422] therm: AvGHz MnGHz MxGHz  LdA1  LdA5 LdA15    AMBF INT340   NGFF   TCPU TCPU_P   TMEM   TSKN iwlwif x86_pk
+stress-ng: info:  [235422] therm:  3.40  3.10  4.00  2.41  1.31  1.16   27.05  20.00  48.05  64.05  92.00  42.05  50.05  42.00  90.00
+     2.013356067    31,12,87,24,976      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.46%)
+     2.013356067    47,12,82,63,251      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    47.13 tma_info_system_average_frequency  (33.54%)
+     2.013356067    31,13,50,88,464      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.54%)
+     2.013356067    31,13,88,66,454      TSC                                                                   
+     2.013356067     1,00,18,58,490 ns   duration_time                                                         
+     2.013356067    23,87,11,44,197      cpu_atom/INST_RETIRED.ANY/                                              (66.46%)
+     2.013356067    55,72,56,40,100      cpu_core/INST_RETIRED.ANY/       #     1.18 tma_info_thread_ipc         (33.54%)
+     2.013356067    47,11,87,90,990      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.54%)
+     2.013356067     1,00,18,58,490 ns   duration_time                                                         
+     2.013356067    36,49,77,87,491      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.05 tma_info_system_kernel_utilization  (66.46%)
+     2.013356067     1,93,57,67,705      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.46%)
+     2.013356067     1,00,18,58,490 ns   duration_time                                                         
+     2.013356067    55,72,57,01,066      cpu_core/INST_RETIRED.ANY/       # 55725701066.00 tma_info_inst_mix_instructions  (33.54%)
+     2.013356067     1,00,18,58,490 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  3.40  3.10  4.00  2.41  1.31  1.16   27.05  20.00  48.05  91.05  91.00  42.05  52.05  41.00  90.00
+     3.015531421    31,06,07,54,437      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.80%)
+     3.015531421    45,75,16,58,520      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    45.77 tma_info_system_average_frequency  (33.21%)
+     3.015531421    31,06,82,19,469      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.21%)
+     3.015531421    31,07,79,17,414      TSC                                                                   
+     3.015531421     1,00,21,75,354 ns   duration_time                                                         
+     3.015531421    23,43,04,15,424      cpu_atom/INST_RETIRED.ANY/                                              (66.80%)
+     3.015531421    54,50,47,08,902      cpu_core/INST_RETIRED.ANY/       #     1.19 tma_info_thread_ipc         (33.20%)
+     3.015531421    45,75,33,49,742      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.20%)
+     3.015531421     1,00,21,75,354 ns   duration_time                                                         
+     3.015531421    35,85,96,83,493      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.05 tma_info_system_kernel_utilization  (66.80%)
+     3.015531421     1,88,45,67,787      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.80%)
+     3.015531421     1,00,21,75,354 ns   duration_time                                                         
+     3.015531421    54,50,52,89,406      cpu_core/INST_RETIRED.ANY/       # 54505289406.00 tma_info_inst_mix_instructions  (33.20%)
+     3.015531421     1,00,21,75,354 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  3.28  3.00  3.81  5.26  1.92  1.36   27.05  20.00  48.05  91.05  94.00  42.05  53.05  41.00  92.00
+     4.023511586    31,37,43,38,629      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.58%)
+     4.023511586    45,03,81,02,570      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    45.05 tma_info_system_average_frequency  (33.42%)
+     4.023511586    31,37,73,13,003      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.42%)
+     4.023511586    31,38,36,94,326      TSC                                                                   
+     4.023511586     1,00,79,80,165 ns   duration_time                                                         
+     4.023511586    23,44,90,15,845      cpu_atom/INST_RETIRED.ANY/                                              (66.58%)
+     4.023511586    53,26,85,03,367      cpu_core/INST_RETIRED.ANY/       #     1.18 tma_info_thread_ipc         (33.42%)
+     4.023511586    45,03,73,37,552      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.42%)
+     4.023511586     1,00,79,80,165 ns   duration_time                                                         
+     4.023511586    35,92,54,05,097      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.05 tma_info_system_kernel_utilization  (66.58%)
+     4.023511586     1,91,71,70,714      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.58%)
+     4.023511586     1,00,79,80,165 ns   duration_time                                                         
+     4.023511586    53,26,79,83,147      cpu_core/INST_RETIRED.ANY/       # 53267983147.00 tma_info_inst_mix_instructions  (33.42%)
+     4.023511586     1,00,79,80,165 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  3.27  3.00  3.80  5.26  1.92  1.36   27.05  20.00  48.05  91.05  92.00  42.05  55.05  41.00  91.00
+     5.027524031    31,19,73,42,115      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.49%)
+     5.027524031    43,90,92,84,893      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    43.92 tma_info_system_average_frequency  (33.51%)
+     5.027524031    31,20,35,33,508      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.51%)
+     5.027524031    31,21,08,12,154      TSC                                                                   
+     5.027524031     1,00,40,12,445 ns   duration_time                                                         
+     5.027524031    23,12,09,96,717      cpu_atom/INST_RETIRED.ANY/                                              (66.49%)
+     5.027524031    51,97,35,63,009      cpu_core/INST_RETIRED.ANY/       #     1.18 tma_info_thread_ipc         (33.51%)
+     5.027524031    43,90,83,25,063      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.51%)
+     5.027524031     1,00,40,12,445 ns   duration_time                                                         
+     5.027524031    35,31,69,94,493      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.05 tma_info_system_kernel_utilization  (66.49%)
+     5.027524031     1,89,18,59,005      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.49%)
+     5.027524031     1,00,40,12,445 ns   duration_time                                                         
+     5.027524031    51,97,33,39,443      cpu_core/INST_RETIRED.ANY/       # 51973339443.00 tma_info_inst_mix_instructions  (33.51%)
+     5.027524031     1,00,40,12,445 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  3.23  3.00  3.70  5.26  1.92  1.36   27.05  20.00  48.05  92.05  91.00  42.05  56.05  41.00  91.00
+     6.029981225    31,01,04,96,053      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.38%)
+     6.029981225    43,16,20,32,047      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    43.17 tma_info_system_average_frequency  (33.62%)
+     6.029981225    31,01,67,91,424      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.62%)
+     6.029981225    31,02,38,31,484      TSC                                                                   
+     6.029981225     1,00,24,57,194 ns   duration_time                                                         
+     6.029981225    22,91,41,50,042      cpu_atom/INST_RETIRED.ANY/                                              (66.38%)
+     6.029981225    51,22,82,47,277      cpu_core/INST_RETIRED.ANY/       #     1.19 tma_info_thread_ipc         (33.62%)
+     6.029981225    43,16,20,00,936      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.62%)
+     6.029981225     1,00,24,57,194 ns   duration_time                                                         
+     6.029981225    34,80,76,93,274      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.05 tma_info_system_kernel_utilization  (66.38%)
+     6.029981225     1,87,82,30,679      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.38%)
+     6.029981225     1,00,24,57,194 ns   duration_time                                                         
+     6.029981225    51,22,84,47,850      cpu_core/INST_RETIRED.ANY/       # 51228447850.00 tma_info_inst_mix_instructions  (33.62%)
+     6.029981225     1,00,24,57,194 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  3.13  2.90  3.60  5.26  1.92  1.36   27.05  20.00  48.05  91.05  91.00  42.05  57.05  41.00  91.00
+     7.035523437    31,25,49,13,759      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.60%)
+     7.035523437    43,13,09,22,384      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    43.14 tma_info_system_average_frequency  (33.40%)
+     7.035523437    31,26,13,54,376      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.40%)
+     7.035523437    31,26,97,26,764      TSC                                                                   
+     7.035523437     1,00,55,42,212 ns   duration_time                                                         
+     7.035523437    22,69,35,65,980      cpu_atom/INST_RETIRED.ANY/                                              (66.60%)
+     7.035523437    51,05,39,42,827      cpu_core/INST_RETIRED.ANY/       #     1.18 tma_info_thread_ipc         (33.40%)
+     7.035523437    43,13,08,74,958      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.40%)
+     7.035523437     1,00,55,42,212 ns   duration_time                                                         
+     7.035523437    34,76,48,28,799      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.05 tma_info_system_kernel_utilization  (66.60%)
+     7.035523437     1,86,17,67,798      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.60%)
+     7.035523437     1,00,55,42,212 ns   duration_time                                                         
+     7.035523437    51,05,40,28,055      cpu_core/INST_RETIRED.ANY/       # 51054028055.00 tma_info_inst_mix_instructions  (33.40%)
+     7.035523437     1,00,55,42,212 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  3.03  2.80  3.50  5.26  1.92  1.36   27.05  20.00  48.05  92.05  92.00  42.05  58.05  42.00  92.00
+     8.037689523    31,16,90,12,132      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.58%)
+     8.037689523    42,51,62,70,395      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    42.53 tma_info_system_average_frequency  (33.42%)
+     8.037689523    31,17,36,93,563      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.42%)
+     8.037689523    31,18,13,68,594      TSC                                                                   
+     8.037689523     1,00,21,66,086 ns   duration_time                                                         
+     8.037689523    22,32,45,69,647      cpu_atom/INST_RETIRED.ANY/                                              (66.58%)
+     8.037689523    50,18,77,72,778      cpu_core/INST_RETIRED.ANY/       #     1.18 tma_info_thread_ipc         (33.42%)
+     8.037689523    42,51,68,63,971      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.42%)
+     8.037689523     1,00,21,66,086 ns   duration_time                                                         
+     8.037689523    34,17,45,58,597      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.05 tma_info_system_kernel_utilization  (66.58%)
+     8.037689523     1,85,02,09,316      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.58%)
+     8.037689523     1,00,21,66,086 ns   duration_time                                                         
+     8.037689523    50,19,43,56,285      cpu_core/INST_RETIRED.ANY/       # 50194356285.00 tma_info_inst_mix_instructions  (33.42%)
+     8.037689523     1,00,21,66,086 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  3.13  2.90  3.60  7.72  2.49  1.54   27.05  20.00  48.05  91.05  91.00  42.05  59.05  41.00  92.00
+stress-ng: info:  [235422] therm:  3.03  2.80  3.50  7.72  2.49  1.54   27.05  20.00  48.05  91.05  91.00  42.05  60.05  41.00  92.00
+     9.043552915    31,26,64,82,485      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.83%)
+     9.043552915    42,40,63,59,228      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    42.42 tma_info_system_average_frequency  (33.17%)
+     9.043552915    31,27,47,73,753      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.17%)
+     9.043552915    31,28,22,35,504      TSC                                                                   
+     9.043552915     1,00,58,63,392 ns   duration_time                                                         
+     9.043552915    22,16,82,36,741      cpu_atom/INST_RETIRED.ANY/                                              (66.83%)
+     9.043552915    50,32,96,67,809      cpu_core/INST_RETIRED.ANY/       #     1.19 tma_info_thread_ipc         (33.17%)
+     9.043552915    42,40,56,71,567      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.17%)
+     9.043552915     1,00,58,63,392 ns   duration_time                                                         
+     9.043552915    34,02,99,56,180      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.05 tma_info_system_kernel_utilization  (66.83%)
+     9.043552915     1,86,67,70,356      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.83%)
+     9.043552915     1,00,58,63,392 ns   duration_time                                                         
+     9.043552915    50,32,31,34,234      cpu_core/INST_RETIRED.ANY/       # 50323134234.00 tma_info_inst_mix_instructions  (33.17%)
+     9.043552915     1,00,58,63,392 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  3.16  2.93  3.63  7.72  2.49  1.54   27.05  20.00  48.05  92.05  91.00  42.05  61.05  41.00  92.00
+    10.046549456    31,07,81,56,654      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.50%)
+    10.046549456    41,82,99,22,044      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    41.84 tma_info_system_average_frequency  (33.50%)
+    10.046549456    31,08,42,09,554      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.50%)
+    10.046549456    31,09,11,16,598      TSC                                                                   
+    10.046549456     1,00,29,96,541 ns   duration_time                                                         
+    10.046549456    22,03,72,02,750      cpu_atom/INST_RETIRED.ANY/                                              (66.50%)
+    10.046549456    49,50,19,68,847      cpu_core/INST_RETIRED.ANY/       #     1.18 tma_info_thread_ipc         (33.50%)
+    10.046549456    41,83,00,08,740      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.50%)
+    10.046549456     1,00,29,96,541 ns   duration_time                                                         
+    10.046549456    33,51,05,06,552      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.05 tma_info_system_kernel_utilization  (66.50%)
+    10.046549456     1,82,27,08,310      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.50%)
+    10.046549456     1,00,29,96,541 ns   duration_time                                                         
+    10.046549456    49,50,16,81,482      cpu_core/INST_RETIRED.ANY/       # 49501681482.00 tma_info_inst_mix_instructions  (33.50%)
+    10.046549456     1,00,29,96,541 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  3.03  2.80  3.50  7.72  2.49  1.54   27.05  20.00  48.05  91.05  92.00  42.05  61.05  40.00  92.00
+    11.055514475    31,36,32,06,976      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.80%)
+    11.055514475    41,85,27,11,607      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    41.87 tma_info_system_average_frequency  (33.20%)
+    11.055514475    31,37,35,75,192      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.20%)
+    11.055514475    31,38,36,61,952      TSC                                                                   
+    11.055514475     1,00,89,65,019 ns   duration_time                                                         
+    11.055514475    21,80,26,10,734      cpu_atom/INST_RETIRED.ANY/                                              (66.80%)
+    11.055514475    49,88,21,85,749      cpu_core/INST_RETIRED.ANY/       #     1.19 tma_info_thread_ipc         (33.20%)
+    11.055514475    41,85,52,61,360      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.20%)
+    11.055514475     1,00,89,65,019 ns   duration_time                                                         
+    11.055514475    33,46,12,14,264      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.05 tma_info_system_kernel_utilization  (66.80%)
+    11.055514475     1,81,24,70,539      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.80%)
+    11.055514475     1,00,89,65,019 ns   duration_time                                                         
+    11.055514475    49,88,20,52,670      cpu_core/INST_RETIRED.ANY/       # 49882052670.00 tma_info_inst_mix_instructions  (33.20%)
+    11.055514475     1,00,89,65,019 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  2.97  2.74  3.44  7.72  2.49  1.54   27.05  20.00  49.05  91.05  92.00  42.05  63.05  41.00  92.00
+    12.062414625    31,33,29,52,906      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.73%)
+    12.062414625    41,48,02,86,954      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    41.49 tma_info_system_average_frequency  (33.27%)
+    12.062414625    31,33,75,54,570      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.27%)
+    12.062414625    31,34,30,13,346      TSC                                                                   
+    12.062414625     1,00,69,00,150 ns   duration_time                                                         
+    12.062414625    21,57,36,10,882      cpu_atom/INST_RETIRED.ANY/                                              (66.73%)
+    12.062414625    49,40,80,23,110      cpu_core/INST_RETIRED.ANY/       #     1.19 tma_info_thread_ipc         (33.27%)
+    12.062414625    41,48,11,08,300      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.27%)
+    12.062414625     1,00,69,00,150 ns   duration_time                                                         
+    12.062414625    33,09,59,71,081      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.05 tma_info_system_kernel_utilization  (66.73%)
+    12.062414625     1,81,45,50,669      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.73%)
+    12.062414625     1,00,69,00,150 ns   duration_time                                                         
+    12.062414625    49,40,82,85,081      cpu_core/INST_RETIRED.ANY/       # 49408285081.00 tma_info_inst_mix_instructions  (33.27%)
+    12.062414625     1,00,69,00,150 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  2.93  2.70  3.40  9.91  3.03  1.72   27.05  20.00  49.05  91.05  92.00  42.05  62.05  40.00  91.00
+    13.067514417    31,29,03,84,729      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.75%)
+    13.067514417    41,01,31,36,390      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    41.02 tma_info_system_average_frequency  (33.25%)
+    13.067514417    31,29,93,01,629      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.25%)
+    13.067514417    31,30,35,82,510      TSC                                                                   
+    13.067514417     1,00,50,99,792 ns   duration_time                                                         
+    13.067514417    21,27,57,38,116      cpu_atom/INST_RETIRED.ANY/                                              (66.75%)
+    13.067514417    48,55,32,69,302      cpu_core/INST_RETIRED.ANY/       #     1.18 tma_info_thread_ipc         (33.25%)
+    13.067514417    41,00,98,47,170      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.25%)
+    13.067514417     1,00,50,99,792 ns   duration_time                                                         
+    13.067514417    32,63,60,37,182      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.06 tma_info_system_kernel_utilization  (66.75%)
+    13.067514417     1,80,89,94,318      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.75%)
+    13.067514417     1,00,50,99,792 ns   duration_time                                                         
+    13.067514417    48,55,32,49,022      cpu_core/INST_RETIRED.ANY/       # 48553249022.00 tma_info_inst_mix_instructions  (33.25%)
+    13.067514417     1,00,50,99,792 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  3.02  2.79  3.49  9.91  3.03  1.72   27.05  20.00  49.05  91.05  92.00  42.05  62.05  40.00  92.00
+    14.069608120    31,17,04,20,190      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.74%)
+    14.069608120    40,63,84,99,999      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    40.65 tma_info_system_average_frequency  (33.26%)
+    14.069608120    31,17,78,37,403      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.26%)
+    14.069608120    31,18,39,50,136      TSC                                                                   
+    14.069608120     1,00,20,93,703 ns   duration_time                                                         
+    14.069608120    21,05,21,89,158      cpu_atom/INST_RETIRED.ANY/                                              (66.74%)
+    14.069608120    48,21,66,59,395      cpu_core/INST_RETIRED.ANY/       #     1.19 tma_info_thread_ipc         (33.26%)
+    14.069608120    40,63,85,52,875      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.26%)
+    14.069608120     1,00,20,93,703 ns   duration_time                                                         
+    14.069608120    32,30,32,18,849      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.05 tma_info_system_kernel_utilization  (66.74%)
+    14.069608120     1,77,55,37,877      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.74%)
+    14.069608120     1,00,20,93,703 ns   duration_time                                                         
+    14.069608120    48,21,67,96,495      cpu_core/INST_RETIRED.ANY/       # 48216796495.00 tma_info_inst_mix_instructions  (33.26%)
+    14.069608120     1,00,20,93,703 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  2.98  2.75  3.44  9.91  3.03  1.72   27.05  20.00  49.05  92.05  91.00  42.05  63.05  40.00  92.00
+    15.079536402    31,15,39,10,963      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.82%)
+    15.079536402    40,51,44,09,688      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    40.52 tma_info_system_average_frequency  (33.18%)
+    15.079536402    31,16,16,49,920      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.18%)
+    15.079536402    31,16,91,90,482      TSC                                                                   
+    15.079536402     1,00,99,28,282 ns   duration_time                                                         
+    15.079536402    21,05,87,98,874      cpu_atom/INST_RETIRED.ANY/                                              (66.82%)
+    15.079536402    47,94,78,67,027      cpu_core/INST_RETIRED.ANY/       #     1.18 tma_info_thread_ipc         (33.18%)
+    15.079536402    40,51,40,52,478      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.18%)
+    15.079536402     1,00,99,28,282 ns   duration_time                                                         
+    15.079536402    32,17,71,02,533      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.06 tma_info_system_kernel_utilization  (66.82%)
+    15.079536402     1,81,28,86,555      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.82%)
+    15.079536402     1,00,99,28,282 ns   duration_time                                                         
+    15.079536402    47,94,71,54,985      cpu_core/INST_RETIRED.ANY/       # 47947154985.00 tma_info_inst_mix_instructions  (33.18%)
+    15.079536402     1,00,99,28,282 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  2.97  2.74  3.44  9.91  3.03  1.72   27.05  20.00  49.05  92.05  92.00  42.05  63.05  40.00  91.00
+    16.087538915    31,32,93,79,552      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.85%)
+    16.087538915    40,51,88,32,439      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    40.53 tma_info_system_average_frequency  (33.16%)
+    16.087538915    31,33,80,06,413      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.16%)
+    16.087538915    31,34,68,90,246      TSC                                                                   
+    16.087538915     1,00,80,02,513 ns   duration_time                                                         
+    16.087538915    20,93,39,67,964      cpu_atom/INST_RETIRED.ANY/                                              (66.84%)
+    16.087538915    48,10,78,79,282      cpu_core/INST_RETIRED.ANY/       #     1.19 tma_info_thread_ipc         (33.16%)
+    16.087538915    40,52,01,50,070      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.16%)
+    16.087538915     1,00,80,02,513 ns   duration_time                                                         
+    16.087538915    32,14,88,71,337      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.05 tma_info_system_kernel_utilization  (66.84%)
+    16.087538915     1,76,13,80,630      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.84%)
+    16.087538915     1,00,80,02,513 ns   duration_time                                                         
+    16.087538915    48,10,84,76,384      cpu_core/INST_RETIRED.ANY/       # 48108476384.00 tma_info_inst_mix_instructions  (33.16%)
+    16.087538915     1,00,80,02,513 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  2.83  2.60  3.30  9.91  3.03  1.72   27.05  20.00  50.05  92.05  91.00  42.05  63.05  40.00  92.00
+    17.095541091    31,36,06,05,631      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.75%)
+    17.095541091    40,37,07,64,042      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    40.38 tma_info_system_average_frequency  (33.25%)
+    17.095541091    31,36,29,69,008      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.25%)
+    17.095541091    31,37,09,91,738      TSC                                                                   
+    17.095541091     1,00,80,02,176 ns   duration_time                                                         
+    17.095541091    20,81,59,98,074      cpu_atom/INST_RETIRED.ANY/                                              (66.75%)
+    17.095541091    47,60,67,87,739      cpu_core/INST_RETIRED.ANY/       #     1.18 tma_info_thread_ipc         (33.25%)
+    17.095541091    40,37,00,52,305      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.25%)
+    17.095541091     1,00,80,02,176 ns   duration_time                                                         
+    17.095541091    31,98,40,05,632      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.05 tma_info_system_kernel_utilization  (66.75%)
+    17.095541091     1,71,67,73,091      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.75%)
+    17.095541091     1,00,80,02,176 ns   duration_time                                                         
+    17.095541091    47,60,67,83,386      cpu_core/INST_RETIRED.ANY/       # 47606783386.00 tma_info_inst_mix_instructions  (33.25%)
+    17.095541091     1,00,80,02,176 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  2.83  2.60  3.30 12.00  3.58  1.91   27.05  20.00  50.05  91.05  92.00  42.05  63.05  40.00  92.00
+    18.103537877    31,17,70,78,192      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.68%)
+    18.103537877    39,93,18,07,903      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    39.94 tma_info_system_average_frequency  (33.32%)
+    18.103537877    31,18,29,02,732      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.32%)
+    18.103537877    31,19,14,65,144      TSC                                                                   
+    18.103537877     1,00,79,96,786 ns   duration_time                                                         
+    18.103537877    20,69,90,11,543      cpu_atom/INST_RETIRED.ANY/                                              (66.68%)
+    18.103537877    47,49,39,53,055      cpu_core/INST_RETIRED.ANY/       #     1.19 tma_info_thread_ipc         (33.32%)
+    18.103537877    39,93,12,25,771      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.32%)
+    18.103537877     1,00,79,96,786 ns   duration_time                                                         
+    18.103537877    31,59,61,85,740      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.05 tma_info_system_kernel_utilization  (66.68%)
+    18.103537877     1,73,52,05,354      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.68%)
+    18.103537877     1,00,79,96,786 ns   duration_time                                                         
+    18.103537877    47,49,35,91,300      cpu_core/INST_RETIRED.ANY/       # 47493591300.00 tma_info_inst_mix_instructions  (33.32%)
+    18.103537877     1,00,79,96,786 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  2.82  2.59  3.29 12.00  3.58  1.91   27.05  20.00  50.05  92.05  91.00  42.05  64.05  40.00  92.00
+    19.111535960    31,26,93,28,944      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.64%)
+    19.111535960    39,83,83,84,945      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    39.85 tma_info_system_average_frequency  (33.36%)
+    19.111535960    31,27,69,52,130      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.36%)
+    19.111535960    31,28,64,54,164      TSC                                                                   
+    19.111535960     1,00,79,98,083 ns   duration_time                                                         
+    19.111535960    20,56,87,65,826      cpu_atom/INST_RETIRED.ANY/                                              (66.64%)
+    19.111535960    47,30,15,30,288      cpu_core/INST_RETIRED.ANY/       #     1.19 tma_info_thread_ipc         (33.36%)
+    19.111535960    39,83,90,57,434      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.36%)
+    19.111535960     1,00,79,98,083 ns   duration_time                                                         
+    19.111535960    31,47,02,86,852      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.06 tma_info_system_kernel_utilization  (66.64%)
+    19.111535960     1,76,26,90,578      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.64%)
+    19.111535960     1,00,79,98,083 ns   duration_time                                                         
+    19.111535960    47,30,18,69,524      cpu_core/INST_RETIRED.ANY/       # 47301869524.00 tma_info_inst_mix_instructions  (33.36%)
+    19.111535960     1,00,79,98,083 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  2.79  2.55  3.25 12.00  3.58  1.91   27.05  20.00  50.05  92.05  91.00  42.05  64.05  40.00  92.00
+    20.114204203    31,18,20,54,713      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.82%)
+    20.114204203    39,64,04,02,852      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    39.65 tma_info_system_average_frequency  (33.18%)
+    20.114204203    31,18,43,85,046      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.18%)
+    20.114204203    31,19,33,00,258      TSC                                                                   
+    20.114204203     1,00,26,68,243 ns   duration_time                                                         
+    20.114204203    20,39,82,64,943      cpu_atom/INST_RETIRED.ANY/                                              (66.82%)
+    20.114204203    46,99,36,78,714      cpu_core/INST_RETIRED.ANY/       #     1.19 tma_info_thread_ipc         (33.18%)
+    20.114204203    39,63,99,29,064      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.18%)
+    20.114204203     1,00,26,68,243 ns   duration_time                                                         
+    20.114204203    31,30,75,11,972      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.05 tma_info_system_kernel_utilization  (66.82%)
+    20.114204203     1,71,64,33,713      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.82%)
+    20.114204203     1,00,26,68,243 ns   duration_time                                                         
+    20.114204203    46,99,36,37,873      cpu_core/INST_RETIRED.ANY/       # 46993637873.00 tma_info_inst_mix_instructions  (33.18%)
+    20.114204203     1,00,26,68,243 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  2.83  2.60  3.30 12.00  3.58  1.91   27.05  20.00  50.05  91.05  91.00  42.05  64.05  40.00  91.00
+    21.127529012    31,51,24,81,909      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.67%)
+    21.127529012    40,03,30,80,189      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    40.04 tma_info_system_average_frequency  (33.33%)
+    21.127529012    31,51,80,73,541      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.33%)
+    21.127529012    31,52,65,59,870      TSC                                                                   
+    21.127529012     1,01,33,24,809 ns   duration_time                                                         
+    21.127529012    20,59,43,52,304      cpu_atom/INST_RETIRED.ANY/                                              (66.67%)
+    21.127529012    47,56,64,43,635      cpu_core/INST_RETIRED.ANY/       #     1.19 tma_info_thread_ipc         (33.33%)
+    21.127529012    40,03,28,26,254      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.33%)
+    21.127529012     1,01,33,24,809 ns   duration_time                                                         
+    21.127529012    31,60,84,54,960      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.06 tma_info_system_kernel_utilization  (66.67%)
+    21.127529012     1,74,13,23,657      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.67%)
+    21.127529012     1,01,33,24,809 ns   duration_time                                                         
+    21.127529012    47,56,64,73,139      cpu_core/INST_RETIRED.ANY/       # 47566473139.00 tma_info_inst_mix_instructions  (33.33%)
+    21.127529012     1,01,33,24,809 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  2.82  2.59  3.29 12.00  3.58  1.91   27.05  20.00  50.05  92.05  91.00  42.05  64.05  40.00  91.00
+    22.130872675    31,09,53,02,855      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.58%)
+    22.130872675    39,40,38,01,657      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    39.41 tma_info_system_average_frequency  (33.42%)
+    22.130872675    31,10,27,86,862      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.42%)
+    22.130872675    31,11,02,97,934      TSC                                                                   
+    22.130872675     1,00,33,43,663 ns   duration_time                                                         
+    22.130872675    20,37,45,95,904      cpu_atom/INST_RETIRED.ANY/                                              (66.58%)
+    22.130872675    46,72,23,49,393      cpu_core/INST_RETIRED.ANY/       #     1.19 tma_info_thread_ipc         (33.42%)
+    22.130872675    39,40,49,71,662      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.42%)
+    22.130872675     1,00,33,43,663 ns   duration_time                                                         
+    22.130872675    31,09,94,79,780      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.05 tma_info_system_kernel_utilization  (66.58%)
+    22.130872675     1,70,84,54,188      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.58%)
+    22.130872675     1,00,33,43,663 ns   duration_time                                                         
+    22.130872675    46,72,99,90,798      cpu_core/INST_RETIRED.ANY/       # 46729990798.00 tma_info_inst_mix_instructions  (33.42%)
+    22.130872675     1,00,33,43,663 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  2.73  2.50  3.20 13.92  4.11  2.09   27.05  20.00  51.05  92.05  91.00  42.05  64.05  40.00  92.00
+    23.147533190    31,54,02,39,933      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.74%)
+    23.147533190    39,93,93,52,971      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    39.95 tma_info_system_average_frequency  (33.26%)
+    23.147533190    31,54,65,47,610      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.26%)
+    23.147533190    31,55,58,28,416      TSC                                                                   
+    23.147533190     1,01,66,60,515 ns   duration_time                                                         
+    23.147533190    20,56,54,79,191      cpu_atom/INST_RETIRED.ANY/                                              (66.74%)
+    23.147533190    47,30,30,37,367      cpu_core/INST_RETIRED.ANY/       #     1.18 tma_info_thread_ipc         (33.26%)
+    23.147533190    39,93,85,16,548      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.26%)
+    23.147533190     1,01,66,60,515 ns   duration_time                                                         
+    23.147533190    31,50,27,24,543      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.06 tma_info_system_kernel_utilization  (66.74%)
+    23.147533190     1,74,73,71,142      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.74%)
+    23.147533190     1,01,66,60,515 ns   duration_time                                                         
+    23.147533190    47,29,55,07,182      cpu_core/INST_RETIRED.ANY/       # 47295507182.00 tma_info_inst_mix_instructions  (33.26%)
+    23.147533190     1,01,66,60,515 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  2.73  2.50  3.20 13.92  4.11  2.09   27.05  20.00  51.05  92.05  91.00  42.05  65.05  40.00  92.00
+    24.155531093    31,34,71,00,345      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.80%)
+    24.155531093    39,67,78,05,662      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    39.69 tma_info_system_average_frequency  (33.20%)
+    24.155531093    31,35,25,85,265      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.20%)
+    24.155531093    31,36,13,46,564      TSC                                                                   
+    24.155531093     1,00,79,97,903 ns   duration_time                                                         
+    24.155531093    20,39,83,71,999      cpu_atom/INST_RETIRED.ANY/                                              (66.80%)
+    24.155531093    47,23,61,71,622      cpu_core/INST_RETIRED.ANY/       #     1.19 tma_info_thread_ipc         (33.20%)
+    24.155531093    39,67,77,61,304      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.20%)
+    24.155531093     1,00,79,97,903 ns   duration_time                                                         
+    24.155531093    31,29,42,97,980      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.06 tma_info_system_kernel_utilization  (66.80%)
+    24.155531093     1,74,44,43,019      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.80%)
+    24.155531093     1,00,79,97,903 ns   duration_time                                                         
+    24.155531093    47,23,59,05,849      cpu_core/INST_RETIRED.ANY/       # 47235905849.00 tma_info_inst_mix_instructions  (33.20%)
+    24.155531093     1,00,79,97,903 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  2.87  2.63  3.33 13.92  4.11  2.09   27.05  20.00  51.05  92.05  92.00  42.05  64.05  40.00  91.00
+    25.159075297    31,11,94,78,095      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.53%)
+    25.159075297    39,40,70,38,747      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    39.42 tma_info_system_average_frequency  (33.47%)
+    25.159075297    31,12,66,73,520      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.47%)
+    25.159075297    31,13,60,60,720      TSC                                                                   
+    25.159075297     1,00,35,44,204 ns   duration_time                                                         
+    25.159075297    20,36,47,09,405      cpu_atom/INST_RETIRED.ANY/                                              (66.52%)
+    25.159075297    46,65,59,47,693      cpu_core/INST_RETIRED.ANY/       #     1.18 tma_info_thread_ipc         (33.48%)
+    25.159075297    39,40,72,35,916      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.48%)
+    25.159075297     1,00,35,44,204 ns   duration_time                                                         
+    25.159075297    31,08,75,44,043      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.06 tma_info_system_kernel_utilization  (66.52%)
+    25.159075297     1,71,39,59,286      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.52%)
+    25.159075297     1,00,35,44,204 ns   duration_time                                                         
+    25.159075297    46,65,64,85,016      cpu_core/INST_RETIRED.ANY/       # 46656485016.00 tma_info_inst_mix_instructions  (33.48%)
+    25.159075297     1,00,35,44,204 ns   duration_time                                                         
+stress-ng: info:  [235422] therm: AvGHz MnGHz MxGHz  LdA1  LdA5 LdA15    AMBF INT340   NGFF   TCPU TCPU_P   TMEM   TSKN iwlwif x86_pk
+stress-ng: info:  [235422] therm:  2.86  2.63  3.33 13.92  4.11  2.09   27.05  20.00  51.05  91.05  92.00  42.05  64.05  40.00  92.00
+    26.175527439    31,63,06,71,899      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.79%)
+    26.175527439    40,07,11,99,193      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    40.08 tma_info_system_average_frequency  (33.21%)
+    26.175527439    31,63,28,16,297      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.21%)
+    26.175527439    31,64,18,32,728      TSC                                                                   
+    26.175527439     1,01,64,52,142 ns   duration_time                                                         
+    26.175527439    20,56,40,24,564      cpu_atom/INST_RETIRED.ANY/                                              (66.79%)
+    26.175527439    47,65,22,37,267      cpu_core/INST_RETIRED.ANY/       #     1.19 tma_info_thread_ipc         (33.21%)
+    26.175527439    40,07,10,42,665      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.21%)
+    26.175527439     1,01,64,52,142 ns   duration_time                                                         
+    26.175527439    31,61,80,45,664      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.05 tma_info_system_kernel_utilization  (66.79%)
+    26.175527439     1,72,80,18,069      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.79%)
+    26.175527439     1,01,64,52,142 ns   duration_time                                                         
+    26.175527439    47,65,19,59,962      cpu_core/INST_RETIRED.ANY/       # 47651959962.00 tma_info_inst_mix_instructions  (33.21%)
+    26.175527439     1,01,64,52,142 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  2.87  2.63  3.33 13.92  4.11  2.09   27.05  20.00  52.05  92.05  91.00  42.05  65.05  40.00  92.00
+#           time             counts unit events
+    27.177841778    31,11,35,20,309      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.92%)
+    27.177841778    39,46,76,81,938      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    39.48 tma_info_system_average_frequency  (33.08%)
+    27.177841778    31,11,88,36,176      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.08%)
+    27.177841778    31,12,93,49,978      TSC                                                                   
+    27.177841778     1,00,23,14,339 ns   duration_time                                                         
+    27.177841778    20,26,59,42,362      cpu_atom/INST_RETIRED.ANY/                                              (66.92%)
+    27.177841778    46,79,27,81,760      cpu_core/INST_RETIRED.ANY/       #     1.19 tma_info_thread_ipc         (33.08%)
+    27.177841778    39,46,76,90,291      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.08%)
+    27.177841778     1,00,23,14,339 ns   duration_time                                                         
+    27.177841778    31,15,21,95,544      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.06 tma_info_system_kernel_utilization  (66.92%)
+    27.177841778     1,71,39,69,025      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.92%)
+    27.177841778     1,00,23,14,339 ns   duration_time                                                         
+    27.177841778    46,79,29,75,823      cpu_core/INST_RETIRED.ANY/       # 46792975823.00 tma_info_inst_mix_instructions  (33.08%)
+    27.177841778     1,00,23,14,339 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  2.83  2.60  3.30 15.69  4.64  2.27   27.05  20.00  52.05  91.05  91.00  42.05  64.05  40.00  90.00
+    28.179495861    30,37,27,64,778      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.81%)
+    28.179495861    38,40,64,68,470      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    38.42 tma_info_system_average_frequency  (33.19%)
+    28.179495861    30,37,56,79,984      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.19%)
+    28.179495861    30,38,80,00,880      TSC                                                                   
+    28.179495861     1,00,16,54,083 ns   duration_time                                                         
+    28.179495861    20,25,07,49,741      cpu_atom/INST_RETIRED.ANY/                                              (66.80%)
+    28.179495861    45,86,60,81,535      cpu_core/INST_RETIRED.ANY/       #     1.19 tma_info_thread_ipc         (33.20%)
+    28.179495861    38,41,03,33,052      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.20%)
+    28.179495861     1,00,16,54,083 ns   duration_time                                                         
+    28.179495861    30,29,38,71,148      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.06 tma_info_system_kernel_utilization  (66.80%)
+    28.179495861     1,69,32,05,343      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.80%)
+    28.179495861     1,00,16,54,083 ns   duration_time                                                         
+    28.179495861    45,86,51,53,161      cpu_core/INST_RETIRED.ANY/       # 45865153161.00 tma_info_inst_mix_instructions  (33.20%)
+    28.179495861     1,00,16,54,083 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  2.83  2.60  3.30 15.69  4.64  2.27   27.05  20.00  52.05  92.05  91.00  42.05  64.05  40.00  92.00
+    29.191534008    31,36,04,63,084      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.75%)
+    29.191534008    39,79,91,25,636      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    39.81 tma_info_system_average_frequency  (33.25%)
+    29.191534008    31,36,41,22,987      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.25%)
+    29.191534008    31,37,22,16,380      TSC                                                                   
+    29.191534008     1,01,20,38,147 ns   duration_time                                                         
+    29.191534008    20,53,91,28,086      cpu_atom/INST_RETIRED.ANY/                                              (66.75%)
+    29.191534008    47,21,09,38,193      cpu_core/INST_RETIRED.ANY/       #     1.19 tma_info_thread_ipc         (33.25%)
+    29.191534008    39,79,53,20,128      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.25%)
+    29.191534008     1,01,20,38,147 ns   duration_time                                                         
+    29.191534008    31,40,83,42,149      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.05 tma_info_system_kernel_utilization  (66.75%)
+    29.191534008     1,71,08,82,698      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.75%)
+    29.191534008     1,01,20,38,147 ns   duration_time                                                         
+    29.191534008    47,21,16,06,946      cpu_core/INST_RETIRED.ANY/       # 47211606946.00 tma_info_inst_mix_instructions  (33.25%)
+    29.191534008     1,01,20,38,147 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  2.83  2.60  3.30 15.69  4.64  2.27   27.05  20.00  52.05  91.05  91.00  42.05  64.05  40.00  91.00
+    30.199530914    31,07,94,47,872      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (67.16%)
+    30.199530914    39,37,55,41,971      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    39.39 tma_info_system_average_frequency  (32.84%)
+    30.199530914    31,08,21,08,061      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (32.84%)
+    30.199530914    31,09,43,49,390      TSC                                                                   
+    30.199530914     1,00,79,96,906 ns   duration_time                                                         
+    30.199530914    20,27,10,87,853      cpu_atom/INST_RETIRED.ANY/                                              (67.16%)
+    30.199530914    46,93,55,64,392      cpu_core/INST_RETIRED.ANY/       #     1.19 tma_info_thread_ipc         (32.84%)
+    30.199530914    39,37,59,20,411      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (32.84%)
+    30.199530914     1,00,79,96,906 ns   duration_time                                                         
+    30.199530914    31,07,16,59,548      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.05 tma_info_system_kernel_utilization  (67.16%)
+    30.199530914     1,69,06,65,636      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (67.16%)
+    30.199530914     1,00,79,96,906 ns   duration_time                                                         
+    30.199530914    46,93,55,24,804      cpu_core/INST_RETIRED.ANY/       # 46935524804.00 tma_info_inst_mix_instructions  (32.84%)
+    30.199530914     1,00,79,96,906 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  2.84  2.60  3.30 15.69  4.64  2.27   27.05  20.00  52.05  91.05  91.00  42.05  64.05  40.00  91.00
+    31.202394553    31,20,11,25,308      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.81%)
+    31.202394553    39,53,02,12,162      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    39.54 tma_info_system_average_frequency  (33.19%)
+    31.202394553    31,20,49,44,902      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.19%)
+    31.202394553    31,21,42,60,278      TSC                                                                   
+    31.202394553     1,00,28,63,639 ns   duration_time                                                         
+    31.202394553    20,30,67,72,445      cpu_atom/INST_RETIRED.ANY/                                              (66.81%)
+    31.202394553    46,85,49,08,517      cpu_core/INST_RETIRED.ANY/       #     1.19 tma_info_thread_ipc         (33.19%)
+    31.202394553    39,52,98,03,615      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.19%)
+    31.202394553     1,00,28,63,639 ns   duration_time                                                         
+    31.202394553    31,19,50,40,991      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.06 tma_info_system_kernel_utilization  (66.81%)
+    31.202394553     1,72,32,82,131      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.81%)
+    31.202394553     1,00,28,63,639 ns   duration_time                                                         
+    31.202394553    46,86,22,30,110      cpu_core/INST_RETIRED.ANY/       # 46862230110.00 tma_info_inst_mix_instructions  (33.19%)
+    31.202394553     1,00,28,63,639 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  2.84  2.61  3.31 15.69  4.64  2.27   27.05  20.00  53.05  92.05  91.00  42.05  64.05  42.00  91.00
+    32.207529930    31,04,58,18,416      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.94%)
+    32.207529930    39,28,86,43,199      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    39.30 tma_info_system_average_frequency  (33.06%)
+    32.207529930    31,05,29,76,325      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.06%)
+    32.207529930    31,06,44,19,790      TSC                                                                   
+    32.207529930     1,00,51,35,377 ns   duration_time                                                         
+    32.207529930    20,24,76,11,227      cpu_atom/INST_RETIRED.ANY/                                              (66.94%)
+    32.207529930    46,92,59,66,737      cpu_core/INST_RETIRED.ANY/       #     1.19 tma_info_thread_ipc         (33.06%)
+    32.207529930    39,29,34,27,735      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.06%)
+    32.207529930     1,00,51,35,377 ns   duration_time                                                         
+    32.207529930    30,98,39,29,479      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.06 tma_info_system_kernel_utilization  (66.94%)
+    32.207529930     1,70,71,49,646      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.94%)
+    32.207529930     1,00,51,35,377 ns   duration_time                                                         
+    32.207529930    46,91,87,08,770      cpu_core/INST_RETIRED.ANY/       # 46918708770.00 tma_info_inst_mix_instructions  (33.06%)
+    32.207529930     1,00,51,35,377 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  2.83  2.60  3.30 17.40  5.18  2.46   27.05  20.00  53.05  92.05  92.00  42.05  64.05  40.00  91.00
+    33.211526247    31,08,85,34,917      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.91%)
+    33.211526247    39,47,04,92,820      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    39.48 tma_info_system_average_frequency  (33.09%)
+    33.211526247    31,08,97,10,845      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.09%)
+    33.211526247    31,09,78,14,862      TSC                                                                   
+    33.211526247     1,00,39,96,317 ns   duration_time                                                         
+    33.211526247    20,31,86,17,226      cpu_atom/INST_RETIRED.ANY/                                              (66.91%)
+    33.211526247    46,92,95,86,232      cpu_core/INST_RETIRED.ANY/       #     1.19 tma_info_thread_ipc         (33.09%)
+    33.211526247    39,47,08,59,270      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.09%)
+    33.211526247     1,00,39,96,317 ns   duration_time                                                         
+    33.211526247    31,17,30,40,679      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.06 tma_info_system_kernel_utilization  (66.91%)
+    33.211526247     1,72,32,40,320      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.91%)
+    33.211526247     1,00,39,96,317 ns   duration_time                                                         
+    33.211526247    46,93,00,45,580      cpu_core/INST_RETIRED.ANY/       # 46930045580.00 tma_info_inst_mix_instructions  (33.09%)
+    33.211526247     1,00,39,96,317 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  2.93  2.70  3.40 17.40  5.18  2.46   27.05  20.00  53.05  92.05  91.00  42.05  64.05  40.00  92.00
+    34.219529832    31,33,93,47,791      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.85%)
+    34.219529832    39,78,44,53,334      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    39.80 tma_info_system_average_frequency  (33.15%)
+    34.219529832    31,34,38,99,611      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.15%)
+    34.219529832    31,35,65,06,256      TSC                                                                   
+    34.219529832     1,00,80,03,585 ns   duration_time                                                         
+    34.219529832    20,41,91,22,912      cpu_atom/INST_RETIRED.ANY/                                              (66.85%)
+    34.219529832    47,03,81,19,600      cpu_core/INST_RETIRED.ANY/       #     1.18 tma_info_thread_ipc         (33.15%)
+    34.219529832    39,78,48,70,901      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.15%)
+    34.219529832     1,00,80,03,585 ns   duration_time                                                         
+    34.219529832    31,41,31,20,165      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.06 tma_info_system_kernel_utilization  (66.85%)
+    34.219529832     1,74,28,95,871      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.85%)
+    34.219529832     1,00,80,03,585 ns   duration_time                                                         
+    34.219529832    47,03,79,85,883      cpu_core/INST_RETIRED.ANY/       # 47037985883.00 tma_info_inst_mix_instructions  (33.15%)
+    34.219529832     1,00,80,03,585 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  2.87  2.64  3.34 17.40  5.18  2.46   27.05  20.00  53.05  92.05  92.00  42.05  64.05  40.00  91.00
+    35.227531334    31,28,80,28,179      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.86%)
+    35.227531334    39,73,93,01,541      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    39.75 tma_info_system_average_frequency  (33.14%)
+    35.227531334    31,29,11,08,103      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.14%)
+    35.227531334    31,29,85,34,230      TSC                                                                   
+    35.227531334     1,00,80,01,502 ns   duration_time                                                         
+    35.227531334    20,41,67,95,197      cpu_atom/INST_RETIRED.ANY/                                              (66.86%)
+    35.227531334    47,02,17,36,227      cpu_core/INST_RETIRED.ANY/       #     1.18 tma_info_thread_ipc         (33.14%)
+    35.227531334    39,73,36,75,188      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.14%)
+    35.227531334     1,00,80,01,502 ns   duration_time                                                         
+    35.227531334    31,37,51,23,592      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.06 tma_info_system_kernel_utilization  (66.86%)
+    35.227531334     1,75,58,09,157      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.86%)
+    35.227531334     1,00,80,01,502 ns   duration_time                                                         
+    35.227531334    47,02,14,06,720      cpu_core/INST_RETIRED.ANY/       # 47021406720.00 tma_info_inst_mix_instructions  (33.14%)
+    35.227531334     1,00,80,01,502 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  2.85  2.62  3.31 17.40  5.18  2.46   27.05  20.00  53.05  91.05  92.00  42.05  64.05  40.00  91.00
+    36.235532720    31,24,29,08,163      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.92%)
+    36.235532720    39,80,65,26,386      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    39.82 tma_info_system_average_frequency  (33.08%)
+    36.235532720    31,24,70,22,952      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.08%)
+    36.235532720    31,25,63,90,994      TSC                                                                   
+    36.235532720     1,00,80,01,386 ns   duration_time                                                         
+    36.235532720    20,51,43,67,513      cpu_atom/INST_RETIRED.ANY/                                              (66.92%)
+    36.235532720    47,27,43,07,642      cpu_core/INST_RETIRED.ANY/       #     1.19 tma_info_thread_ipc         (33.08%)
+    36.235532720    39,80,65,51,851      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.08%)
+    36.235532720     1,00,80,01,386 ns   duration_time                                                         
+    36.235532720    31,45,21,50,460      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.06 tma_info_system_kernel_utilization  (66.92%)
+    36.235532720     1,73,98,41,663      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.92%)
+    36.235532720     1,00,80,01,386 ns   duration_time                                                         
+    36.235532720    47,27,42,12,531      cpu_core/INST_RETIRED.ANY/       # 47274212531.00 tma_info_inst_mix_instructions  (33.08%)
+    36.235532720     1,00,80,01,386 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  2.83  2.60  3.30 17.40  5.18  2.46   27.05  20.00  54.05  92.05  91.00  42.05  64.05  42.00  92.00
+    37.239525635    30,94,20,48,485      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (67.28%)
+    37.239525635    39,40,45,99,632      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    39.42 tma_info_system_average_frequency  (32.72%)
+    37.239525635    30,94,37,45,354      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (32.72%)
+    37.239525635    30,95,63,69,454      TSC                                                                   
+    37.239525635     1,00,39,92,915 ns   duration_time                                                         
+    37.239525635    20,29,13,66,488      cpu_atom/INST_RETIRED.ANY/                                              (67.28%)
+    37.239525635    47,10,01,64,781      cpu_core/INST_RETIRED.ANY/       #     1.20 tma_info_thread_ipc         (32.72%)
+    37.239525635    39,40,75,50,973      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (32.72%)
+    37.239525635     1,00,39,92,915 ns   duration_time                                                         
+    37.239525635    31,13,03,70,462      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.06 tma_info_system_kernel_utilization  (67.28%)
+    37.239525635     1,71,45,57,479      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (67.28%)
+    37.239525635     1,00,39,92,915 ns   duration_time                                                         
+    37.239525635    47,10,04,28,518      cpu_core/INST_RETIRED.ANY/       # 47100428518.00 tma_info_inst_mix_instructions  (32.72%)
+    37.239525635     1,00,39,92,915 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  2.92  2.68  3.38 18.89  5.69  2.64   27.05  20.00  54.05  92.05  92.00  42.05  63.05  41.00  91.00
+    38.242749549    31,15,59,40,828      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.90%)
+    38.242749549    39,60,65,41,111      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    39.62 tma_info_system_average_frequency  (33.10%)
+    38.242749549    31,16,14,93,907      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.10%)
+    38.242749549    31,17,01,36,358      TSC                                                                   
+    38.242749549     1,00,32,23,914 ns   duration_time                                                         
+    38.242749549    20,37,17,99,442      cpu_atom/INST_RETIRED.ANY/                                              (66.90%)
+    38.242749549    47,05,35,54,922      cpu_core/INST_RETIRED.ANY/       #     1.19 tma_info_thread_ipc         (33.10%)
+    38.242749549    39,60,35,53,487      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.10%)
+    38.242749549     1,00,32,23,914 ns   duration_time                                                         
+    38.242749549    31,27,46,02,031      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.06 tma_info_system_kernel_utilization  (66.91%)
+    38.242749549     1,73,50,33,039      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.91%)
+    38.242749549     1,00,32,23,914 ns   duration_time                                                         
+    38.242749549    47,05,32,55,038      cpu_core/INST_RETIRED.ANY/       # 47053255038.00 tma_info_inst_mix_instructions  (33.10%)
+    38.242749549     1,00,32,23,914 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  2.84  2.61  3.31 18.89  5.69  2.64   27.05  20.00  54.05  92.05  91.00  43.05  64.05  41.00  91.00
+    39.247532547    31,11,79,66,865      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.77%)
+    39.247532547    39,50,44,40,649      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    39.52 tma_info_system_average_frequency  (33.23%)
+    39.247532547    31,12,20,01,019      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.23%)
+    39.247532547    31,13,17,32,772      TSC                                                                   
+    39.247532547     1,00,47,82,998 ns   duration_time                                                         
+    39.247532547    20,38,73,79,503      cpu_atom/INST_RETIRED.ANY/                                              (66.77%)
+    39.247532547    46,82,04,86,364      cpu_core/INST_RETIRED.ANY/       #     1.19 tma_info_thread_ipc         (33.23%)
+    39.247532547    39,50,41,61,304      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.23%)
+    39.247532547     1,00,47,82,998 ns   duration_time                                                         
+    39.247532547    31,18,29,37,673      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.06 tma_info_system_kernel_utilization  (66.77%)
+    39.247532547     1,75,07,12,304      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.77%)
+    39.247532547     1,00,47,82,998 ns   duration_time                                                         
+    39.247532547    46,82,03,17,998      cpu_core/INST_RETIRED.ANY/       # 46820317998.00 tma_info_inst_mix_instructions  (33.23%)
+    39.247532547     1,00,47,82,998 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  2.76  2.52  3.22 18.89  5.69  2.64   27.05  20.00  54.05  92.05  91.00  42.05  64.05  40.00  91.00
+    40.255532396    31,17,76,47,809      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.61%)
+    40.255532396    39,57,03,81,349      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    39.58 tma_info_system_average_frequency  (33.39%)
+    40.255532396    31,18,50,92,308      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.39%)
+    40.255532396    31,19,30,24,998      TSC                                                                   
+    40.255532396     1,00,79,99,849 ns   duration_time                                                         
+    40.255532396    20,46,97,02,037      cpu_atom/INST_RETIRED.ANY/                                              (66.61%)
+    40.255532396    46,74,24,55,942      cpu_core/INST_RETIRED.ANY/       #     1.18 tma_info_thread_ipc         (33.39%)
+    40.255532396    39,57,06,82,388      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.39%)
+    40.255532396     1,00,79,99,849 ns   duration_time                                                         
+    40.255532396    31,22,93,67,117      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.06 tma_info_system_kernel_utilization  (66.61%)
+    40.255532396     1,75,66,37,057      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.61%)
+    40.255532396     1,00,79,99,849 ns   duration_time                                                         
+    40.255532396    46,74,28,12,474      cpu_core/INST_RETIRED.ANY/       # 46742812474.00 tma_info_inst_mix_instructions  (33.39%)
+    40.255532396     1,00,79,99,849 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  2.93  2.70  3.40 18.89  5.69  2.64   27.05  20.00  54.05  92.05  92.00  43.05  64.05  41.00  91.00
+    41.259545654    31,11,04,49,811      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.76%)
+    41.259545654    38,77,10,72,675      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    38.78 tma_info_system_average_frequency  (33.24%)
+    41.259545654    31,11,65,73,145      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.24%)
+    41.259545654    31,12,66,93,296      TSC                                                                   
+    41.259545654     1,00,40,13,258 ns   duration_time                                                         
+    41.259545654    19,92,71,78,409      cpu_atom/INST_RETIRED.ANY/                                              (66.76%)
+    41.259545654    45,96,58,83,954      cpu_core/INST_RETIRED.ANY/       #     1.19 tma_info_thread_ipc         (33.24%)
+    41.259545654    38,77,18,62,479      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.24%)
+    41.259545654     1,00,40,13,258 ns   duration_time                                                         
+    41.259545654    30,44,60,16,481      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.06 tma_info_system_kernel_utilization  (66.76%)
+    41.259545654     1,73,99,83,604      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.76%)
+    41.259545654     1,00,40,13,258 ns   duration_time                                                         
+    41.259545654    45,96,58,65,626      cpu_core/INST_RETIRED.ANY/       # 45965865626.00 tma_info_inst_mix_instructions  (33.24%)
+    41.259545654     1,00,40,13,258 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  2.23  2.00  2.70 18.89  5.69  2.64   27.05  20.00  54.05  90.05  82.00  42.05  64.05  41.00  82.00
+    42.261418410    31,04,78,02,462      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.58%)
+    42.261418410    31,80,81,70,386      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    31.82 tma_info_system_average_frequency  (33.42%)
+    42.261418410    31,05,38,74,808      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.42%)
+    42.261418410    31,06,41,70,156      TSC                                                                   
+    42.261418410     1,00,18,72,756 ns   duration_time                                                         
+    42.261418410    15,72,39,26,468      cpu_atom/INST_RETIRED.ANY/                                              (66.58%)
+    42.261418410    37,54,66,87,163      cpu_core/INST_RETIRED.ANY/       #     1.18 tma_info_thread_ipc         (33.42%)
+    42.261418410    31,80,74,17,631      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.42%)
+    42.261418410     1,00,18,72,756 ns   duration_time                                                         
+    42.261418410    24,03,97,97,285      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.06 tma_info_system_kernel_utilization  (66.58%)
+    42.261418410     1,41,05,95,424      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.58%)
+    42.261418410     1,00,18,72,756 ns   duration_time                                                         
+    42.261418410    37,54,66,29,914      cpu_core/INST_RETIRED.ANY/       # 37546629914.00 tma_info_inst_mix_instructions  (33.42%)
+    42.261418410     1,00,18,72,756 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  2.20  2.00  2.60 20.34  6.21  2.83   28.05  20.00  54.05  82.05  81.00  42.05  63.05  41.00  81.00
+    43.264831318    31,17,48,32,000      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.97%)
+    43.264831318    31,88,82,28,618      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    31.90 tma_info_system_average_frequency  (33.03%)
+    43.264831318    31,18,19,08,351      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.03%)
+    43.264831318    31,19,13,64,552      TSC                                                                   
+    43.264831318     1,00,34,12,908 ns   duration_time                                                         
+    43.264831318    15,45,62,00,100      cpu_atom/INST_RETIRED.ANY/                                              (66.97%)
+    43.264831318    37,66,19,03,888      cpu_core/INST_RETIRED.ANY/       #     1.18 tma_info_thread_ipc         (33.03%)
+    43.264831318    31,88,82,40,347      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.03%)
+    43.264831318     1,00,34,12,908 ns   duration_time                                                         
+    43.264831318    23,82,28,54,995      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.06 tma_info_system_kernel_utilization  (66.97%)
+    43.264831318     1,37,08,57,353      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.97%)
+    43.264831318     1,00,34,12,908 ns   duration_time                                                         
+    43.264831318    37,66,18,95,485      cpu_core/INST_RETIRED.ANY/       # 37661895485.00 tma_info_inst_mix_instructions  (33.03%)
+    43.264831318     1,00,34,12,908 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  2.22  2.00  2.65 20.34  6.21  2.83   28.05  20.00  54.05  81.05  81.00  42.05  62.05  41.00  81.00
+    44.266794539    31,01,07,12,203      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.86%)
+    44.266794539    31,76,45,05,964      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    31.77 tma_info_system_average_frequency  (33.14%)
+    44.266794539    31,01,79,33,811      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.14%)
+    44.266794539    31,02,81,41,782      TSC                                                                   
+    44.266794539     1,00,19,63,221 ns   duration_time                                                         
+    44.266794539    15,47,10,53,412      cpu_atom/INST_RETIRED.ANY/                                              (66.86%)
+    44.266794539    37,56,48,23,826      cpu_core/INST_RETIRED.ANY/       #     1.18 tma_info_thread_ipc         (33.14%)
+    44.266794539    31,76,41,50,869      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.14%)
+    44.266794539     1,00,19,63,221 ns   duration_time                                                         
+    44.266794539    23,69,73,75,735      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.06 tma_info_system_kernel_utilization  (66.86%)
+    44.266794539     1,39,48,14,378      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.86%)
+    44.266794539     1,00,19,63,221 ns   duration_time                                                         
+    44.266794539    37,56,47,16,363      cpu_core/INST_RETIRED.ANY/       # 37564716363.00 tma_info_inst_mix_instructions  (33.14%)
+    44.266794539     1,00,19,63,221 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  2.20  2.00  2.60 20.34  6.21  2.83   27.05  20.00  55.05  80.05  80.00  42.05  62.05  41.00  80.00
+    45.279561675    31,46,90,03,732      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.93%)
+    45.279561675    31,63,85,23,932      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    31.65 tma_info_system_average_frequency  (33.07%)
+    45.279561675    31,47,53,77,510      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.07%)
+    45.279561675    31,48,59,55,300      TSC                                                                   
+    45.279561675     1,01,27,67,136 ns   duration_time                                                         
+    45.279561675    15,39,48,22,330      cpu_atom/INST_RETIRED.ANY/                                              (66.93%)
+    45.279561675    37,48,33,16,103      cpu_core/INST_RETIRED.ANY/       #     1.18 tma_info_thread_ipc         (33.07%)
+    45.279561675    31,63,86,94,396      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.07%)
+    45.279561675     1,01,27,67,136 ns   duration_time                                                         
+    45.279561675    23,69,91,81,659      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.06 tma_info_system_kernel_utilization  (66.93%)
+    45.279561675     1,37,11,21,965      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.93%)
+    45.279561675     1,01,27,67,136 ns   duration_time                                                         
+    45.279561675    37,48,32,62,488      cpu_core/INST_RETIRED.ANY/       # 37483262488.00 tma_info_inst_mix_instructions  (33.07%)
+    45.279561675     1,01,27,67,136 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  2.00  1.80  2.40 20.34  6.21  2.83   27.05  20.00  55.05  79.05  77.00  42.05  62.05  41.00  77.00
+    46.283996797    31,23,56,65,994      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.90%)
+    46.283996797    28,31,88,34,024      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    28.33 tma_info_system_average_frequency  (33.10%)
+    46.283996797    31,24,27,39,313      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.10%)
+    46.283996797    31,25,40,55,530      TSC                                                                   
+    46.283996797     1,00,44,35,122 ns   duration_time                                                         
+    46.283996797    13,76,42,95,160      cpu_atom/INST_RETIRED.ANY/                                              (66.90%)
+    46.283996797    33,36,15,54,156      cpu_core/INST_RETIRED.ANY/       #     1.18 tma_info_thread_ipc         (33.10%)
+    46.283996797    28,31,89,90,513      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.10%)
+    46.283996797     1,00,44,35,122 ns   duration_time                                                         
+    46.283996797    21,20,48,80,650      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.06 tma_info_system_kernel_utilization  (66.90%)
+    46.283996797     1,28,17,58,105      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.90%)
+    46.283996797     1,00,44,35,122 ns   duration_time                                                         
+    46.283996797    33,36,15,42,937      cpu_core/INST_RETIRED.ANY/       # 33361542937.00 tma_info_inst_mix_instructions  (33.10%)
+    46.283996797     1,00,44,35,122 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  1.95  1.75  2.35 20.34  6.21  2.83   28.05  20.00  55.05  77.05  77.00  43.05  61.05  41.00  77.00
+    47.284852367    31,08,71,06,208      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (66.99%)
+    47.284852367    28,10,02,46,188      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    28.11 tma_info_system_average_frequency  (33.01%)
+    47.284852367    31,09,31,63,136      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (33.01%)
+    47.284852367    31,10,54,08,708      TSC                                                                   
+    47.284852367     1,00,08,55,570 ns   duration_time                                                         
+    47.284852367    13,62,54,07,608      cpu_atom/INST_RETIRED.ANY/                                              (66.99%)
+    47.284852367    33,17,11,69,226      cpu_core/INST_RETIRED.ANY/       #     1.18 tma_info_thread_ipc         (33.01%)
+    47.284852367    28,10,02,06,368      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (33.01%)
+    47.284852367     1,00,08,55,570 ns   duration_time                                                         
+    47.284852367    21,01,28,85,632      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.06 tma_info_system_kernel_utilization  (66.99%)
+    47.284852367     1,26,65,51,729      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (66.99%)
+    47.284852367     1,00,08,55,570 ns   duration_time                                                         
+    47.284852367    33,17,11,57,537      cpu_core/INST_RETIRED.ANY/       # 33171157537.00 tma_info_inst_mix_instructions  (33.01%)
+    47.284852367     1,00,08,55,570 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  1.94  1.75  2.35 21.83  6.76  3.02   28.05  20.00  55.05  76.05  76.00  42.05  62.05  41.00  76.00
+    48.287207040    28,94,29,85,180      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (72.04%)
+    48.287207040    25,63,95,57,505      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    25.65 tma_info_system_average_frequency  (27.96%)
+    48.287207040    28,94,96,37,395      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (27.96%)
+    48.287207040    28,96,00,98,034      TSC                                                                   
+    48.287207040     1,00,23,54,673 ns   duration_time                                                         
+    48.287207040    12,32,81,31,384      cpu_atom/INST_RETIRED.ANY/                                              (72.04%)
+    48.287207040    33,27,86,69,384      cpu_core/INST_RETIRED.ANY/       #     1.30 tma_info_thread_ipc         (27.96%)
+    48.287207040    25,63,95,28,093      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (27.96%)
+    48.287207040     1,00,23,54,673 ns   duration_time                                                         
+    48.287207040    18,99,23,95,557      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.06 tma_info_system_kernel_utilization  (72.04%)
+    48.287207040     1,13,13,79,935      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (72.04%)
+    48.287207040     1,00,23,54,673 ns   duration_time                                                         
+    48.287207040    33,27,76,84,157      cpu_core/INST_RETIRED.ANY/       # 33277684157.00 tma_info_inst_mix_instructions  (27.97%)
+    48.287207040     1,00,23,54,673 ns   duration_time                                                         
+stress-ng: info:  [235422] therm:  1.94  1.73  2.35 21.83  6.76  3.02   28.05  20.00  55.05  76.05  76.00  43.05  61.05  41.00  76.00
+    49.291164701    30,57,30,86,184      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (67.95%)
+    49.291164701    27,63,81,68,090      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    27.65 tma_info_system_average_frequency  (32.05%)
+    49.291164701    30,57,97,22,500      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     1.00 tma_info_system_cpu_utilization  (32.05%)
+    49.291164701    30,59,17,00,304      TSC                                                                   
+    49.291164701     1,00,39,57,661 ns   duration_time                                                         
+    49.291164701    13,43,92,33,229      cpu_atom/INST_RETIRED.ANY/                                              (67.95%)
+    49.291164701    33,10,34,16,952      cpu_core/INST_RETIRED.ANY/       #     1.20 tma_info_thread_ipc         (32.05%)
+    49.291164701    27,63,81,59,971      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (32.05%)
+    49.291164701     1,00,39,57,661 ns   duration_time                                                         
+    49.291164701    20,59,94,36,984      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.06 tma_info_system_kernel_utilization  (67.95%)
+    49.291164701     1,22,23,43,923      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (67.95%)
+    49.291164701     1,00,39,57,661 ns   duration_time                                                         
+    49.291164701    33,10,35,25,730      cpu_core/INST_RETIRED.ANY/       # 33103525730.00 tma_info_inst_mix_instructions  (32.05%)
+    49.291164701     1,00,39,57,661 ns   duration_time                                                         
+stress-ng: info:  [235421] skipped: 0
+stress-ng: info:  [235421] passed: 35: matrix (35)
+stress-ng: info:  [235421] failed: 0
+stress-ng: info:  [235421] metrics untrustworthy: 0
+stress-ng: info:  [235421] successful run completed in 50.03 secs
+    50.045124143    16,69,21,58,755      cpu_atom/CPU_CLK_UNHALTED.REF_TSC/                                        (91.80%)
+    50.045124143     9,42,48,79,513      cpu_core/CPU_CLK_UNHALTED.THREAD/ #    20.87 tma_info_system_average_frequency  (73.49%)
+    50.045124143    10,36,32,11,096      cpu_core/CPU_CLK_UNHALTED.REF_TSC/ #     0.45 tma_info_system_cpu_utilization  (73.49%)
+    50.045124143    22,94,96,95,448      TSC                                                                   
+    50.045124143       75,39,59,442 ns   duration_time                                                         
+    50.045124143     7,45,15,63,552      cpu_atom/INST_RETIRED.ANY/                                              (91.80%)
+    50.045124143    11,12,60,52,529      cpu_core/INST_RETIRED.ANY/       #     1.18 tma_info_thread_ipc         (73.49%)
+    50.045124143     9,42,40,05,256      cpu_core/CPU_CLK_UNHALTED.THREAD/                                        (73.49%)
+    50.045124143       75,39,59,442 ns   duration_time                                                         
+    50.045124143    11,37,29,80,312      cpu_atom/CPU_CLK_UNHALTED.CORE/  #     0.06 tma_info_system_kernel_utilization  (91.80%)
+    50.045124143       69,73,54,635      cpu_atom/CPU_CLK_UNHALTED.CORE/k                                        (91.80%)
+    50.045124143       75,39,59,442 ns   duration_time                                                         
+    50.045124143    11,12,53,39,422      cpu_core/INST_RETIRED.ANY/       # 11125339422.00 tma_info_inst_mix_instructions  (73.49%)
+    50.045124143       75,39,59,442 ns   duration_time                     
