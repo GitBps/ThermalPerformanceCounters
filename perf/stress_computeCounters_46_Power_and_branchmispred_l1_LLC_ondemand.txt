@@ -1,0 +1,1502 @@
+(base) drdang@drdang-Inspiron-14-7430-2-in-1:~/phD/thesis/tools/perf$ sudo /home/drdang/phD/thesis/linux-6.6.8/tools/perf/perf stat -a -I 1000 -e power/energy-pkg/,power/energy-cores/,dTLB-loads,dTLB-load-misses,L1-dcache-loads,L1-dcache-stores,LLC-loads,LLC-load-misses  /usr/bin/stress-ng  --branch 4  --timeout 100  --thermalstat 1
+stress-ng: info:  [34996] setting to a 1 min, 40 secs run per stressor
+stress-ng: info:  [34996] dispatching hogs: 4 branch
+#           time             counts   unit events
+     1.001080492              28.52 Joules power/energy-pkg/                                                     
+     1.001080492              25.12 Joules power/energy-cores/                                                   
+     1.001080492       70,18,97,857        cpu_atom/dTLB-loads/                                                  
+     1.001080492       35,35,33,984        cpu_core/dTLB-loads/                                                    (66.60%)
+     1.001080492           4,50,838        cpu_atom/dTLB-load-misses/       #    0.06% of all dTLB cache accesses
+     1.001080492             74,331        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.62%)
+     1.001080492       70,18,98,857        cpu_atom/L1-dcache-loads/                                             
+     1.001080492       35,06,88,195        cpu_core/L1-dcache-loads/                                               (66.60%)
+     1.001080492       18,10,24,395        cpu_atom/L1-dcache-stores/                                            
+     1.001080492        3,44,81,002        cpu_core/L1-dcache-stores/                                              (66.70%)
+     1.001080492          12,02,276        cpu_atom/LLC-loads/                                                   
+     1.001080492           2,44,173        cpu_core/LLC-loads/                                                     (66.80%)
+     1.001080492             12,759        cpu_atom/LLC-load-misses/        #    1.06% of all L1-icache accesses 
+     1.001080492             33,337        cpu_core/LLC-load-misses/        #    2.77% of all L1-icache accesses   (66.68%)
+stress-ng: info:  [34997] therm: AvGHz MnGHz MxGHz  LdA1  LdA5 LdA15    AMBF INT340   NGFF   TCPU TCPU_P   TMEM   TSKN iwlwif x86_pk
+stress-ng: info:  [34997] therm:  2.93  0.40  4.70  0.61  0.60  0.65   29.05  20.00  48.05  67.05  86.00  45.05  50.05  43.00  86.00
+stress-ng: info:  [34997] therm:  2.90  0.40  4.70  0.61  0.60  0.65   29.05  20.00  47.05  85.05  84.00  45.05  52.05  42.00  83.00
+     2.018378942              29.80 Joules power/energy-pkg/                                                     
+     2.018378942              26.27 Joules power/energy-cores/                                                   
+     2.018378942       49,22,44,887        cpu_atom/dTLB-loads/                                                  
+     2.018378942       35,18,20,978        cpu_core/dTLB-loads/                                                    (66.50%)
+     2.018378942           1,29,640        cpu_atom/dTLB-load-misses/       #    0.03% of all dTLB cache accesses
+     2.018378942             46,104        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.83%)
+     2.018378942       49,22,44,910        cpu_atom/L1-dcache-loads/                                             
+     2.018378942       35,57,05,797        cpu_core/L1-dcache-loads/                                               (66.94%)
+     2.018378942        6,65,42,121        cpu_atom/L1-dcache-stores/                                            
+     2.018378942        1,15,35,869        cpu_core/L1-dcache-stores/                                              (66.85%)
+     2.018378942           3,10,456        cpu_atom/LLC-loads/                                                   
+     2.018378942             62,084        cpu_core/LLC-loads/                                                     (66.56%)
+     2.018378942              5,424        cpu_atom/LLC-load-misses/        #    1.75% of all L1-icache accesses 
+     2.018378942              6,567        cpu_core/LLC-load-misses/        #    2.12% of all L1-icache accesses   (66.32%)
+stress-ng: info:  [34997] therm:  2.44  0.40  4.70  0.61  0.60  0.65   29.05  20.00  47.05  87.05  85.00  45.05  53.05  43.00  85.00
+     3.034321204              30.16 Joules power/energy-pkg/                                                     
+     3.034321204              26.30 Joules power/energy-cores/                                                   
+     3.034321204       49,94,91,616        cpu_atom/dTLB-loads/                                                  
+     3.034321204       34,94,18,208        cpu_core/dTLB-loads/                                                    (66.63%)
+     3.034321204           1,53,548        cpu_atom/dTLB-load-misses/       #    0.03% of all dTLB cache accesses
+     3.034321204             38,979        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.38%)
+     3.034321204       49,94,91,600        cpu_atom/L1-dcache-loads/                                             
+     3.034321204       34,87,19,992        cpu_core/L1-dcache-loads/                                               (66.47%)
+     3.034321204        7,06,33,952        cpu_atom/L1-dcache-stores/                                            
+     3.034321204          92,59,167        cpu_core/L1-dcache-stores/                                              (66.70%)
+     3.034321204           3,37,968        cpu_atom/LLC-loads/                                                   
+     3.034321204             61,721        cpu_core/LLC-loads/                                                     (66.90%)
+     3.034321204              3,992        cpu_atom/LLC-load-misses/        #    1.18% of all L1-icache accesses 
+     3.034321204              7,853        cpu_core/LLC-load-misses/        #    2.32% of all L1-icache accesses   (66.92%)
+stress-ng: info:  [34997] therm:  2.93  0.40  4.70  0.61  0.60  0.65   29.05  20.00  47.05  88.05  91.00  45.05  55.05  43.00  91.00
+     4.054378986              30.46 Joules power/energy-pkg/                                                     
+     4.054378986              26.56 Joules power/energy-cores/                                                   
+     4.054378986       42,39,38,871        cpu_atom/dTLB-loads/                                                  
+     4.054378986       43,39,03,471        cpu_core/dTLB-loads/                                                    (66.89%)
+     4.054378986           1,16,992        cpu_atom/dTLB-load-misses/       #    0.03% of all dTLB cache accesses
+     4.054378986             60,273        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.93%)
+     4.054378986       42,39,38,866        cpu_atom/L1-dcache-loads/                                             
+     4.054378986       42,46,64,057        cpu_core/L1-dcache-loads/                                               (66.72%)
+     4.054378986        3,28,56,762        cpu_atom/L1-dcache-stores/                                            
+     4.054378986        4,29,03,886        cpu_core/L1-dcache-stores/                                              (66.50%)
+     4.054378986           2,39,546        cpu_atom/LLC-loads/                                                   
+     4.054378986           2,01,978        cpu_core/LLC-loads/                                                     (66.39%)
+     4.054378986              9,407        cpu_atom/LLC-load-misses/        #    3.93% of all L1-icache accesses 
+     4.054378986             34,434        cpu_core/LLC-load-misses/        #   14.37% of all L1-icache accesses   (66.57%)
+stress-ng: info:  [34997] therm:  2.75  0.40  4.70  0.61  0.60  0.65   29.05  20.00  48.05  90.05  90.00  45.05  56.05  43.00  90.00
+     5.070308230              30.00 Joules power/energy-pkg/                                                     
+     5.070308230              26.22 Joules power/energy-cores/                                                   
+     5.070308230       42,04,19,132        cpu_atom/dTLB-loads/                                                  
+     5.070308230       41,18,59,222        cpu_core/dTLB-loads/                                                    (66.31%)
+     5.070308230           1,34,654        cpu_atom/dTLB-load-misses/       #    0.03% of all dTLB cache accesses
+     5.070308230             56,458        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.51%)
+     5.070308230       42,04,19,157        cpu_atom/L1-dcache-loads/                                             
+     5.070308230       42,37,58,744        cpu_core/L1-dcache-loads/                                               (66.83%)
+     5.070308230        2,96,88,928        cpu_atom/L1-dcache-stores/                                            
+     5.070308230        5,46,71,084        cpu_core/L1-dcache-stores/                                              (66.93%)
+     5.070308230           2,01,960        cpu_atom/LLC-loads/                                                   
+     5.070308230           2,22,449        cpu_core/LLC-loads/                                                     (66.86%)
+     5.070308230              4,925        cpu_atom/LLC-load-misses/        #    2.44% of all L1-icache accesses 
+     5.070308230             52,883        cpu_core/LLC-load-misses/        #   26.18% of all L1-icache accesses   (66.56%)
+stress-ng: info:  [34997] therm:  3.18  0.40  4.70  0.88  0.66  0.67   29.05  20.00  48.05  91.05  90.00  44.05  58.05  43.00  90.00
+     6.086335701              30.50 Joules power/energy-pkg/                                                     
+     6.086335701              26.68 Joules power/energy-cores/                                                   
+     6.086335701       51,88,45,354        cpu_atom/dTLB-loads/                                                  
+     6.086335701       36,84,18,816        cpu_core/dTLB-loads/                                                    (66.98%)
+     6.086335701           2,16,910        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+     6.086335701             53,533        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.71%)
+     6.086335701       51,88,45,375        cpu_atom/L1-dcache-loads/                                             
+     6.086335701       36,65,89,957        cpu_core/L1-dcache-loads/                                               (66.36%)
+     6.086335701        7,91,73,368        cpu_atom/L1-dcache-stores/                                            
+     6.086335701          95,16,885        cpu_core/L1-dcache-stores/                                              (66.36%)
+     6.086335701           8,68,253        cpu_atom/LLC-loads/                                                   
+     6.086335701             52,873        cpu_core/LLC-loads/                                                     (66.66%)
+     6.086335701             42,925        cpu_atom/LLC-load-misses/        #    4.94% of all L1-icache accesses 
+     6.086335701              5,849        cpu_core/LLC-load-misses/        #    0.67% of all L1-icache accesses   (66.94%)
+stress-ng: info:  [34997] therm:  2.55  0.40  4.70  0.88  0.66  0.67   29.05  20.00  48.05  91.05  91.00  45.05  58.05  43.00  91.00
+     7.106307489              29.39 Joules power/energy-pkg/                                                     
+     7.106307489              25.55 Joules power/energy-cores/                                                   
+     7.106307489       49,49,18,856        cpu_atom/dTLB-loads/                                                  
+     7.106307489       35,76,85,070        cpu_core/dTLB-loads/                                                    (66.36%)
+     7.106307489           2,00,449        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+     7.106307489             52,683        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.66%)
+     7.106307489       49,49,18,837        cpu_atom/L1-dcache-loads/                                             
+     7.106307489       34,63,94,340        cpu_core/L1-dcache-loads/                                               (66.97%)
+     7.106307489        7,29,69,722        cpu_atom/L1-dcache-stores/                                            
+     7.106307489        1,29,82,139        cpu_core/L1-dcache-stores/                                              (66.96%)
+     7.106307489           4,04,064        cpu_atom/LLC-loads/                                                   
+     7.106307489             77,955        cpu_core/LLC-loads/                                                     (66.67%)
+     7.106307489              9,871        cpu_atom/LLC-load-misses/        #    2.44% of all L1-icache accesses 
+     7.106307489             13,431        cpu_core/LLC-load-misses/        #    3.32% of all L1-icache accesses   (66.37%)
+stress-ng: info:  [34997] therm:  3.13  0.40  4.69  0.88  0.66  0.67   29.05  20.00  48.05  91.05  91.00  45.05  58.05  43.00  92.00
+     8.126334568              29.04 Joules power/energy-pkg/                                                     
+     8.126334568              25.20 Joules power/energy-cores/                                                   
+     8.126334568       49,96,22,308        cpu_atom/dTLB-loads/                                                  
+     8.126334568       34,79,25,272        cpu_core/dTLB-loads/                                                    (66.92%)
+     8.126334568           2,21,186        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+     8.126334568             57,838        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.61%)
+     8.126334568       49,96,22,326        cpu_atom/L1-dcache-loads/                                             
+     8.126334568       35,33,31,365        cpu_core/L1-dcache-loads/                                               (66.37%)
+     8.126334568        7,73,53,007        cpu_atom/L1-dcache-stores/                                            
+     8.126334568          95,05,577        cpu_core/L1-dcache-stores/                                              (66.48%)
+     8.126334568           4,34,782        cpu_atom/LLC-loads/                                                   
+     8.126334568             66,575        cpu_core/LLC-loads/                                                     (66.71%)
+     8.126334568              8,740        cpu_atom/LLC-load-misses/        #    2.01% of all L1-icache accesses 
+     8.126334568              7,743        cpu_core/LLC-load-misses/        #    1.78% of all L1-icache accesses   (66.91%)
+stress-ng: info:  [34997] therm:  3.42  0.40  4.70  0.88  0.66  0.67   29.05  20.00  48.05  91.05  90.00  45.05  59.05  43.00  89.00
+     9.146343242              28.87 Joules power/energy-pkg/                                                     
+     9.146343242              25.02 Joules power/energy-cores/                                                   
+     9.146343242       49,81,01,457        cpu_atom/dTLB-loads/                                                  
+     9.146343242       36,27,51,833        cpu_core/dTLB-loads/                                                    (66.53%)
+     9.146343242           2,33,676        cpu_atom/dTLB-load-misses/       #    0.05% of all dTLB cache accesses
+     9.146343242             58,959        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.76%)
+     9.146343242       49,81,01,438        cpu_atom/L1-dcache-loads/                                             
+     9.146343242       36,66,73,290        cpu_core/L1-dcache-loads/                                               (66.89%)
+     9.146343242        7,90,18,964        cpu_atom/L1-dcache-stores/                                            
+     9.146343242        1,02,93,463        cpu_core/L1-dcache-stores/                                              (66.81%)
+     9.146343242           4,50,282        cpu_atom/LLC-loads/                                                   
+     9.146343242             79,329        cpu_core/LLC-loads/                                                     (66.58%)
+     9.146343242              7,562        cpu_atom/LLC-load-misses/        #    1.68% of all L1-icache accesses 
+     9.146343242             15,644        cpu_core/LLC-load-misses/        #    3.47% of all L1-icache accesses   (66.43%)
+stress-ng: info:  [34997] therm:  3.10  0.40  4.63  0.88  0.66  0.67   29.05  20.00  48.05  91.05  92.00  45.05  59.05  43.00  90.00
+    10.166304459              28.57 Joules power/energy-pkg/                                                     
+    10.166304459              24.70 Joules power/energy-cores/                                                   
+    10.166304459       60,35,69,841        cpu_atom/dTLB-loads/                                                  
+    10.166304459       35,98,97,871        cpu_core/dTLB-loads/                                                    (66.82%)
+    10.166304459           6,24,382        cpu_atom/dTLB-load-misses/       #    0.10% of all dTLB cache accesses
+    10.166304459             69,788        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.68%)
+    10.166304459       60,35,69,866        cpu_atom/L1-dcache-loads/                                             
+    10.166304459       36,94,23,311        cpu_core/L1-dcache-loads/                                               (66.47%)
+    10.166304459       14,06,68,327        cpu_atom/L1-dcache-stores/                                            
+    10.166304459        1,44,64,712        cpu_core/L1-dcache-stores/                                              (66.50%)
+    10.166304459          11,18,536        cpu_atom/LLC-loads/                                                   
+    10.166304459           1,27,539        cpu_core/LLC-loads/                                                     (66.71%)
+    10.166304459             15,030        cpu_atom/LLC-load-misses/        #    1.34% of all L1-icache accesses 
+    10.166304459              8,679        cpu_core/LLC-load-misses/        #    0.78% of all L1-icache accesses   (66.82%)
+stress-ng: info:  [34997] therm:  3.09  0.40  4.61  1.13  0.72  0.69   29.05  20.00  48.05  91.05  93.00  45.05  61.05  43.00  92.00
+    11.190332154              27.50 Joules power/energy-pkg/                                                     
+    11.190332154              23.64 Joules power/energy-cores/                                                   
+    11.190332154       51,35,98,933        cpu_atom/dTLB-loads/                                                  
+    11.190332154       36,58,07,359        cpu_core/dTLB-loads/                                                    (66.39%)
+    11.190332154           1,99,371        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    11.190332154             57,503        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.58%)
+    11.190332154       51,35,98,909        cpu_atom/L1-dcache-loads/                                             
+    11.190332154       36,13,58,192        cpu_core/L1-dcache-loads/                                               (66.90%)
+    11.190332154        9,37,32,294        cpu_atom/L1-dcache-stores/                                            
+    11.190332154          99,49,547        cpu_core/L1-dcache-stores/                                              (66.90%)
+    11.190332154           4,50,684        cpu_atom/LLC-loads/                                                   
+    11.190332154             58,479        cpu_core/LLC-loads/                                                     (66.71%)
+    11.190332154              8,858        cpu_atom/LLC-load-misses/        #    1.97% of all L1-icache accesses 
+    11.190332154              4,118        cpu_core/LLC-load-misses/        #    0.91% of all L1-icache accesses   (66.52%)
+stress-ng: info:  [34997] therm:  3.13  0.40  4.65  1.13  0.72  0.69   29.05  20.00  49.05  91.05  93.00  45.05  61.05  43.00  92.00
+    12.206311273              27.26 Joules power/energy-pkg/                                                     
+    12.206311273              23.38 Joules power/energy-cores/                                                   
+    12.206311273       39,96,12,163        cpu_atom/dTLB-loads/                                                  
+    12.206311273       45,56,15,989        cpu_core/dTLB-loads/                                                    (66.92%)
+    12.206311273           1,64,631        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    12.206311273           1,00,472        cpu_core/dTLB-load-misses/       #    0.03% of all dTLB cache accesses  (66.62%)
+    12.206311273       39,96,12,158        cpu_atom/L1-dcache-loads/                                             
+    12.206311273       45,78,30,531        cpu_core/L1-dcache-loads/                                               (66.29%)
+    12.206311273        3,06,05,743        cpu_atom/L1-dcache-stores/                                            
+    12.206311273        5,10,14,964        cpu_core/L1-dcache-stores/                                              (66.39%)
+    12.206311273           2,34,891        cpu_atom/LLC-loads/                                                   
+    12.206311273           7,83,321        cpu_core/LLC-loads/                                                     (66.78%)
+    12.206311273              7,430        cpu_atom/LLC-load-misses/        #    3.16% of all L1-icache accesses 
+    12.206311273           1,36,848        cpu_core/LLC-load-misses/        #   58.26% of all L1-icache accesses   (66.98%)
+stress-ng: info:  [34997] therm:  3.88  3.43  4.64  1.13  0.72  0.69   29.05  20.00  49.05  91.05  93.00  45.05  62.05  43.00  92.00
+    13.222351323              27.57 Joules power/energy-pkg/                                                     
+    13.222351323              23.65 Joules power/energy-cores/                                                   
+    13.222351323       93,89,70,721        cpu_atom/dTLB-loads/                                                  
+    13.222351323       43,55,13,453        cpu_core/dTLB-loads/                                                    (66.53%)
+    13.222351323           2,85,153        cpu_atom/dTLB-load-misses/       #    0.03% of all dTLB cache accesses
+    13.222351323             81,876        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.81%)
+    13.222351323       93,89,70,723        cpu_atom/L1-dcache-loads/                                             
+    13.222351323       41,24,74,680        cpu_core/L1-dcache-loads/                                               (67.02%)
+    13.222351323       35,27,67,699        cpu_atom/L1-dcache-stores/                                            
+    13.222351323        4,79,21,267        cpu_core/L1-dcache-stores/                                              (66.85%)
+    13.222351323          13,34,455        cpu_atom/LLC-loads/                                                   
+    13.222351323           2,35,718        cpu_core/LLC-loads/                                                     (66.45%)
+    13.222351323             23,733        cpu_atom/LLC-load-misses/        #    1.78% of all L1-icache accesses 
+    13.222351323             58,677        cpu_core/LLC-load-misses/        #    4.40% of all L1-icache accesses   (66.34%)
+stress-ng: info:  [34997] therm:  3.52  0.40  4.47  1.13  0.72  0.69   29.05  20.00  49.05  91.05  90.00  45.05  62.05  43.00  91.00
+    14.242336887              25.67 Joules power/energy-pkg/                                                     
+    14.242336887              22.04 Joules power/energy-cores/                                                   
+    14.242336887       41,92,57,065        cpu_atom/dTLB-loads/                                                  
+    14.242336887       42,86,76,023        cpu_core/dTLB-loads/                                                    (66.70%)
+    14.242336887           2,01,085        cpu_atom/dTLB-load-misses/       #    0.05% of all dTLB cache accesses
+    14.242336887             76,849        cpu_core/dTLB-load-misses/       #    0.02% of all dTLB cache accesses  (66.40%)
+    14.242336887       41,92,57,089        cpu_atom/L1-dcache-loads/                                             
+    14.242336887       40,88,20,696        cpu_core/L1-dcache-loads/                                               (66.41%)
+    14.242336887        4,18,64,198        cpu_atom/L1-dcache-stores/                                            
+    14.242336887        4,56,09,460        cpu_core/L1-dcache-stores/                                              (66.72%)
+    14.242336887           2,91,470        cpu_atom/LLC-loads/                                                   
+    14.242336887           2,54,155        cpu_core/LLC-loads/                                                     (66.90%)
+    14.242336887              7,268        cpu_atom/LLC-load-misses/        #    2.49% of all L1-icache accesses 
+    14.242336887             76,956        cpu_core/LLC-load-misses/        #   26.40% of all L1-icache accesses   (66.89%)
+stress-ng: info:  [34997] therm:  3.11  0.40  4.69  1.13  0.72  0.69   29.05  20.00  49.05  91.05  91.00  45.05  62.05  43.00  90.00
+    15.262313515              25.94 Joules power/energy-pkg/                                                     
+    15.262313515              22.32 Joules power/energy-cores/                                                   
+    15.262313515       48,29,86,937        cpu_atom/dTLB-loads/                                                  
+    15.262313515       35,43,55,649        cpu_core/dTLB-loads/                                                    (66.63%)
+    15.262313515           2,26,074        cpu_atom/dTLB-load-misses/       #    0.05% of all dTLB cache accesses
+    15.262313515             54,496        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.94%)
+    15.262313515       48,29,86,888        cpu_atom/L1-dcache-loads/                                             
+    15.262313515       35,09,66,884        cpu_core/L1-dcache-loads/                                               (66.94%)
+    15.262313515        7,69,04,943        cpu_atom/L1-dcache-stores/                                            
+    15.262313515        1,08,37,187        cpu_core/L1-dcache-stores/                                              (66.63%)
+    15.262313515           4,44,681        cpu_atom/LLC-loads/                                                   
+    15.262313515             60,370        cpu_core/LLC-loads/                                                     (66.44%)
+    15.262313515              9,282        cpu_atom/LLC-load-misses/        #    2.09% of all L1-icache accesses 
+    15.262313515              9,532        cpu_core/LLC-load-misses/        #    2.14% of all L1-icache accesses   (66.44%)
+stress-ng: info:  [34997] therm:  2.57  0.40  4.49  1.36  0.77  0.70   29.05  20.00  49.05  91.05  91.00  45.05  63.05  43.00  92.00
+    16.282343664              25.48 Joules power/energy-pkg/                                                     
+    16.282343664              21.86 Joules power/energy-cores/                                                   
+    16.282343664       47,97,19,487        cpu_atom/dTLB-loads/                                                  
+    16.282343664       34,43,10,077        cpu_core/dTLB-loads/                                                    (66.77%)
+    16.282343664           1,91,927        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    16.282343664             56,052        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.49%)
+    16.282343664       47,97,19,535        cpu_atom/L1-dcache-loads/                                             
+    16.282343664       34,62,35,315        cpu_core/L1-dcache-loads/                                               (66.37%)
+    16.282343664        7,53,32,540        cpu_atom/L1-dcache-stores/                                            
+    16.282343664          93,06,106        cpu_core/L1-dcache-stores/                                              (66.56%)
+    16.282343664           3,79,380        cpu_atom/LLC-loads/                                                   
+    16.282343664             49,732        cpu_core/LLC-loads/                                                     (66.85%)
+    16.282343664              8,802        cpu_atom/LLC-load-misses/        #    2.32% of all L1-icache accesses 
+    16.282343664              4,387        cpu_core/LLC-load-misses/        #    1.16% of all L1-icache accesses   (66.95%)
+stress-ng: info:  [34997] therm:  3.30  0.40  4.50  1.36  0.77  0.70   29.05  20.00  50.05  91.05  91.00  45.05  62.05  43.00  92.00
+    17.302357563              25.90 Joules power/energy-pkg/                                                     
+    17.302357563              22.26 Joules power/energy-cores/                                                   
+    17.302357563       48,63,42,366        cpu_atom/dTLB-loads/                                                  
+    17.302357563       35,48,81,646        cpu_core/dTLB-loads/                                                    (66.57%)
+    17.302357563           2,60,275        cpu_atom/dTLB-load-misses/       #    0.05% of all dTLB cache accesses
+    17.302357563             57,857        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.85%)
+    17.302357563       48,63,42,369        cpu_atom/L1-dcache-loads/                                             
+    17.302357563       35,58,85,014        cpu_core/L1-dcache-loads/                                               (66.95%)
+    17.302357563        7,96,37,434        cpu_atom/L1-dcache-stores/                                            
+    17.302357563          94,24,940        cpu_core/L1-dcache-stores/                                              (66.77%)
+    17.302357563           4,78,738        cpu_atom/LLC-loads/                                                   
+    17.302357563             49,878        cpu_core/LLC-loads/                                                     (66.48%)
+    17.302357563             10,704        cpu_atom/LLC-load-misses/        #    2.24% of all L1-icache accesses 
+    17.302357563              5,200        cpu_core/LLC-load-misses/        #    1.09% of all L1-icache accesses   (66.38%)
+stress-ng: info:  [34997] therm:  2.74  0.40  4.46  1.36  0.77  0.70   29.05  20.00  50.05  91.05  91.00  44.05  62.05  43.00  91.00
+    18.322332182              25.53 Joules power/energy-pkg/                                                     
+    18.322332182              21.92 Joules power/energy-cores/                                                   
+    18.322332182       42,52,85,628        cpu_atom/dTLB-loads/                                                  
+    18.322332182       34,86,36,429        cpu_core/dTLB-loads/                                                    (66.64%)
+    18.322332182           1,95,149        cpu_atom/dTLB-load-misses/       #    0.05% of all dTLB cache accesses
+    18.322332182             57,881        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.34%)
+    18.322332182       42,52,85,606        cpu_atom/L1-dcache-loads/                                             
+    18.322332182       34,99,85,898        cpu_core/L1-dcache-loads/                                               (66.43%)
+    18.322332182        4,78,16,796        cpu_atom/L1-dcache-stores/                                            
+    18.322332182          95,66,928        cpu_core/L1-dcache-stores/                                              (66.83%)
+    18.322332182           2,90,439        cpu_atom/LLC-loads/                                                   
+    18.322332182             57,583        cpu_core/LLC-loads/                                                     (66.93%)
+    18.322332182              5,293        cpu_atom/LLC-load-misses/        #    1.82% of all L1-icache accesses 
+    18.322332182              6,351        cpu_core/LLC-load-misses/        #    2.19% of all L1-icache accesses   (66.83%)
+stress-ng: info:  [34997] therm:  3.74  3.40  4.40  1.36  0.77  0.70   29.05  20.00  50.05  91.05  92.00  45.05  61.05  43.00  91.00
+    19.338308578              25.43 Joules power/energy-pkg/                                                     
+    19.338308578              21.82 Joules power/energy-cores/                                                   
+    19.338308578       48,73,79,154        cpu_atom/dTLB-loads/                                                  
+    19.338308578       35,03,39,097        cpu_core/dTLB-loads/                                                    (66.98%)
+    19.338308578           2,58,290        cpu_atom/dTLB-load-misses/       #    0.05% of all dTLB cache accesses
+    19.338308578             55,575        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.99%)
+    19.338308578       48,73,79,177        cpu_atom/L1-dcache-loads/                                             
+    19.338308578       35,10,47,347        cpu_core/L1-dcache-loads/                                               (66.71%)
+    19.338308578        8,19,28,921        cpu_atom/L1-dcache-stores/                                            
+    19.338308578          93,97,242        cpu_core/L1-dcache-stores/                                              (66.31%)
+    19.338308578           5,91,219        cpu_atom/LLC-loads/                                                   
+    19.338308578             76,556        cpu_core/LLC-loads/                                                     (66.31%)
+    19.338308578             11,180        cpu_atom/LLC-load-misses/        #    1.89% of all L1-icache accesses 
+    19.338308578             13,296        cpu_core/LLC-load-misses/        #    2.25% of all L1-icache accesses   (66.70%)
+stress-ng: info:  [34997] therm:  2.72  0.40  4.38  1.36  0.77  0.70   29.05  20.00  50.05  91.05  90.00  45.05  63.05  43.00  93.00
+    20.354346800              25.25 Joules power/energy-pkg/                                                     
+    20.354346800              21.40 Joules power/energy-cores/                                                   
+    20.354346800       61,40,36,899        cpu_atom/dTLB-loads/                                                  
+    20.354346800       34,54,53,467        cpu_core/dTLB-loads/                                                    (66.37%)
+    20.354346800           6,81,317        cpu_atom/dTLB-load-misses/       #    0.11% of all dTLB cache accesses
+    20.354346800             72,826        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.69%)
+    20.354346800       61,40,36,893        cpu_atom/L1-dcache-loads/                                             
+    20.354346800       33,97,11,109        cpu_core/L1-dcache-loads/                                               (66.87%)
+    20.354346800       14,94,94,438        cpu_atom/L1-dcache-stores/                                            
+    20.354346800        1,10,41,262        cpu_core/L1-dcache-stores/                                              (66.87%)
+    20.354346800          17,23,194        cpu_atom/LLC-loads/                                                   
+    20.354346800             92,217        cpu_core/LLC-loads/                                                     (66.76%)
+    20.354346800             35,004        cpu_atom/LLC-load-misses/        #    2.03% of all L1-icache accesses 
+    20.354346800             18,746        cpu_core/LLC-load-misses/        #    1.09% of all L1-icache accesses   (66.44%)
+stress-ng: info:  [34997] therm:  2.92  0.40  4.46  1.65  0.84  0.73   29.05  20.00  51.05  91.05  90.00  45.05  63.05  43.00  92.00
+    21.370328849              25.14 Joules power/energy-pkg/                                                     
+    21.370328849              21.12 Joules power/energy-cores/                                                   
+    21.370328849       40,09,83,747        cpu_atom/dTLB-loads/                                                  
+    21.370328849       42,44,58,012        cpu_core/dTLB-loads/                                                    (66.70%)
+    21.370328849           1,81,174        cpu_atom/dTLB-load-misses/       #    0.05% of all dTLB cache accesses
+    21.370328849             74,876        cpu_core/dTLB-load-misses/       #    0.02% of all dTLB cache accesses  (66.44%)
+    21.370328849       40,09,83,746        cpu_atom/L1-dcache-loads/                                             
+    21.370328849       40,68,80,559        cpu_core/L1-dcache-loads/                                               (66.44%)
+    21.370328849        3,52,26,510        cpu_atom/L1-dcache-stores/                                            
+    21.370328849        4,21,84,664        cpu_core/L1-dcache-stores/                                              (66.66%)
+    21.370328849           2,69,209        cpu_atom/LLC-loads/                                                   
+    21.370328849           2,03,338        cpu_core/LLC-loads/                                                     (66.86%)
+    21.370328849              7,612        cpu_atom/LLC-load-misses/        #    2.83% of all L1-icache accesses 
+    21.370328849             39,697        cpu_core/LLC-load-misses/        #   14.75% of all L1-icache accesses   (66.89%)
+stress-ng: info:  [34997] therm:  2.98  0.40  4.40  1.65  0.84  0.73   29.05  20.00  51.05  91.05  92.00  45.05  64.05  43.00  92.00
+    22.390347828              25.27 Joules power/energy-pkg/                                                     
+    22.390347828              21.26 Joules power/energy-cores/                                                   
+    22.390347828       47,50,99,937        cpu_atom/dTLB-loads/                                                  
+    22.390347828       43,04,69,568        cpu_core/dTLB-loads/                                                    (66.78%)
+    22.390347828           1,91,090        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    22.390347828             58,375        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.92%)
+    22.390347828       47,50,99,918        cpu_atom/L1-dcache-loads/                                             
+    22.390347828       43,98,48,304        cpu_core/L1-dcache-loads/                                               (66.82%)
+    22.390347828        7,53,36,534        cpu_atom/L1-dcache-stores/                                            
+    22.390347828        6,49,86,124        cpu_core/L1-dcache-stores/                                              (66.59%)
+    22.390347828           4,01,803        cpu_atom/LLC-loads/                                                   
+    22.390347828             93,051        cpu_core/LLC-loads/                                                     (66.40%)
+    22.390347828              8,546        cpu_atom/LLC-load-misses/        #    2.13% of all L1-icache accesses 
+    22.390347828             20,226        cpu_core/LLC-load-misses/        #    5.03% of all L1-icache accesses   (66.49%)
+stress-ng: info:  [34997] therm:  3.44  0.40  4.36  1.65  0.84  0.73   29.05  20.00  51.05  91.05  92.00  45.05  63.05  43.00  91.00
+    23.410350504              25.31 Joules power/energy-pkg/                                                     
+    23.410350504              21.42 Joules power/energy-cores/                                                   
+    23.410350504       47,53,54,671        cpu_atom/dTLB-loads/                                                  
+    23.410350504       34,81,28,467        cpu_core/dTLB-loads/                                                    (66.49%)
+    23.410350504           1,87,861        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    23.410350504             52,059        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.35%)
+    23.410350504       47,53,54,647        cpu_atom/L1-dcache-loads/                                             
+    23.410350504       34,54,24,632        cpu_core/L1-dcache-loads/                                               (66.54%)
+    23.410350504        7,59,03,412        cpu_atom/L1-dcache-stores/                                            
+    23.410350504          91,37,109        cpu_core/L1-dcache-stores/                                              (66.87%)
+    23.410350504           3,75,818        cpu_atom/LLC-loads/                                                   
+    23.410350504             47,207        cpu_core/LLC-loads/                                                     (66.97%)
+    23.410350504              8,144        cpu_atom/LLC-load-misses/        #    2.17% of all L1-icache accesses 
+    23.410350504              4,582        cpu_core/LLC-load-misses/        #    1.22% of all L1-icache accesses   (66.78%)
+stress-ng: info:  [34997] therm:  3.20  0.40  4.36  1.65  0.84  0.73   29.05  20.00  51.05  91.05  92.00  45.05  64.05  43.00  93.00
+    24.426345106              25.24 Joules power/energy-pkg/                                                     
+    24.426345106              21.36 Joules power/energy-cores/                                                   
+    24.426345106       48,72,59,756        cpu_atom/dTLB-loads/                                                  
+    24.426345106       34,46,82,742        cpu_core/dTLB-loads/                                                    (66.93%)
+    24.426345106           2,32,282        cpu_atom/dTLB-load-misses/       #    0.05% of all dTLB cache accesses
+    24.426345106             53,878        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.86%)
+    24.426345106       48,72,59,798        cpu_atom/L1-dcache-loads/                                             
+    24.426345106       34,35,16,461        cpu_core/L1-dcache-loads/                                               (66.57%)
+    24.426345106        8,09,78,717        cpu_atom/L1-dcache-stores/                                            
+    24.426345106          90,96,563        cpu_core/L1-dcache-stores/                                              (66.30%)
+    24.426345106           5,10,425        cpu_atom/LLC-loads/                                                   
+    24.426345106             51,829        cpu_core/LLC-loads/                                                     (66.50%)
+    24.426345106             12,995        cpu_atom/LLC-load-misses/        #    2.55% of all L1-icache accesses 
+    24.426345106              4,963        cpu_core/LLC-load-misses/        #    0.97% of all L1-icache accesses   (66.83%)
+stress-ng: info:  [34997] therm:  3.50  0.40  4.44  1.65  0.84  0.73   29.05  20.00  51.05  91.05  91.00  45.05  64.05  43.00  90.00
+    25.442354453              25.06 Joules power/energy-pkg/                                                     
+    25.442354453              21.18 Joules power/energy-cores/                                                   
+    25.442354453       48,34,06,501        cpu_atom/dTLB-loads/                                                  
+    25.442354453       33,47,43,244        cpu_core/dTLB-loads/                                                    (66.49%)
+    25.442354453           1,95,826        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    25.442354453             53,638        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.83%)
+    25.442354453       48,34,06,504        cpu_atom/L1-dcache-loads/                                             
+    25.442354453       33,49,89,032        cpu_core/L1-dcache-loads/                                               (66.93%)
+    25.442354453        8,02,45,167        cpu_atom/L1-dcache-stores/                                            
+    25.442354453          92,03,744        cpu_core/L1-dcache-stores/                                              (66.86%)
+    25.442354453           3,82,584        cpu_atom/LLC-loads/                                                   
+    25.442354453             58,515        cpu_core/LLC-loads/                                                     (66.57%)
+    25.442354453              9,230        cpu_atom/LLC-load-misses/        #    2.41% of all L1-icache accesses 
+    25.442354453              6,863        cpu_core/LLC-load-misses/        #    1.79% of all L1-icache accesses   (66.32%)
+stress-ng: info:  [34997] therm: AvGHz MnGHz MxGHz  LdA1  LdA5 LdA15    AMBF INT340   NGFF   TCPU TCPU_P   TMEM   TSKN iwlwif x86_pk
+stress-ng: info:  [34997] therm:  2.59  0.40  4.68  1.84  0.89  0.74   29.05  20.00  51.05  91.05  89.00  45.05  64.05  43.00  90.00
+    26.458355913              25.27 Joules power/energy-pkg/                                                     
+    26.458355913              21.22 Joules power/energy-cores/                                                   
+    26.458355913       47,25,96,069        cpu_atom/dTLB-loads/                                                  
+    26.458355913       41,56,64,341        cpu_core/dTLB-loads/                                                    (66.59%)
+    26.458355913           2,12,261        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    26.458355913             79,620        cpu_core/dTLB-load-misses/       #    0.02% of all dTLB cache accesses  (66.28%)
+    26.458355913       47,25,96,023        cpu_atom/L1-dcache-loads/                                             
+    26.458355913       40,64,00,291        cpu_core/L1-dcache-loads/                                               (66.46%)
+    26.458355913        7,48,72,890        cpu_atom/L1-dcache-stores/                                            
+    26.458355913        4,32,84,902        cpu_core/L1-dcache-stores/                                              (66.85%)
+    26.458355913           4,79,076        cpu_atom/LLC-loads/                                                   
+    26.458355913           1,97,486        cpu_core/LLC-loads/                                                     (66.94%)
+    26.458355913             25,924        cpu_atom/LLC-load-misses/        #    5.41% of all L1-icache accesses 
+    26.458355913             32,021        cpu_core/LLC-load-misses/        #    6.68% of all L1-icache accesses   (66.87%)
+stress-ng: info:  [34997] therm:  3.52  0.40  4.49  1.84  0.89  0.74   29.05  20.00  52.05  91.05  92.00  45.05  64.05  43.00  93.00
+#           time             counts   unit events
+    27.474331094              25.21 Joules power/energy-pkg/                                                     
+    27.474331094              21.18 Joules power/energy-cores/                                                   
+    27.474331094       46,35,91,707        cpu_atom/dTLB-loads/                                                  
+    27.474331094       43,28,19,671        cpu_core/dTLB-loads/                                                    (66.93%)
+    27.474331094           2,14,915        cpu_atom/dTLB-load-misses/       #    0.05% of all dTLB cache accesses
+    27.474331094             97,813        cpu_core/dTLB-load-misses/       #    0.02% of all dTLB cache accesses  (66.93%)
+    27.474331094       46,35,91,756        cpu_atom/L1-dcache-loads/                                             
+    27.474331094       42,78,66,995        cpu_core/L1-dcache-loads/                                               (66.63%)
+    27.474331094        7,66,82,093        cpu_atom/L1-dcache-stores/                                            
+    27.474331094        5,49,67,528        cpu_core/L1-dcache-stores/                                              (66.24%)
+    27.474331094           3,92,727        cpu_atom/LLC-loads/                                                   
+    27.474331094           6,80,378        cpu_core/LLC-loads/                                                     (66.43%)
+    27.474331094             11,175        cpu_atom/LLC-load-misses/        #    2.85% of all L1-icache accesses 
+    27.474331094           1,63,204        cpu_core/LLC-load-misses/        #   41.56% of all L1-icache accesses   (66.83%)
+stress-ng: info:  [34997] therm:  3.53  1.00  4.40  1.84  0.89  0.74   29.05  20.00  52.05  91.05  92.00  45.05  64.05  43.00  92.00
+    28.490344450              25.08 Joules power/energy-pkg/                                                     
+    28.490344450              21.19 Joules power/energy-cores/                                                   
+    28.490344450       47,90,79,733        cpu_atom/dTLB-loads/                                                  
+    28.490344450       33,58,91,178        cpu_core/dTLB-loads/                                                    (66.48%)
+    28.490344450           2,19,806        cpu_atom/dTLB-load-misses/       #    0.05% of all dTLB cache accesses
+    28.490344450             62,985        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.81%)
+    28.490344450       47,90,79,732        cpu_atom/L1-dcache-loads/                                             
+    28.490344450       34,01,16,992        cpu_core/L1-dcache-loads/                                               (66.91%)
+    28.490344450        7,57,51,291        cpu_atom/L1-dcache-stores/                                            
+    28.490344450          94,63,830        cpu_core/L1-dcache-stores/                                              (66.90%)
+    28.490344450           4,20,176        cpu_atom/LLC-loads/                                                   
+    28.490344450             52,594        cpu_core/LLC-loads/                                                     (66.61%)
+    28.490344450              5,184        cpu_atom/LLC-load-misses/        #    1.23% of all L1-icache accesses 
+    28.490344450              6,819        cpu_core/LLC-load-misses/        #    1.62% of all L1-icache accesses   (66.29%)
+stress-ng: info:  [34997] therm:  3.43  1.64  4.42  1.84  0.89  0.74   29.05  20.00  52.05  91.05  92.00  45.05  63.05  43.00  92.00
+    29.506313384              25.40 Joules power/energy-pkg/                                                     
+    29.506313384              21.52 Joules power/energy-cores/                                                   
+    29.506313384       48,27,43,674        cpu_atom/dTLB-loads/                                                  
+    29.506313384       34,03,65,725        cpu_core/dTLB-loads/                                                    (66.57%)
+    29.506313384           2,13,132        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    29.506313384             58,349        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.31%)
+    29.506313384       48,27,43,676        cpu_atom/L1-dcache-loads/                                             
+    29.506313384       33,17,21,762        cpu_core/L1-dcache-loads/                                               (66.50%)
+    29.506313384        7,81,13,792        cpu_atom/L1-dcache-stores/                                            
+    29.506313384          91,41,936        cpu_core/L1-dcache-stores/                                              (66.83%)
+    29.506313384           4,22,125        cpu_atom/LLC-loads/                                                   
+    29.506313384             58,104        cpu_core/LLC-loads/                                                     (66.93%)
+    29.506313384             10,601        cpu_atom/LLC-load-misses/        #    2.51% of all L1-icache accesses 
+    29.506313384              9,156        cpu_core/LLC-load-misses/        #    2.17% of all L1-icache accesses   (66.86%)
+stress-ng: info:  [34997] therm:  2.63  0.40  4.41  1.84  0.89  0.74   29.05  20.00  52.05  91.05  91.00  45.05  64.05  43.00  91.00
+    30.522337722              25.88 Joules power/energy-pkg/                                                     
+    30.522337722              21.95 Joules power/energy-cores/                                                   
+    30.522337722       59,88,04,021        cpu_atom/dTLB-loads/                                                  
+    30.522337722       34,49,39,882        cpu_core/dTLB-loads/                                                    (66.95%)
+    30.522337722           6,63,989        cpu_atom/dTLB-load-misses/       #    0.11% of all dTLB cache accesses
+    30.522337722             54,817        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.88%)
+    30.522337722       59,88,04,019        cpu_atom/L1-dcache-loads/                                             
+    30.522337722       34,03,30,388        cpu_core/L1-dcache-loads/                                               (66.59%)
+    30.522337722       14,63,52,582        cpu_atom/L1-dcache-stores/                                            
+    30.522337722          92,61,604        cpu_core/L1-dcache-stores/                                              (66.27%)
+    30.522337722          12,24,833        cpu_atom/LLC-loads/                                                   
+    30.522337722             51,895        cpu_core/LLC-loads/                                                     (66.46%)
+    30.522337722              8,463        cpu_atom/LLC-load-misses/        #    0.69% of all L1-icache accesses 
+    30.522337722              4,077        cpu_core/LLC-load-misses/        #    0.33% of all L1-icache accesses   (66.85%)
+stress-ng: info:  [34997] therm:  3.69  3.31  4.40  2.01  0.95  0.76   29.05  20.00  52.05  91.05  92.00  45.05  63.05  43.00  92.00
+    31.538312024              25.27 Joules power/energy-pkg/                                                     
+    31.538312024              21.39 Joules power/energy-cores/                                                   
+    31.538312024       48,37,68,927        cpu_atom/dTLB-loads/                                                  
+    31.538312024       34,33,50,387        cpu_core/dTLB-loads/                                                    (66.37%)
+    31.538312024           1,80,628        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    31.538312024             55,887        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.77%)
+    31.538312024       48,37,68,925        cpu_atom/L1-dcache-loads/                                             
+    31.538312024       33,66,83,816        cpu_core/L1-dcache-loads/                                               (66.96%)
+    31.538312024        7,57,49,437        cpu_atom/L1-dcache-stores/                                            
+    31.538312024          91,84,722        cpu_core/L1-dcache-stores/                                              (66.96%)
+    31.538312024           3,54,051        cpu_atom/LLC-loads/                                                   
+    31.538312024             57,785        cpu_core/LLC-loads/                                                     (66.67%)
+    31.538312024              8,400        cpu_atom/LLC-load-misses/        #    2.37% of all L1-icache accesses 
+    31.538312024              7,466        cpu_core/LLC-load-misses/        #    2.11% of all L1-icache accesses   (66.28%)
+stress-ng: info:  [34997] therm:  2.71  0.40  4.39  2.01  0.95  0.76   29.05  20.00  52.05  91.05  92.00  45.05  64.05  43.00  92.00
+    32.554336560              25.25 Joules power/energy-pkg/                                                     
+    32.554336560              21.37 Joules power/energy-cores/                                                   
+    32.554336560       47,80,97,295        cpu_atom/dTLB-loads/                                                  
+    32.554336560       34,69,08,080        cpu_core/dTLB-loads/                                                    (66.70%)
+    32.554336560           1,97,915        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    32.554336560             52,185        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.31%)
+    32.554336560       47,80,97,270        cpu_atom/L1-dcache-loads/                                             
+    32.554336560       34,23,06,281        cpu_core/L1-dcache-loads/                                               (66.40%)
+    32.554336560        7,69,00,665        cpu_atom/L1-dcache-stores/                                            
+    32.554336560          91,29,126        cpu_core/L1-dcache-stores/                                              (66.80%)
+    32.554336560           4,22,602        cpu_atom/LLC-loads/                                                   
+    32.554336560             48,658        cpu_core/LLC-loads/                                                     (66.90%)
+    32.554336560              9,067        cpu_atom/LLC-load-misses/        #    2.15% of all L1-icache accesses 
+    32.554336560              4,645        cpu_core/LLC-load-misses/        #    1.10% of all L1-icache accesses   (66.89%)
+stress-ng: info:  [34997] therm:  3.52  0.40  4.45  2.01  0.95  0.76   29.05  20.00  53.05  91.05  92.00  45.05  64.05  43.00  92.00
+    33.570308124              25.35 Joules power/energy-pkg/                                                     
+    33.570308124              21.45 Joules power/energy-cores/                                                   
+    33.570308124       58,99,64,981        cpu_atom/dTLB-loads/                                                  
+    33.570308124       34,32,72,058        cpu_core/dTLB-loads/                                                    (66.89%)
+    33.570308124           2,59,520        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    33.570308124             51,572        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.99%)
+    33.570308124       58,99,65,009        cpu_atom/L1-dcache-loads/                                             
+    33.570308124       34,12,82,300        cpu_core/L1-dcache-loads/                                               (66.70%)
+    33.570308124       13,57,62,247        cpu_atom/L1-dcache-stores/                                            
+    33.570308124          91,19,292        cpu_core/L1-dcache-stores/                                              (66.31%)
+    33.570308124          12,05,709        cpu_atom/LLC-loads/                                                   
+    33.570308124             53,289        cpu_core/LLC-loads/                                                     (66.40%)
+    33.570308124             32,637        cpu_atom/LLC-load-misses/        #    2.71% of all L1-icache accesses 
+    33.570308124              6,014        cpu_core/LLC-load-misses/        #    0.50% of all L1-icache accesses   (66.70%)
+stress-ng: info:  [34997] therm:  3.74  3.39  4.40  2.01  0.95  0.76   29.05  20.00  53.05  91.05  91.00  45.05  64.05  43.00  92.00
+    34.590276995              25.42 Joules power/energy-pkg/                                                     
+    34.590276995              21.51 Joules power/energy-cores/                                                   
+    34.590276995       49,13,07,180        cpu_atom/dTLB-loads/                                                  
+    34.590276995       34,05,04,564        cpu_core/dTLB-loads/                                                    (66.35%)
+    34.590276995           2,38,568        cpu_atom/dTLB-load-misses/       #    0.05% of all dTLB cache accesses
+    34.590276995             55,728        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.54%)
+    34.590276995       49,13,07,181        cpu_atom/L1-dcache-loads/                                             
+    34.590276995       33,51,06,259        cpu_core/L1-dcache-loads/                                               (66.87%)
+    34.590276995        8,19,92,528        cpu_atom/L1-dcache-stores/                                            
+    34.590276995          92,27,891        cpu_core/L1-dcache-stores/                                              (66.97%)
+    34.590276995           5,18,237        cpu_atom/LLC-loads/                                                   
+    34.590276995             61,720        cpu_core/LLC-loads/                                                     (66.77%)
+    34.590276995             11,834        cpu_atom/LLC-load-misses/        #    2.28% of all L1-icache accesses 
+    34.590276995              7,201        cpu_core/LLC-load-misses/        #    1.39% of all L1-icache accesses   (66.48%)
+stress-ng: info:  [34997] therm:  2.99  0.40  4.49  2.01  0.95  0.76   29.05  20.00  53.05  91.05  92.00  45.05  63.05  43.00  91.00
+    35.606287794              25.44 Joules power/energy-pkg/                                                     
+    35.606287794              21.57 Joules power/energy-cores/                                                   
+    35.606287794       47,67,20,137        cpu_atom/dTLB-loads/                                                  
+    35.606287794       35,41,81,344        cpu_core/dTLB-loads/                                                    (66.89%)
+    35.606287794           1,94,862        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    35.606287794             54,114        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.60%)
+    35.606287794       47,67,20,113        cpu_atom/L1-dcache-loads/                                             
+    35.606287794       35,33,18,106        cpu_core/L1-dcache-loads/                                               (66.34%)
+    35.606287794        7,59,38,411        cpu_atom/L1-dcache-stores/                                            
+    35.606287794        1,02,32,338        cpu_core/L1-dcache-stores/                                              (66.44%)
+    35.606287794           3,85,126        cpu_atom/LLC-loads/                                                   
+    35.606287794             50,740        cpu_core/LLC-loads/                                                     (66.76%)
+    35.606287794              9,534        cpu_atom/LLC-load-misses/        #    2.48% of all L1-icache accesses 
+    35.606287794              5,899        cpu_core/LLC-load-misses/        #    1.53% of all L1-icache accesses   (66.96%)
+stress-ng: info:  [34997] therm:  3.23  0.40  4.40  2.17  1.00  0.78   29.05  20.00  53.05  91.05  92.00  45.05  63.05  43.00  91.00
+    36.622297076              25.15 Joules power/energy-pkg/                                                     
+    36.622297076              21.26 Joules power/energy-cores/                                                   
+    36.622297076       47,93,40,580        cpu_atom/dTLB-loads/                                                  
+    36.622297076       33,94,02,673        cpu_core/dTLB-loads/                                                    (66.82%)
+    36.622297076           1,99,902        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    36.622297076             54,927        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.92%)
+    36.622297076       47,93,40,603        cpu_atom/L1-dcache-loads/                                             
+    36.622297076       33,52,62,204        cpu_core/L1-dcache-loads/                                               (66.86%)
+    36.622297076        7,69,70,582        cpu_atom/L1-dcache-stores/                                            
+    36.622297076          89,48,732        cpu_core/L1-dcache-stores/                                              (66.65%)
+    36.622297076           4,14,560        cpu_atom/LLC-loads/                                                   
+    36.622297076             52,828        cpu_core/LLC-loads/                                                     (66.32%)
+    36.622297076              8,475        cpu_atom/LLC-load-misses/        #    2.04% of all L1-icache accesses 
+    36.622297076              4,947        cpu_core/LLC-load-misses/        #    1.19% of all L1-icache accesses   (66.42%)
+stress-ng: info:  [34997] therm:  3.29  0.40  4.50  2.17  1.00  0.78   29.05  20.00  53.05  91.05  93.00  45.05  64.05  43.00  92.00
+    37.638283144              25.03 Joules power/energy-pkg/                                                     
+    37.638283144              21.14 Joules power/energy-cores/                                                   
+    37.638283144       40,26,01,846        cpu_atom/dTLB-loads/                                                  
+    37.638283144       43,04,66,149        cpu_core/dTLB-loads/                                                    (66.31%)
+    37.638283144           1,91,220        cpu_atom/dTLB-load-misses/       #    0.05% of all dTLB cache accesses
+    37.638283144             70,232        cpu_core/dTLB-load-misses/       #    0.02% of all dTLB cache accesses  (66.40%)
+    37.638283144       40,26,01,862        cpu_atom/L1-dcache-loads/                                             
+    37.638283144       41,63,85,607        cpu_core/L1-dcache-loads/                                               (66.70%)
+    37.638283144        3,46,43,475        cpu_atom/L1-dcache-stores/                                            
+    37.638283144        4,23,05,571        cpu_core/L1-dcache-stores/                                              (66.90%)
+    37.638283144           2,86,518        cpu_atom/LLC-loads/                                                   
+    37.638283144           2,32,266        cpu_core/LLC-loads/                                                     (67.00%)
+    37.638283144              6,721        cpu_atom/LLC-load-misses/        #    2.35% of all L1-icache accesses 
+    37.638283144             44,159        cpu_core/LLC-load-misses/        #   15.41% of all L1-icache accesses   (66.70%)
+stress-ng: info:  [34997] therm:  3.40  0.40  4.70  2.17  1.00  0.78   29.05  20.00  53.05  91.05  90.00  45.05  64.05  43.00  92.00
+    38.658244303              25.59 Joules power/energy-pkg/                                                     
+    38.658244303              21.70 Joules power/energy-cores/                                                   
+    38.658244303       39,58,80,252        cpu_atom/dTLB-loads/                                                  
+    38.658244303       39,68,42,605        cpu_core/dTLB-loads/                                                    (66.99%)
+    38.658244303           1,88,881        cpu_atom/dTLB-load-misses/       #    0.05% of all dTLB cache accesses
+    38.658244303             63,326        cpu_core/dTLB-load-misses/       #    0.02% of all dTLB cache accesses  (66.80%)
+    38.658244303       39,58,80,235        cpu_atom/L1-dcache-loads/                                             
+    38.658244303       38,18,18,792        cpu_core/L1-dcache-loads/                                               (66.51%)
+    38.658244303        3,08,83,953        cpu_atom/L1-dcache-stores/                                            
+    38.658244303        3,35,09,501        cpu_core/L1-dcache-stores/                                              (66.31%)
+    38.658244303           2,53,760        cpu_atom/LLC-loads/                                                   
+    38.658244303           1,49,589        cpu_core/LLC-loads/                                                     (66.50%)
+    38.658244303              5,006        cpu_atom/LLC-load-misses/        #    1.97% of all L1-icache accesses 
+    38.658244303             42,656        cpu_core/LLC-load-misses/        #   16.81% of all L1-icache accesses   (66.89%)
+stress-ng: info:  [34997] therm:  3.23  0.40  4.40  2.17  1.00  0.78   29.05  20.00  54.05  91.05  91.00  45.05  63.05  43.00  93.00
+    39.674308414              25.39 Joules power/energy-pkg/                                                     
+    39.674308414              21.54 Joules power/energy-cores/                                                   
+    39.674308414       39,67,25,186        cpu_atom/dTLB-loads/                                                  
+    39.674308414       39,23,01,774        cpu_core/dTLB-loads/                                                    (66.48%)
+    39.674308414           1,59,376        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    39.674308414             60,938        cpu_core/dTLB-load-misses/       #    0.02% of all dTLB cache accesses  (66.80%)
+    39.674308414       39,67,25,189        cpu_atom/L1-dcache-loads/                                             
+    39.674308414       38,96,55,129        cpu_core/L1-dcache-loads/                                               (66.91%)
+    39.674308414        3,27,26,693        cpu_atom/L1-dcache-stores/                                            
+    39.674308414        3,50,98,271        cpu_core/L1-dcache-stores/                                              (66.91%)
+    39.674308414           2,34,247        cpu_atom/LLC-loads/                                                   
+    39.674308414           1,94,870        cpu_core/LLC-loads/                                                     (66.62%)
+    39.674308414              6,953        cpu_atom/LLC-load-misses/        #    2.97% of all L1-icache accesses 
+    39.674308414             13,401        cpu_core/LLC-load-misses/        #    5.72% of all L1-icache accesses   (66.29%)
+stress-ng: info:  [34997] therm:  3.48  0.40  4.40  2.17  1.00  0.78   29.05  20.00  54.05  91.05  92.00  45.05  63.05  43.00  92.00
+    40.690288688              26.05 Joules power/energy-pkg/                                                     
+    40.690288688              22.13 Joules power/energy-cores/                                                   
+    40.690288688       51,71,72,538        cpu_atom/dTLB-loads/                                                  
+    40.690288688       42,09,31,078        cpu_core/dTLB-loads/                                                    (66.72%)
+    40.690288688           6,31,649        cpu_atom/dTLB-load-misses/       #    0.12% of all dTLB cache accesses
+    40.690288688             72,736        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.40%)
+    40.690288688       51,71,72,534        cpu_atom/L1-dcache-loads/                                             
+    40.690288688       42,75,52,852        cpu_core/L1-dcache-loads/                                               (66.39%)
+    40.690288688       10,19,57,988        cpu_atom/L1-dcache-stores/                                            
+    40.690288688        4,81,64,998        cpu_core/L1-dcache-stores/                                              (66.59%)
+    40.690288688          11,62,991        cpu_atom/LLC-loads/                                                   
+    40.690288688           3,35,537        cpu_core/LLC-loads/                                                     (66.88%)
+    40.690288688              8,243        cpu_atom/LLC-load-misses/        #    0.71% of all L1-icache accesses 
+    40.690288688             44,990        cpu_core/LLC-load-misses/        #    3.87% of all L1-icache accesses   (67.01%)
+stress-ng: info:  [34997] therm:  3.22  1.73  3.66  2.40  1.06  0.80   29.05  20.00  54.05  91.05  93.00  45.05  64.05  43.00  93.00
+    41.710303023              25.03 Joules power/energy-pkg/                                                     
+    41.710303023              21.12 Joules power/energy-cores/                                                   
+    41.710303023       39,73,23,019        cpu_atom/dTLB-loads/                                                  
+    41.710303023       43,24,25,980        cpu_core/dTLB-loads/                                                    (66.82%)
+    41.710303023           1,72,747        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    41.710303023             88,783        cpu_core/dTLB-load-misses/       #    0.02% of all dTLB cache accesses  (66.93%)
+    41.710303023       39,73,23,021        cpu_atom/L1-dcache-loads/                                             
+    41.710303023       42,68,75,175        cpu_core/L1-dcache-loads/                                               (66.84%)
+    41.710303023        3,36,32,227        cpu_atom/L1-dcache-stores/                                            
+    41.710303023        5,67,47,239        cpu_core/L1-dcache-stores/                                              (66.64%)
+    41.710303023           2,55,069        cpu_atom/LLC-loads/                                                   
+    41.710303023           7,56,366        cpu_core/LLC-loads/                                                     (66.34%)
+    41.710303023              8,266        cpu_atom/LLC-load-misses/        #    3.24% of all L1-icache accesses 
+    41.710303023           2,70,172        cpu_core/LLC-load-misses/        #  105.92% of all L1-icache accesses   (66.43%)
+stress-ng: info:  [34997] therm:  3.42  0.40  4.40  2.40  1.06  0.80   29.05  20.00  54.05  91.05  92.00  45.05  64.05  43.00  91.00
+    42.726279276              25.40 Joules power/energy-pkg/                                                     
+    42.726279276              21.53 Joules power/energy-cores/                                                   
+    42.726279276       45,08,04,668        cpu_atom/dTLB-loads/                                                  
+    42.726279276       36,35,54,869        cpu_core/dTLB-loads/                                                    (66.29%)
+    42.726279276           1,79,213        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    42.726279276             59,118        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.48%)
+    42.726279276       45,08,04,667        cpu_atom/L1-dcache-loads/                                             
+    42.726279276       37,41,86,028        cpu_core/L1-dcache-loads/                                               (66.80%)
+    42.726279276        5,92,62,718        cpu_atom/L1-dcache-stores/                                            
+    42.726279276        2,66,47,329        cpu_core/L1-dcache-stores/                                              (66.90%)
+    42.726279276           3,68,252        cpu_atom/LLC-loads/                                                   
+    42.726279276             63,982        cpu_core/LLC-loads/                                                     (66.91%)
+    42.726279276              9,079        cpu_atom/LLC-load-misses/        #    2.47% of all L1-icache accesses 
+    42.726279276             11,882        cpu_core/LLC-load-misses/        #    3.23% of all L1-icache accesses   (66.62%)
+stress-ng: info:  [34997] therm:  3.47  0.40  4.38  2.40  1.06  0.80   29.05  20.00  54.05  91.05  92.00  45.05  64.05  43.00  93.00
+    43.742269888              25.45 Joules power/energy-pkg/                                                     
+    43.742269888              21.55 Joules power/energy-cores/                                                   
+    43.742269888       42,47,03,285        cpu_atom/dTLB-loads/                                                  
+    43.742269888       40,06,37,604        cpu_core/dTLB-loads/                                                    (66.94%)
+    43.742269888           1,74,784        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    43.742269888             63,102        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.75%)
+    43.742269888       42,47,03,291        cpu_atom/L1-dcache-loads/                                             
+    43.742269888       38,60,14,271        cpu_core/L1-dcache-loads/                                               (66.44%)
+    43.742269888        4,75,78,799        cpu_atom/L1-dcache-stores/                                            
+    43.742269888        3,56,36,858        cpu_core/L1-dcache-stores/                                              (66.43%)
+    43.742269888           2,51,652        cpu_atom/LLC-loads/                                                   
+    43.742269888           2,59,899        cpu_core/LLC-loads/                                                     (66.62%)
+    43.742269888              9,177        cpu_atom/LLC-load-misses/        #    3.65% of all L1-icache accesses 
+    43.742269888             52,291        cpu_core/LLC-load-misses/        #   20.78% of all L1-icache accesses   (66.81%)
+stress-ng: info:  [34997] therm:  2.30  0.40  3.61  2.40  1.06  0.80   29.05  20.00  54.05  91.05  89.00  45.05  63.05  43.00  90.00
+    44.766280393              25.33 Joules power/energy-pkg/                                                     
+    44.766280393              21.42 Joules power/energy-cores/                                                   
+    44.766280393       45,03,17,107        cpu_atom/dTLB-loads/                                                  
+    44.766280393       40,68,87,674        cpu_core/dTLB-loads/                                                    (66.42%)
+    44.766280393           1,88,415        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    44.766280393             64,408        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.51%)
+    44.766280393       45,03,17,076        cpu_atom/L1-dcache-loads/                                             
+    44.766280393       40,76,09,731        cpu_core/L1-dcache-loads/                                               (66.84%)
+    44.766280393        6,63,05,909        cpu_atom/L1-dcache-stores/                                            
+    44.766280393        4,80,16,538        cpu_core/L1-dcache-stores/                                              (66.94%)
+    44.766280393           3,25,789        cpu_atom/LLC-loads/                                                   
+    44.766280393           2,16,368        cpu_core/LLC-loads/                                                     (66.74%)
+    44.766280393             10,571        cpu_atom/LLC-load-misses/        #    3.24% of all L1-icache accesses 
+    44.766280393             37,766        cpu_core/LLC-load-misses/        #   11.59% of all L1-icache accesses   (66.55%)
+stress-ng: info:  [34997] therm:  3.76  3.40  4.44  2.40  1.06  0.80   29.05  20.00  54.05  91.05  92.00  45.05  63.05  43.00  93.00
+    45.778699679              25.33 Joules power/energy-pkg/                                                     
+    45.778699679              21.45 Joules power/energy-cores/                                                   
+    45.778699679       47,57,58,411        cpu_atom/dTLB-loads/                                                  
+    45.778699679       34,78,01,157        cpu_core/dTLB-loads/                                                    (66.82%)
+    45.778699679           1,83,369        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    45.778699679             48,717        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.62%)
+    45.778699679       47,57,58,433        cpu_atom/L1-dcache-loads/                                             
+    45.778699679       34,74,08,193        cpu_core/L1-dcache-loads/                                               (66.39%)
+    45.778699679        7,52,47,181        cpu_atom/L1-dcache-stores/                                            
+    45.778699679        1,00,95,180        cpu_core/L1-dcache-stores/                                              (66.49%)
+    45.778699679           4,08,993        cpu_atom/LLC-loads/                                                   
+    45.778699679             52,020        cpu_core/LLC-loads/                                                     (66.79%)
+    45.778699679             10,252        cpu_atom/LLC-load-misses/        #    2.51% of all L1-icache accesses 
+    45.778699679              6,418        cpu_core/LLC-load-misses/        #    1.57% of all L1-icache accesses   (66.89%)
+stress-ng: info:  [34997] therm:  3.49  0.40  4.40  2.53  1.11  0.82   29.05  20.00  54.05  91.05  91.00  45.05  64.05  43.00  92.00
+    46.798285090              25.64 Joules power/energy-pkg/                                                     
+    46.798285090              21.73 Joules power/energy-cores/                                                   
+    46.798285090       50,75,20,381        cpu_atom/dTLB-loads/                                                  
+    46.798285090       34,99,03,577        cpu_core/dTLB-loads/                                                    (66.66%)
+    46.798285090           2,27,520        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    46.798285090             57,068        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.96%)
+    46.798285090       50,75,20,360        cpu_atom/L1-dcache-loads/                                             
+    46.798285090       36,00,17,611        cpu_core/L1-dcache-loads/                                               (66.97%)
+    46.798285090        9,17,98,521        cpu_atom/L1-dcache-stores/                                            
+    46.798285090        1,27,58,683        cpu_core/L1-dcache-stores/                                              (66.67%)
+    46.798285090           4,84,110        cpu_atom/LLC-loads/                                                   
+    46.798285090             78,247        cpu_core/LLC-loads/                                                     (66.37%)
+    46.798285090             11,144        cpu_atom/LLC-load-misses/        #    2.30% of all L1-icache accesses 
+    46.798285090              6,050        cpu_core/LLC-load-misses/        #    1.25% of all L1-icache accesses   (66.37%)
+stress-ng: info:  [34997] therm:  2.81  0.40  4.40  2.53  1.11  0.82   29.05  20.00  55.05  91.05  91.00  45.05  64.05  43.00  92.00
+    47.818318659              21.75 Joules power/energy-pkg/                                                     
+    47.818318659              17.86 Joules power/energy-cores/                                                   
+    47.818318659       48,57,79,877        cpu_atom/dTLB-loads/                                                  
+    47.818318659       32,65,55,493        cpu_core/dTLB-loads/                                                    (66.55%)
+    47.818318659           4,44,785        cpu_atom/dTLB-load-misses/       #    0.09% of all dTLB cache accesses
+    47.818318659             40,780        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.32%)
+    47.818318659       48,57,79,908        cpu_atom/L1-dcache-loads/                                             
+    47.818318659       32,91,18,797        cpu_core/L1-dcache-loads/                                               (66.51%)
+    47.818318659        8,86,68,805        cpu_atom/L1-dcache-stores/                                            
+    47.818318659        1,33,73,047        cpu_core/L1-dcache-stores/                                              (66.84%)
+    47.818318659           8,07,664        cpu_atom/LLC-loads/                                                   
+    47.818318659             72,263        cpu_core/LLC-loads/                                                     (66.95%)
+    47.818318659             27,690        cpu_atom/LLC-load-misses/        #    3.43% of all L1-icache accesses 
+    47.818318659              8,523        cpu_core/LLC-load-misses/        #    1.06% of all L1-icache accesses   (66.85%)
+stress-ng: info:  [34997] therm:  2.09  0.40  3.61  2.53  1.11  0.82   29.05  20.00  55.05  89.05  79.00  45.05  64.05  43.00  80.00
+    48.834280421              14.97 Joules power/energy-pkg/                                                     
+    48.834280421              11.15 Joules power/energy-cores/                                                   
+    48.834280421       42,81,57,038        cpu_atom/dTLB-loads/                                                  
+    48.834280421       28,35,08,019        cpu_core/dTLB-loads/                                                    (66.93%)
+    48.834280421           1,92,549        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    48.834280421             37,183        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.86%)
+    48.834280421       42,81,57,033        cpu_atom/L1-dcache-loads/                                             
+    48.834280421       28,61,51,596        cpu_core/L1-dcache-loads/                                               (66.58%)
+    48.834280421        7,54,92,334        cpu_atom/L1-dcache-stores/                                            
+    48.834280421        1,04,27,818        cpu_core/L1-dcache-stores/                                              (66.30%)
+    48.834280421           8,92,579        cpu_atom/LLC-loads/                                                   
+    48.834280421             63,582        cpu_core/LLC-loads/                                                     (66.50%)
+    48.834280421             17,341        cpu_atom/LLC-load-misses/        #    1.94% of all L1-icache accesses 
+    48.834280421             10,795        cpu_core/LLC-load-misses/        #    1.21% of all L1-icache accesses   (66.83%)
+stress-ng: info:  [34997] therm:  2.27  0.40  3.60  2.53  1.11  0.82   29.05  20.00  55.05  79.05  79.00  45.05  63.05  43.00  79.00
+    49.850334267              14.94 Joules power/energy-pkg/                                                     
+    49.850334267              11.13 Joules power/energy-cores/                                                   
+    49.850334267       40,75,15,456        cpu_atom/dTLB-loads/                                                  
+    49.850334267       29,19,95,087        cpu_core/dTLB-loads/                                                    (66.51%)
+    49.850334267           1,49,137        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    49.850334267             36,663        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.84%)
+    49.850334267       40,75,15,429        cpu_atom/L1-dcache-loads/                                             
+    49.850334267       29,00,12,862        cpu_core/L1-dcache-loads/                                               (66.93%)
+    49.850334267        7,13,77,303        cpu_atom/L1-dcache-stores/                                            
+    49.850334267        1,08,10,362        cpu_core/L1-dcache-stores/                                              (66.86%)
+    49.850334267           3,87,244        cpu_atom/LLC-loads/                                                   
+    49.850334267             55,010        cpu_core/LLC-loads/                                                     (66.56%)
+    49.850334267              8,953        cpu_atom/LLC-load-misses/        #    2.31% of all L1-icache accesses 
+    49.850334267              8,681        cpu_core/LLC-load-misses/        #    2.24% of all L1-icache accesses   (66.30%)
+stress-ng: info:  [34997] therm:  2.08  0.40  3.60  2.53  1.11  0.82   29.05  20.00  55.05  78.05  78.00  46.05  62.05  43.00  78.00
+    50.866314699              15.14 Joules power/energy-pkg/                                                     
+    50.866314699              11.31 Joules power/energy-cores/                                                   
+    50.866314699       51,30,74,972        cpu_atom/dTLB-loads/                                                  
+    50.866314699       28,89,80,291        cpu_core/dTLB-loads/                                                    (66.60%)
+    50.866314699           6,12,756        cpu_atom/dTLB-load-misses/       #    0.12% of all dTLB cache accesses
+    50.866314699             86,220        cpu_core/dTLB-load-misses/       #    0.02% of all dTLB cache accesses  (66.27%)
+    50.866314699       51,30,74,994        cpu_atom/L1-dcache-loads/                                             
+    50.866314699       29,55,11,458        cpu_core/L1-dcache-loads/                                               (66.45%)
+    50.866314699       13,30,33,799        cpu_atom/L1-dcache-stores/                                            
+    50.866314699        1,66,44,475        cpu_core/L1-dcache-stores/                                              (66.85%)
+    50.866314699          10,98,293        cpu_atom/LLC-loads/                                                   
+    50.866314699           1,02,547        cpu_core/LLC-loads/                                                     (66.95%)
+    50.866314699              7,930        cpu_atom/LLC-load-misses/        #    0.72% of all L1-icache accesses 
+    50.866314699              7,565        cpu_core/LLC-load-misses/        #    0.69% of all L1-icache accesses   (66.89%)
+stress-ng: info:  [34997] therm: AvGHz MnGHz MxGHz  LdA1  LdA5 LdA15    AMBF INT340   NGFF   TCPU TCPU_P   TMEM   TSKN iwlwif x86_pk
+stress-ng: info:  [34997] therm:  1.88  0.40  3.60  2.65  1.16  0.84   29.05  20.00  55.05  78.05  75.00  45.05  62.05  43.00  76.00
+    51.878508222              14.89 Joules power/energy-pkg/                                                     
+    51.878508222              11.13 Joules power/energy-cores/                                                   
+    51.878508222       50,41,03,202        cpu_atom/dTLB-loads/                                                  
+    51.878508222       28,78,67,372        cpu_core/dTLB-loads/                                                    (66.81%)
+    51.878508222           1,61,283        cpu_atom/dTLB-load-misses/       #    0.03% of all dTLB cache accesses
+    51.878508222             41,832        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.81%)
+    51.878508222       50,41,03,180        cpu_atom/L1-dcache-loads/                                             
+    51.878508222       28,59,21,451        cpu_core/L1-dcache-loads/                                               (66.58%)
+    51.878508222       12,71,21,980        cpu_atom/L1-dcache-stores/                                            
+    51.878508222        1,06,78,221        cpu_core/L1-dcache-stores/                                              (66.38%)
+    51.878508222           4,38,494        cpu_atom/LLC-loads/                                                   
+    51.878508222             53,842        cpu_core/LLC-loads/                                                     (66.61%)
+    51.878508222              7,656        cpu_atom/LLC-load-misses/        #    1.75% of all L1-icache accesses 
+    51.878508222              6,444        cpu_core/LLC-load-misses/        #    1.47% of all L1-icache accesses   (66.81%)
+stress-ng: info:  [34997] therm:  2.07  0.40  3.60  2.65  1.16  0.84   29.05  20.00  55.05  77.05  75.00  46.05  62.05  43.00  76.00
+    52.894320168              14.87 Joules power/energy-pkg/                                                     
+    52.894320168              11.11 Joules power/energy-cores/                                                   
+    52.894320168       36,13,63,724        cpu_atom/dTLB-loads/                                                  
+    52.894320168       33,32,94,297        cpu_core/dTLB-loads/                                                    (66.80%)
+    52.894320168           1,32,967        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    52.894320168             44,856        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.90%)
+    52.894320168       36,13,63,752        cpu_atom/L1-dcache-loads/                                             
+    52.894320168       32,18,45,192        cpu_core/L1-dcache-loads/                                               (66.83%)
+    52.894320168        4,40,54,817        cpu_atom/L1-dcache-stores/                                            
+    52.894320168        4,02,61,714        cpu_core/L1-dcache-stores/                                              (66.64%)
+    52.894320168           2,46,118        cpu_atom/LLC-loads/                                                   
+    52.894320168           3,67,565        cpu_core/LLC-loads/                                                     (66.37%)
+    52.894320168              7,981        cpu_atom/LLC-load-misses/        #    3.24% of all L1-icache accesses 
+    52.894320168             57,265        cpu_core/LLC-load-misses/        #   23.27% of all L1-icache accesses   (66.47%)
+stress-ng: info:  [34997] therm:  2.51  0.40  3.70  2.65  1.16  0.84   29.05  20.00  55.05  77.05  77.00  46.05  61.05  43.00  77.00
+#           time             counts   unit events
+    53.910320954              15.14 Joules power/energy-pkg/                                                     
+    53.910320954              11.38 Joules power/energy-cores/                                                   
+    53.910320954       43,57,37,152        cpu_atom/dTLB-loads/                                                  
+    53.910320954       27,94,35,268        cpu_core/dTLB-loads/                                                    (66.31%)
+    53.910320954           1,83,728        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    53.910320954             36,450        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.50%)
+    53.910320954       43,57,37,133        cpu_atom/L1-dcache-loads/                                             
+    53.910320954       28,56,15,271        cpu_core/L1-dcache-loads/                                               (66.83%)
+    53.910320954        8,18,13,678        cpu_atom/L1-dcache-stores/                                            
+    53.910320954          90,86,743        cpu_core/L1-dcache-stores/                                              (66.91%)
+    53.910320954           5,05,413        cpu_atom/LLC-loads/                                                   
+    53.910320954             59,404        cpu_core/LLC-loads/                                                     (66.86%)
+    53.910320954             11,283        cpu_atom/LLC-load-misses/        #    2.23% of all L1-icache accesses 
+    53.910320954              5,015        cpu_core/LLC-load-misses/        #    0.99% of all L1-icache accesses   (66.59%)
+stress-ng: info:  [34997] therm:  2.54  0.40  3.70  2.65  1.16  0.84   29.05  20.00  55.05  77.05  76.00  45.05  61.05  43.00  76.00
+    54.926317667              15.08 Joules power/energy-pkg/                                                     
+    54.926317667              11.29 Joules power/energy-cores/                                                   
+    54.926317667       45,07,92,535        cpu_atom/dTLB-loads/                                                  
+    54.926317667       28,45,42,168        cpu_core/dTLB-loads/                                                    (66.88%)
+    54.926317667           1,97,488        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    54.926317667             38,125        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.58%)
+    54.926317667       45,07,92,519        cpu_atom/L1-dcache-loads/                                             
+    54.926317667       27,39,16,429        cpu_core/L1-dcache-loads/                                               (66.27%)
+    54.926317667        8,78,16,834        cpu_atom/L1-dcache-stores/                                            
+    54.926317667          74,41,354        cpu_core/L1-dcache-stores/                                              (66.46%)
+    54.926317667           9,34,616        cpu_atom/LLC-loads/                                                   
+    54.926317667             52,056        cpu_core/LLC-loads/                                                     (66.85%)
+    54.926317667             21,192        cpu_atom/LLC-load-misses/        #    2.27% of all L1-icache accesses 
+    54.926317667              6,518        cpu_core/LLC-load-misses/        #    0.70% of all L1-icache accesses   (66.96%)
+stress-ng: info:  [34997] therm:  2.67  0.40  3.61  2.65  1.16  0.84   29.05  20.00  56.05  76.05  76.00  46.05  61.05  43.00  76.00
+    55.942318009              15.14 Joules power/energy-pkg/                                                     
+    55.942318009              11.36 Joules power/energy-cores/                                                   
+    55.942318009       44,27,73,780        cpu_atom/dTLB-loads/                                                  
+    55.942318009       28,18,75,705        cpu_core/dTLB-loads/                                                    (66.79%)
+    55.942318009           2,09,383        cpu_atom/dTLB-load-misses/       #    0.05% of all dTLB cache accesses
+    55.942318009             34,093        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.91%)
+    55.942318009       44,27,73,788        cpu_atom/L1-dcache-loads/                                             
+    55.942318009       28,54,72,640        cpu_core/L1-dcache-loads/                                               (66.91%)
+    55.942318009        8,81,05,590        cpu_atom/L1-dcache-stores/                                            
+    55.942318009          77,61,525        cpu_core/L1-dcache-stores/                                              (66.61%)
+    55.942318009           6,46,055        cpu_atom/LLC-loads/                                                   
+    55.942318009             48,306        cpu_core/LLC-loads/                                                     (66.30%)
+    55.942318009             34,907        cpu_atom/LLC-load-misses/        #    5.40% of all L1-icache accesses 
+    55.942318009              4,559        cpu_core/LLC-load-misses/        #    0.71% of all L1-icache accesses   (66.48%)
+stress-ng: info:  [34997] therm:  2.48  0.40  3.60  2.76  1.21  0.85   29.05  20.00  55.05  76.05  76.00  45.05  59.05  43.00  75.00
+    56.958266409              15.14 Joules power/energy-pkg/                                                     
+    56.958266409              11.37 Joules power/energy-cores/                                                   
+    56.958266409       42,08,46,221        cpu_atom/dTLB-loads/                                                  
+    56.958266409       29,17,67,672        cpu_core/dTLB-loads/                                                    (66.33%)
+    56.958266409           1,87,548        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    56.958266409             36,874        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.48%)
+    56.958266409       42,08,46,246        cpu_atom/L1-dcache-loads/                                             
+    56.958266409       29,93,48,608        cpu_core/L1-dcache-loads/                                               (66.79%)
+    56.958266409        7,70,85,325        cpu_atom/L1-dcache-stores/                                            
+    56.958266409        2,35,84,827        cpu_core/L1-dcache-stores/                                              (66.94%)
+    56.958266409           4,46,397        cpu_atom/LLC-loads/                                                   
+    56.958266409             64,636        cpu_core/LLC-loads/                                                     (66.87%)
+    56.958266409              7,974        cpu_atom/LLC-load-misses/        #    1.79% of all L1-icache accesses 
+    56.958266409              6,408        cpu_core/LLC-load-misses/        #    1.44% of all L1-icache accesses   (66.58%)
+stress-ng: info:  [34997] therm:  2.74  0.40  3.60  2.76  1.21  0.85   29.05  20.00  55.05  75.05  74.00  46.05  61.05  43.00  74.00
+    57.974317021              15.17 Joules power/energy-pkg/                                                     
+    57.974317021              11.44 Joules power/energy-cores/                                                   
+    57.974317021       42,76,36,458        cpu_atom/dTLB-loads/                                                  
+    57.974317021       29,29,50,622        cpu_core/dTLB-loads/                                                    (66.88%)
+    57.974317021           2,03,078        cpu_atom/dTLB-load-misses/       #    0.05% of all dTLB cache accesses
+    57.974317021             35,270        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.64%)
+    57.974317021       42,76,36,430        cpu_atom/L1-dcache-loads/                                             
+    57.974317021       28,71,34,268        cpu_core/L1-dcache-loads/                                               (66.37%)
+    57.974317021        7,90,66,330        cpu_atom/L1-dcache-stores/                                            
+    57.974317021          89,28,947        cpu_core/L1-dcache-stores/                                              (66.41%)
+    57.974317021           4,42,169        cpu_atom/LLC-loads/                                                   
+    57.974317021             64,382        cpu_core/LLC-loads/                                                     (66.75%)
+    57.974317021              6,067        cpu_atom/LLC-load-misses/        #    1.37% of all L1-icache accesses 
+    57.974317021             10,645        cpu_core/LLC-load-misses/        #    2.41% of all L1-icache accesses   (66.95%)
+stress-ng: info:  [34997] therm:  2.42  0.40  3.68  2.76  1.21  0.85   29.05  20.00  55.05  75.05  77.00  46.05  59.05  43.00  76.00
+    58.990291235              15.05 Joules power/energy-pkg/                                                     
+    58.990291235              11.44 Joules power/energy-cores/                                                   
+    58.990291235       38,20,86,145        cpu_atom/dTLB-loads/                                                  
+    58.990291235       28,49,52,887        cpu_core/dTLB-loads/                                                    (66.66%)
+    58.990291235           1,40,667        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    58.990291235             34,699        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.87%)
+    58.990291235       38,20,86,154        cpu_atom/L1-dcache-loads/                                             
+    58.990291235       28,41,63,931        cpu_core/L1-dcache-loads/                                               (66.89%)
+    58.990291235        5,28,42,710        cpu_atom/L1-dcache-stores/                                            
+    58.990291235          78,44,495        cpu_core/L1-dcache-stores/                                              (66.69%)
+    58.990291235           2,73,391        cpu_atom/LLC-loads/                                                   
+    58.990291235             63,271        cpu_core/LLC-loads/                                                     (66.45%)
+    58.990291235              1,762        cpu_atom/LLC-load-misses/        #    0.64% of all L1-icache accesses 
+    58.990291235              6,846        cpu_core/LLC-load-misses/        #    2.50% of all L1-icache accesses   (66.44%)
+stress-ng: info:  [34997] therm:  2.58  0.40  3.70  2.76  1.21  0.85   29.05  20.00  55.05  75.05  76.00  46.05  59.05  43.00  76.00
+    60.014171713              15.28 Joules power/energy-pkg/                                                     
+    60.014171713              11.38 Joules power/energy-cores/                                                   
+    60.014171713       37,80,38,710        cpu_atom/dTLB-loads/                                                  
+    60.014171713       28,58,25,588        cpu_core/dTLB-loads/                                                    (66.63%)
+    60.014171713           1,25,611        cpu_atom/dTLB-load-misses/       #    0.03% of all dTLB cache accesses
+    60.014171713             35,120        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.45%)
+    60.014171713       37,80,38,753        cpu_atom/L1-dcache-loads/                                             
+    60.014171713       28,19,22,671        cpu_core/L1-dcache-loads/                                               (66.42%)
+    60.014171713        4,78,71,485        cpu_atom/L1-dcache-stores/                                            
+    60.014171713          73,47,922        cpu_core/L1-dcache-stores/                                              (66.70%)
+    60.014171713           2,83,445        cpu_atom/LLC-loads/                                                   
+    60.014171713             46,708        cpu_core/LLC-loads/                                                     (66.95%)
+    60.014171713              2,645        cpu_atom/LLC-load-misses/        #    0.93% of all L1-icache accesses 
+    60.014171713              5,022        cpu_core/LLC-load-misses/        #    1.77% of all L1-icache accesses   (66.85%)
+stress-ng: info:  [34997] therm:  2.33  0.40  3.70  2.76  1.21  0.85   29.05  20.00  56.05  75.05  76.00  45.05  59.05  43.00  74.00
+stress-ng: info:  [34997] therm:  2.67  0.40  3.60  2.86  1.25  0.87   29.05  20.00  56.05  75.05  75.00  45.05  59.05  43.00  75.00
+    61.030260183              15.33 Joules power/energy-pkg/                                                     
+    61.030260183              11.41 Joules power/energy-cores/                                                   
+    61.030260183       66,37,91,429        cpu_atom/dTLB-loads/                                                  
+    61.030260183       27,86,34,997        cpu_core/dTLB-loads/                                                    (66.84%)
+    61.030260183           7,27,942        cpu_atom/dTLB-load-misses/       #    0.11% of all dTLB cache accesses
+    61.030260183             34,403        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.94%)
+    61.030260183       66,37,91,375        cpu_atom/L1-dcache-loads/                                             
+    61.030260183       27,70,13,035        cpu_core/L1-dcache-loads/                                               (66.90%)
+    61.030260183       22,39,13,387        cpu_atom/L1-dcache-stores/                                            
+    61.030260183          77,22,028        cpu_core/L1-dcache-stores/                                              (66.59%)
+    61.030260183          14,83,078        cpu_atom/LLC-loads/                                                   
+    61.030260183             55,852        cpu_core/LLC-loads/                                                     (66.26%)
+    61.030260183             22,310        cpu_atom/LLC-load-misses/        #    1.50% of all L1-icache accesses 
+    61.030260183              5,203        cpu_core/LLC-load-misses/        #    0.35% of all L1-icache accesses   (66.47%)
+stress-ng: info:  [34997] therm:  2.02  0.40  3.80  2.86  1.25  0.87   29.05  20.00  55.05  74.05  75.00  45.05  59.05  43.00  75.00
+    62.046340382              14.88 Joules power/energy-pkg/                                                     
+    62.046340382              11.13 Joules power/energy-cores/                                                   
+    62.046340382       41,52,66,085        cpu_atom/dTLB-loads/                                                  
+    62.046340382       26,88,51,741        cpu_core/dTLB-loads/                                                    (66.29%)
+    62.046340382           1,29,099        cpu_atom/dTLB-load-misses/       #    0.03% of all dTLB cache accesses
+    62.046340382             34,078        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.50%)
+    62.046340382       41,52,66,080        cpu_atom/L1-dcache-loads/                                             
+    62.046340382       27,74,54,488        cpu_core/L1-dcache-loads/                                               (66.81%)
+    62.046340382        7,15,32,083        cpu_atom/L1-dcache-stores/                                            
+    62.046340382          77,46,882        cpu_core/L1-dcache-stores/                                              (66.91%)
+    62.046340382           3,31,130        cpu_atom/LLC-loads/                                                   
+    62.046340382             51,093        cpu_core/LLC-loads/                                                     (66.90%)
+    62.046340382              2,653        cpu_atom/LLC-load-misses/        #    0.80% of all L1-icache accesses 
+    62.046340382              4,466        cpu_core/LLC-load-misses/        #    1.35% of all L1-icache accesses   (66.59%)
+stress-ng: info:  [34997] therm:  2.47  0.40  3.60  2.86  1.25  0.87   29.05  20.00  56.05  75.05  75.00  46.05  59.05  43.00  75.00
+    63.062355309              15.42 Joules power/energy-pkg/                                                     
+    63.062355309              11.75 Joules power/energy-cores/                                                   
+    63.062355309       44,39,54,913        cpu_atom/dTLB-loads/                                                  
+    63.062355309       29,66,98,167        cpu_core/dTLB-loads/                                                    (66.94%)
+    63.062355309           2,16,674        cpu_atom/dTLB-load-misses/       #    0.05% of all dTLB cache accesses
+    63.062355309             35,789        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.75%)
+    63.062355309       44,39,54,957        cpu_atom/L1-dcache-loads/                                             
+    63.062355309       29,43,90,979        cpu_core/L1-dcache-loads/                                               (66.44%)
+    63.062355309        8,21,27,695        cpu_atom/L1-dcache-stores/                                            
+    63.062355309          84,25,492        cpu_core/L1-dcache-stores/                                              (66.43%)
+    63.062355309           9,54,545        cpu_atom/LLC-loads/                                                   
+    63.062355309             65,367        cpu_core/LLC-loads/                                                     (66.62%)
+    63.062355309             36,675        cpu_atom/LLC-load-misses/        #    3.84% of all L1-icache accesses 
+    63.062355309              9,265        cpu_core/LLC-load-misses/        #    0.97% of all L1-icache accesses   (66.82%)
+stress-ng: info:  [34997] therm:  2.69  0.40  3.61  2.86  1.25  0.87   29.05  20.00  55.05  74.05  75.00  46.05  60.05  43.00  75.00
+    64.086309609              15.23 Joules power/energy-pkg/                                                     
+    64.086309609              11.35 Joules power/energy-cores/                                                   
+    64.086309609       41,64,74,450        cpu_atom/dTLB-loads/                                                  
+    64.086309609       27,96,50,487        cpu_core/dTLB-loads/                                                    (66.38%)
+    64.086309609           1,50,350        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    64.086309609             33,665        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.58%)
+    64.086309609       41,64,74,450        cpu_atom/L1-dcache-loads/                                             
+    64.086309609       27,94,98,970        cpu_core/L1-dcache-loads/                                               (66.90%)
+    64.086309609        7,36,88,173        cpu_atom/L1-dcache-stores/                                            
+    64.086309609          77,68,257        cpu_core/L1-dcache-stores/                                              (66.90%)
+    64.086309609           3,79,187        cpu_atom/LLC-loads/                                                   
+    64.086309609             50,259        cpu_core/LLC-loads/                                                     (66.71%)
+    64.086309609             10,426        cpu_atom/LLC-load-misses/        #    2.75% of all L1-icache accesses 
+    64.086309609              3,736        cpu_core/LLC-load-misses/        #    0.99% of all L1-icache accesses   (66.52%)
+stress-ng: info:  [34997] therm:  2.28  0.40  3.63  2.86  1.25  0.87   29.05  20.00  55.05  74.05  74.00  45.05  58.05  43.00  73.00
+    65.102363326              15.28 Joules power/energy-pkg/                                                     
+    65.102363326              11.42 Joules power/energy-cores/                                                   
+    65.102363326       42,44,34,865        cpu_atom/dTLB-loads/                                                  
+    65.102363326       27,46,75,501        cpu_core/dTLB-loads/                                                    (66.92%)
+    65.102363326           1,42,160        cpu_atom/dTLB-load-misses/       #    0.03% of all dTLB cache accesses
+    65.102363326             34,675        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.64%)
+    65.102363326       42,44,34,850        cpu_atom/L1-dcache-loads/                                             
+    65.102363326       27,57,23,310        cpu_core/L1-dcache-loads/                                               (66.31%)
+    65.102363326        7,39,42,073        cpu_atom/L1-dcache-stores/                                            
+    65.102363326          79,64,444        cpu_core/L1-dcache-stores/                                              (66.39%)
+    65.102363326           3,66,238        cpu_atom/LLC-loads/                                                   
+    65.102363326             58,836        cpu_core/LLC-loads/                                                     (66.77%)
+    65.102363326              8,823        cpu_atom/LLC-load-misses/        #    2.41% of all L1-icache accesses 
+    65.102363326              3,997        cpu_core/LLC-load-misses/        #    1.09% of all L1-icache accesses   (66.97%)
+stress-ng: info:  [34997] therm:  2.14  0.40  3.70  2.95  1.30  0.89   29.05  20.00  56.05  74.05  75.00  46.05  58.05  43.00  74.00
+    66.118306345              15.19 Joules power/energy-pkg/                                                     
+    66.118306345              11.41 Joules power/energy-cores/                                                   
+    66.118306345       34,73,13,583        cpu_atom/dTLB-loads/                                                  
+    66.118306345       36,17,93,605        cpu_core/dTLB-loads/                                                    (66.61%)
+    66.118306345           1,55,899        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    66.118306345             55,441        cpu_core/dTLB-load-misses/       #    0.02% of all dTLB cache accesses  (66.89%)
+    66.118306345       34,73,13,582        cpu_atom/L1-dcache-loads/                                             
+    66.118306345       37,31,39,358        cpu_core/L1-dcache-loads/                                               (66.98%)
+    66.118306345        3,67,94,932        cpu_atom/L1-dcache-stores/                                            
+    66.118306345        5,02,44,410        cpu_core/L1-dcache-stores/                                              (66.80%)
+    66.118306345           3,51,513        cpu_atom/LLC-loads/                                                   
+    66.118306345           2,46,205        cpu_core/LLC-loads/                                                     (66.42%)
+    66.118306345             10,927        cpu_atom/LLC-load-misses/        #    3.11% of all L1-icache accesses 
+    66.118306345             14,209        cpu_core/LLC-load-misses/        #    4.04% of all L1-icache accesses   (66.31%)
+stress-ng: info:  [34997] therm:  2.54  0.40  3.71  2.95  1.30  0.89   29.05  20.00  56.05  74.05  76.00  46.05  58.05  43.00  75.00
+    67.138310585              15.19 Joules power/energy-pkg/                                                     
+    67.138310585              11.47 Joules power/energy-cores/                                                   
+    67.138310585       41,98,10,136        cpu_atom/dTLB-loads/                                                  
+    67.138310585       28,35,25,150        cpu_core/dTLB-loads/                                                    (66.54%)
+    67.138310585           1,60,071        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    67.138310585             35,834        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.32%)
+    67.138310585       41,98,10,144        cpu_atom/L1-dcache-loads/                                             
+    67.138310585       28,13,39,019        cpu_core/L1-dcache-loads/                                               (66.51%)
+    67.138310585        7,44,82,266        cpu_atom/L1-dcache-stores/                                            
+    67.138310585          77,98,392        cpu_core/L1-dcache-stores/                                              (66.84%)
+    67.138310585           4,05,811        cpu_atom/LLC-loads/                                                   
+    67.138310585             54,519        cpu_core/LLC-loads/                                                     (66.95%)
+    67.138310585              7,421        cpu_atom/LLC-load-misses/        #    1.83% of all L1-icache accesses 
+    67.138310585              5,209        cpu_core/LLC-load-misses/        #    1.28% of all L1-icache accesses   (66.84%)
+stress-ng: info:  [34997] therm:  2.12  0.40  3.70  2.95  1.30  0.89   29.05  20.00  56.05  74.05  74.00  46.05  59.05  43.00  73.00
+    68.154328708              15.28 Joules power/energy-pkg/                                                     
+    68.154328708              11.53 Joules power/energy-cores/                                                   
+    68.154328708       42,86,31,217        cpu_atom/dTLB-loads/                                                  
+    68.154328708       28,32,44,073        cpu_core/dTLB-loads/                                                    (66.95%)
+    68.154328708           2,31,923        cpu_atom/dTLB-load-misses/       #    0.05% of all dTLB cache accesses
+    68.154328708             37,536        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (67.00%)
+    68.154328708       42,86,31,214        cpu_atom/L1-dcache-loads/                                             
+    68.154328708       28,16,97,494        cpu_core/L1-dcache-loads/                                               (66.70%)
+    68.154328708        7,94,77,560        cpu_atom/L1-dcache-stores/                                            
+    68.154328708          79,43,597        cpu_core/L1-dcache-stores/                                              (66.35%)
+    68.154328708           5,10,434        cpu_atom/LLC-loads/                                                   
+    68.154328708             53,426        cpu_core/LLC-loads/                                                     (66.35%)
+    68.154328708              9,110        cpu_atom/LLC-load-misses/        #    1.78% of all L1-icache accesses 
+    68.154328708              4,706        cpu_core/LLC-load-misses/        #    0.92% of all L1-icache accesses   (66.65%)
+stress-ng: info:  [34997] therm:  2.12  0.40  3.70  2.95  1.30  0.89   29.05  20.00  55.05  74.05  75.00  46.05  58.05  43.00  75.00
+    69.174308732              15.33 Joules power/energy-pkg/                                                     
+    69.174308732              11.60 Joules power/energy-cores/                                                   
+    69.174308732       42,17,82,328        cpu_atom/dTLB-loads/                                                  
+    69.174308732       29,96,84,806        cpu_core/dTLB-loads/                                                    (66.30%)
+    69.174308732           1,90,468        cpu_atom/dTLB-load-misses/       #    0.05% of all dTLB cache accesses
+    69.174308732             37,741        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.58%)
+    69.174308732       42,17,82,336        cpu_atom/L1-dcache-loads/                                             
+    69.174308732       30,17,95,514        cpu_core/L1-dcache-loads/                                               (66.87%)
+    69.174308732        6,87,76,415        cpu_atom/L1-dcache-stores/                                            
+    69.174308732        1,69,98,812        cpu_core/L1-dcache-stores/                                              (66.90%)
+    69.174308732           9,24,933        cpu_atom/LLC-loads/                                                   
+    69.174308732             67,156        cpu_core/LLC-loads/                                                     (66.83%)
+    69.174308732             22,368        cpu_atom/LLC-load-misses/        #    2.42% of all L1-icache accesses 
+    69.174308732              4,863        cpu_core/LLC-load-misses/        #    0.53% of all L1-icache accesses   (66.52%)
+stress-ng: info:  [34997] therm:  2.33  0.40  3.70  2.95  1.30  0.89   29.05  20.00  55.05  74.05  72.00  45.05  58.05  43.00  73.00
+    70.186319588              15.13 Joules power/energy-pkg/                                                     
+    70.186319588              11.45 Joules power/energy-cores/                                                   
+    70.186319588       33,85,85,190        cpu_atom/dTLB-loads/                                                  
+    70.186319588       35,65,13,096        cpu_core/dTLB-loads/                                                    (66.75%)
+    70.186319588           1,24,132        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    70.186319588             47,851        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.43%)
+    70.186319588       33,85,85,179        cpu_atom/L1-dcache-loads/                                             
+    70.186319588       35,30,08,690        cpu_core/L1-dcache-loads/                                               (66.42%)
+    70.186319588        3,18,36,608        cpu_atom/L1-dcache-stores/                                            
+    70.186319588        4,96,89,438        cpu_core/L1-dcache-stores/                                              (66.74%)
+    70.186319588           2,48,633        cpu_atom/LLC-loads/                                                   
+    70.186319588           2,03,926        cpu_core/LLC-loads/                                                     (66.83%)
+    70.186319588              9,220        cpu_atom/LLC-load-misses/        #    3.71% of all L1-icache accesses 
+    70.186319588             47,241        cpu_core/LLC-load-misses/        #   19.00% of all L1-icache accesses   (66.83%)
+stress-ng: info:  [34997] therm:  2.01  0.40  3.60  3.11  1.36  0.91   29.05  20.00  56.05  74.05  71.00  46.05  58.05  43.00  70.00
+    71.202308403              15.17 Joules power/energy-pkg/                                                     
+    71.202308403              11.44 Joules power/energy-cores/                                                   
+    71.202308403       48,85,50,893        cpu_atom/dTLB-loads/                                                  
+    71.202308403       35,25,87,885        cpu_core/dTLB-loads/                                                    (66.94%)
+    71.202308403           7,17,339        cpu_atom/dTLB-load-misses/       #    0.15% of all dTLB cache accesses
+    71.202308403             65,366        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.87%)
+    71.202308403       48,85,50,897        cpu_atom/L1-dcache-loads/                                             
+    71.202308403       35,56,28,705        cpu_core/L1-dcache-loads/                                               (66.56%)
+    71.202308403       11,98,64,321        cpu_atom/L1-dcache-stores/                                            
+    71.202308403        5,02,76,513        cpu_core/L1-dcache-stores/                                              (66.30%)
+    71.202308403          14,17,970        cpu_atom/LLC-loads/                                                   
+    71.202308403           2,35,456        cpu_core/LLC-loads/                                                     (66.50%)
+    71.202308403             11,080        cpu_atom/LLC-load-misses/        #    0.78% of all L1-icache accesses 
+    71.202308403             35,315        cpu_core/LLC-load-misses/        #    2.49% of all L1-icache accesses   (66.83%)
+stress-ng: info:  [34997] therm:  2.32  0.40  3.71  3.11  1.36  0.91   29.05  20.00  55.05  73.05  75.00  46.05  58.05  43.00  75.00
+    72.214342842              15.23 Joules power/energy-pkg/                                                     
+    72.214342842              11.50 Joules power/energy-cores/                                                   
+    72.214342842       36,06,89,093        cpu_atom/dTLB-loads/                                                  
+    72.214342842       34,04,67,640        cpu_core/dTLB-loads/                                                    (66.70%)
+    72.214342842           1,50,088        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    72.214342842             54,524        cpu_core/dTLB-load-misses/       #    0.02% of all dTLB cache accesses  (66.80%)
+    72.214342842       36,06,89,097        cpu_atom/L1-dcache-loads/                                             
+    72.214342842       35,34,14,251        cpu_core/L1-dcache-loads/                                               (66.79%)
+    72.214342842        4,52,16,858        cpu_atom/L1-dcache-stores/                                            
+    72.214342842        3,91,32,596        cpu_core/L1-dcache-stores/                                              (66.73%)
+    72.214342842           4,02,869        cpu_atom/LLC-loads/                                                   
+    72.214342842           2,83,797        cpu_core/LLC-loads/                                                     (66.51%)
+    72.214342842              8,835        cpu_atom/LLC-load-misses/        #    2.19% of all L1-icache accesses 
+    72.214342842             23,484        cpu_core/LLC-load-misses/        #    5.83% of all L1-icache accesses   (66.47%)
+stress-ng: info:  [34997] therm:  2.20  0.40  3.50  3.11  1.36  0.91   29.05  20.00  56.05  74.05  74.00  46.05  58.05  44.00  74.00
+    73.226329183              15.32 Joules power/energy-pkg/                                                     
+    73.226329183              11.59 Joules power/energy-cores/                                                   
+    73.226329183       93,22,39,407        cpu_atom/dTLB-loads/                                                  
+    73.226329183       28,04,79,833        cpu_core/dTLB-loads/                                                    (66.46%)
+    73.226329183           1,93,353        cpu_atom/dTLB-load-misses/       #    0.02% of all dTLB cache accesses
+    73.226329183             35,682        cpu_core/dTLB-load-misses/       #    0.00% of all dTLB cache accesses  (66.68%)
+    73.226329183       93,22,39,401        cpu_atom/L1-dcache-loads/                                             
+    73.226329183       27,69,78,930        cpu_core/L1-dcache-loads/                                               (66.79%)
+    73.226329183       38,61,46,627        cpu_atom/L1-dcache-stores/                                            
+    73.226329183          75,22,220        cpu_core/L1-dcache-stores/                                              (66.81%)
+    73.226329183          13,04,914        cpu_atom/LLC-loads/                                                   
+    73.226329183             56,601        cpu_core/LLC-loads/                                                     (66.75%)
+    73.226329183             18,537        cpu_atom/LLC-load-misses/        #    1.42% of all L1-icache accesses 
+    73.226329183              6,736        cpu_core/LLC-load-misses/        #    0.52% of all L1-icache accesses   (66.51%)
+stress-ng: info:  [34997] therm:  2.67  0.40  3.60  3.11  1.36  0.91   29.05  20.00  55.05  74.05  75.00  45.05  58.05  44.00  74.00
+    74.242324289              15.09 Joules power/energy-pkg/                                                     
+    74.242324289              11.38 Joules power/energy-cores/                                                   
+    74.242324289       42,29,92,866        cpu_atom/dTLB-loads/                                                  
+    74.242324289       29,90,60,494        cpu_core/dTLB-loads/                                                    (66.57%)
+    74.242324289           1,51,835        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    74.242324289             38,051        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.30%)
+    74.242324289       42,29,92,865        cpu_atom/L1-dcache-loads/                                             
+    74.242324289       29,44,69,610        cpu_core/L1-dcache-loads/                                               (66.51%)
+    74.242324289        8,06,17,905        cpu_atom/L1-dcache-stores/                                            
+    74.242324289        1,01,16,761        cpu_core/L1-dcache-stores/                                              (66.82%)
+    74.242324289           4,27,120        cpu_atom/LLC-loads/                                                   
+    74.242324289             53,394        cpu_core/LLC-loads/                                                     (66.92%)
+    74.242324289             18,335        cpu_atom/LLC-load-misses/        #    4.29% of all L1-icache accesses 
+    74.242324289              6,809        cpu_core/LLC-load-misses/        #    1.59% of all L1-icache accesses   (66.88%)
+stress-ng: info:  [34997] therm:  1.78  0.40  3.70  3.11  1.36  0.91   29.05  20.00  55.05  74.05  75.00  46.05  58.05  44.00  75.00
+    75.254325029              15.26 Joules power/energy-pkg/                                                     
+    75.254325029              11.54 Joules power/energy-cores/                                                   
+    75.254325029       33,57,00,881        cpu_atom/dTLB-loads/                                                  
+    75.254325029       36,31,40,290        cpu_core/dTLB-loads/                                                    (66.82%)
+    75.254325029           1,27,454        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    75.254325029             50,301        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.77%)
+    75.254325029       33,57,00,857        cpu_atom/L1-dcache-loads/                                             
+    75.254325029       35,94,81,000        cpu_core/L1-dcache-loads/                                               (66.45%)
+    75.254325029        3,07,50,622        cpu_atom/L1-dcache-stores/                                            
+    75.254325029        5,57,84,586        cpu_core/L1-dcache-stores/                                              (66.42%)
+    75.254325029           2,35,873        cpu_atom/LLC-loads/                                                   
+    75.254325029           3,51,930        cpu_core/LLC-loads/                                                     (66.73%)
+    75.254325029              9,336        cpu_atom/LLC-load-misses/        #    3.96% of all L1-icache accesses 
+    75.254325029             66,264        cpu_core/LLC-load-misses/        #   28.09% of all L1-icache accesses   (66.82%)
+stress-ng: info:  [34997] therm: AvGHz MnGHz MxGHz  LdA1  LdA5 LdA15    AMBF INT340   NGFF   TCPU TCPU_P   TMEM   TSKN iwlwif x86_pk
+stress-ng: info:  [34997] therm:  1.79  0.40  3.70  3.18  1.41  0.93   29.05  20.00  55.05  75.05  74.00  46.05  57.05  44.00  73.00
+    76.270324977              15.23 Joules power/energy-pkg/                                                     
+    76.270324977              11.49 Joules power/energy-cores/                                                   
+    76.270324977       44,20,01,425        cpu_atom/dTLB-loads/                                                  
+    76.270324977       28,31,46,797        cpu_core/dTLB-loads/                                                    (66.64%)
+    76.270324977           2,08,525        cpu_atom/dTLB-load-misses/       #    0.05% of all dTLB cache accesses
+    76.270324977             33,760        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.93%)
+    76.270324977       44,20,01,404        cpu_atom/L1-dcache-loads/                                             
+    76.270324977       28,52,34,758        cpu_core/L1-dcache-loads/                                               (67.02%)
+    76.270324977        8,00,37,414        cpu_atom/L1-dcache-stores/                                            
+    76.270324977          77,01,842        cpu_core/L1-dcache-stores/                                              (66.73%)
+    76.270324977           9,34,524        cpu_atom/LLC-loads/                                                   
+    76.270324977             53,058        cpu_core/LLC-loads/                                                     (66.34%)
+    76.270324977             25,933        cpu_atom/LLC-load-misses/        #    2.77% of all L1-icache accesses 
+    76.270324977              4,884        cpu_core/LLC-load-misses/        #    0.52% of all L1-icache accesses   (66.34%)
+stress-ng: info:  [34997] therm:  2.77  0.40  3.70  3.18  1.41  0.93   29.05  20.00  55.05  74.05  75.00  46.05  58.05  44.00  74.00
+    77.290356379              15.28 Joules power/energy-pkg/                                                     
+    77.290356379              11.56 Joules power/energy-cores/                                                   
+    77.290356379       40,22,14,326        cpu_atom/dTLB-loads/                                                  
+    77.290356379       30,81,88,149        cpu_core/dTLB-loads/                                                    (66.57%)
+    77.290356379           2,02,295        cpu_atom/dTLB-load-misses/       #    0.05% of all dTLB cache accesses
+    77.290356379             52,936        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.28%)
+    77.290356379       40,22,14,353        cpu_atom/L1-dcache-loads/                                             
+    77.290356379       30,32,54,248        cpu_core/L1-dcache-loads/                                               (66.48%)
+    77.290356379        6,30,45,169        cpu_atom/L1-dcache-stores/                                            
+    77.290356379        2,21,73,054        cpu_core/L1-dcache-stores/                                              (66.86%)
+    77.290356379           4,71,489        cpu_atom/LLC-loads/                                                   
+    77.290356379             60,248        cpu_core/LLC-loads/                                                     (66.95%)
+    77.290356379             10,623        cpu_atom/LLC-load-misses/        #    2.25% of all L1-icache accesses 
+    77.290356379              8,066        cpu_core/LLC-load-misses/        #    1.71% of all L1-icache accesses   (66.86%)
+stress-ng: info:  [34997] therm:  2.50  0.40  3.67  3.18  1.41  0.93   29.05  20.00  55.05  74.05  72.00  46.05  57.05  45.00  73.00
+    78.301708378              15.24 Joules power/energy-pkg/                                                     
+    78.301708378              11.56 Joules power/energy-cores/                                                   
+    78.301708378       36,14,86,704        cpu_atom/dTLB-loads/                                                  
+    78.301708378       29,81,98,147        cpu_core/dTLB-loads/                                                    (66.82%)
+    78.301708378           2,07,398        cpu_atom/dTLB-load-misses/       #    0.06% of all dTLB cache accesses
+    78.301708378             42,322        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.84%)
+    78.301708378       36,14,86,679        cpu_atom/L1-dcache-loads/                                             
+    78.301708378       29,53,62,780        cpu_core/L1-dcache-loads/                                               (66.54%)
+    78.301708378        4,37,79,643        cpu_atom/L1-dcache-stores/                                            
+    78.301708378        1,51,67,433        cpu_core/L1-dcache-stores/                                              (66.34%)
+    78.301708378           3,79,592        cpu_atom/LLC-loads/                                                   
+    78.301708378             75,965        cpu_core/LLC-loads/                                                     (66.64%)
+    78.301708378              7,686        cpu_atom/LLC-load-misses/        #    2.02% of all L1-icache accesses 
+    78.301708378             10,083        cpu_core/LLC-load-misses/        #    2.66% of all L1-icache accesses   (66.82%)
+stress-ng: info:  [34997] therm:  2.13  0.40  3.71  3.18  1.41  0.93   29.05  20.00  55.05  74.05  75.00  46.05  57.05  44.00  75.00
+    79.318331576              15.19 Joules power/energy-pkg/                                                     
+    79.318331576              11.49 Joules power/energy-cores/                                                   
+    79.318331576       36,56,04,717        cpu_atom/dTLB-loads/                                                  
+    79.318331576       34,14,53,168        cpu_core/dTLB-loads/                                                    (66.77%)
+    79.318331576           1,48,394        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    79.318331576             43,078        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.87%)
+    79.318331576       36,56,04,761        cpu_atom/L1-dcache-loads/                                             
+    79.318331576       34,16,92,961        cpu_core/L1-dcache-loads/                                               (66.87%)
+    79.318331576        5,05,37,791        cpu_atom/L1-dcache-stores/                                            
+    79.318331576        3,74,43,863        cpu_core/L1-dcache-stores/                                              (66.68%)
+    79.318331576           3,49,646        cpu_atom/LLC-loads/                                                   
+    79.318331576           3,52,862        cpu_core/LLC-loads/                                                     (66.36%)
+    79.318331576              9,986        cpu_atom/LLC-load-misses/        #    2.86% of all L1-icache accesses 
+    79.318331576             84,722        cpu_core/LLC-load-misses/        #   24.23% of all L1-icache accesses   (66.45%)
+stress-ng: info:  [34997] therm:  1.95  0.40  3.70  3.18  1.41  0.93   29.05  20.00  55.05  74.05  74.00  46.05  58.05  45.00  75.00
+#           time             counts   unit events
+    80.330312288              15.06 Joules power/energy-pkg/                                                     
+    80.330312288              11.35 Joules power/energy-cores/                                                   
+    80.330312288       43,36,79,188        cpu_atom/dTLB-loads/                                                  
+    80.330312288       28,25,69,549        cpu_core/dTLB-loads/                                                    (66.47%)
+    80.330312288           2,72,734        cpu_atom/dTLB-load-misses/       #    0.06% of all dTLB cache accesses
+    80.330312288             48,267        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.71%)
+    80.330312288       43,36,79,165        cpu_atom/L1-dcache-loads/                                             
+    80.330312288       28,15,62,380        cpu_core/L1-dcache-loads/                                               (66.80%)
+    80.330312288        8,43,91,370        cpu_atom/L1-dcache-stores/                                            
+    80.330312288          84,80,325        cpu_core/L1-dcache-stores/                                              (66.80%)
+    80.330312288           6,00,813        cpu_atom/LLC-loads/                                                   
+    80.330312288             56,880        cpu_core/LLC-loads/                                                     (66.73%)
+    80.330312288             11,128        cpu_atom/LLC-load-misses/        #    1.85% of all L1-icache accesses 
+    80.330312288              9,751        cpu_core/LLC-load-misses/        #    1.62% of all L1-icache accesses   (66.50%)
+stress-ng: info:  [34997] therm:  2.01  0.40  3.60  3.25  1.45  0.94   29.05  20.00  55.05  74.05  74.00  46.05  57.05  44.00  74.00
+    81.346323182              15.37 Joules power/energy-pkg/                                                     
+    81.346323182              11.62 Joules power/energy-cores/                                                   
+    81.346323182       53,10,05,708        cpu_atom/dTLB-loads/                                                  
+    81.346323182       29,19,96,656        cpu_core/dTLB-loads/                                                    (66.56%)
+    81.346323182           6,77,873        cpu_atom/dTLB-load-misses/       #    0.13% of all dTLB cache accesses
+    81.346323182             48,487        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.31%)
+    81.346323182       53,10,05,710        cpu_atom/L1-dcache-loads/                                             
+    81.346323182       29,39,35,612        cpu_core/L1-dcache-loads/                                               (66.50%)
+    81.346323182       14,15,84,650        cpu_atom/L1-dcache-stores/                                            
+    81.346323182        1,29,62,756        cpu_core/L1-dcache-stores/                                              (66.83%)
+    81.346323182          13,72,613        cpu_atom/LLC-loads/                                                   
+    81.346323182           1,21,131        cpu_core/LLC-loads/                                                     (66.94%)
+    81.346323182              7,698        cpu_atom/LLC-load-misses/        #    0.56% of all L1-icache accesses 
+    81.346323182             18,741        cpu_core/LLC-load-misses/        #    1.37% of all L1-icache accesses   (66.86%)
+stress-ng: info:  [34997] therm:  2.52  0.40  3.70  3.25  1.45  0.94   29.05  20.00  55.05  74.05  75.00  46.05  57.05  45.00  74.00
+    82.358295763              15.15 Joules power/energy-pkg/                                                     
+    82.358295763              11.44 Joules power/energy-cores/                                                   
+    82.358295763       41,63,14,197        cpu_atom/dTLB-loads/                                                  
+    82.358295763       37,49,30,791        cpu_core/dTLB-loads/                                                    (66.81%)
+    82.358295763           1,49,556        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    82.358295763             43,372        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.75%)
+    82.358295763       41,63,14,218        cpu_atom/L1-dcache-loads/                                             
+    82.358295763       38,66,73,750        cpu_core/L1-dcache-loads/                                               (66.47%)
+    82.358295763        7,50,67,403        cpu_atom/L1-dcache-stores/                                            
+    82.358295763        6,41,18,161        cpu_core/L1-dcache-stores/                                              (66.44%)
+    82.358295763           3,95,862        cpu_atom/LLC-loads/                                                   
+    82.358295763           1,09,091        cpu_core/LLC-loads/                                                     (66.73%)
+    82.358295763              6,720        cpu_atom/LLC-load-misses/        #    1.70% of all L1-icache accesses 
+    82.358295763             24,625        cpu_core/LLC-load-misses/        #    6.22% of all L1-icache accesses   (66.81%)
+stress-ng: info:  [34997] therm:  2.12  0.40  3.70  3.25  1.45  0.94   29.05  20.00  55.05  74.05  74.00  46.05  58.05  45.00  74.00
+    83.373504902              15.17 Joules power/energy-pkg/                                                     
+    83.373504902              11.46 Joules power/energy-cores/                                                   
+    83.373504902       34,09,09,615        cpu_atom/dTLB-loads/                                                  
+    83.373504902       35,34,42,768        cpu_core/dTLB-loads/                                                    (66.81%)
+    83.373504902           1,28,688        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    83.373504902             55,129        cpu_core/dTLB-load-misses/       #    0.02% of all dTLB cache accesses  (66.90%)
+    83.373504902       34,09,09,567        cpu_atom/L1-dcache-loads/                                             
+    83.373504902       36,33,23,850        cpu_core/L1-dcache-loads/                                               (66.89%)
+    83.373504902        3,28,05,999        cpu_atom/L1-dcache-stores/                                            
+    83.373504902        4,96,35,246        cpu_core/L1-dcache-stores/                                              (66.62%)
+    83.373504902           2,65,425        cpu_atom/LLC-loads/                                                   
+    83.373504902           2,53,662        cpu_core/LLC-loads/                                                     (66.30%)
+    83.373504902              7,337        cpu_atom/LLC-load-misses/        #    2.76% of all L1-icache accesses 
+    83.373504902             17,521        cpu_core/LLC-load-misses/        #    6.60% of all L1-icache accesses   (66.48%)
+stress-ng: info:  [34997] therm:  2.73  0.40  3.70  3.25  1.45  0.94   29.05  20.00  55.05  74.05  74.00  46.05  57.05  44.00  72.00
+    84.386315352              15.37 Joules power/energy-pkg/                                                     
+    84.386315352              11.64 Joules power/energy-cores/                                                   
+    84.386315352       34,97,90,627        cpu_atom/dTLB-loads/                                                  
+    84.386315352       37,87,68,787        cpu_core/dTLB-loads/                                                    (66.37%)
+    84.386315352           1,59,286        cpu_atom/dTLB-load-misses/       #    0.05% of all dTLB cache accesses
+    84.386315352             89,049        cpu_core/dTLB-load-misses/       #    0.03% of all dTLB cache accesses  (66.46%)
+    84.386315352       34,97,90,652        cpu_atom/L1-dcache-loads/                                             
+    84.386315352       37,59,88,002        cpu_core/L1-dcache-loads/                                               (66.75%)
+    84.386315352        3,59,33,047        cpu_atom/L1-dcache-stores/                                            
+    84.386315352        5,36,05,406        cpu_core/L1-dcache-stores/                                              (66.96%)
+    84.386315352           3,68,009        cpu_atom/LLC-loads/                                                   
+    84.386315352           6,87,804        cpu_core/LLC-loads/                                                     (66.88%)
+    84.386315352             11,429        cpu_atom/LLC-load-misses/        #    3.11% of all L1-icache accesses 
+    84.386315352           2,17,721        cpu_core/LLC-load-misses/        #   59.16% of all L1-icache accesses   (66.58%)
+stress-ng: info:  [34997] therm:  2.54  0.40  3.70  3.25  1.45  0.94   29.05  20.00  55.05  74.05  74.00  46.05  57.05  44.00  74.00
+    85.406330831              15.12 Joules power/energy-pkg/                                                     
+    85.406330831              11.41 Joules power/energy-cores/                                                   
+    85.406330831       42,41,89,510        cpu_atom/dTLB-loads/                                                  
+    85.406330831       28,20,14,909        cpu_core/dTLB-loads/                                                    (66.81%)
+    85.406330831           1,56,804        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    85.406330831             35,752        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.61%)
+    85.406330831       42,41,89,529        cpu_atom/L1-dcache-loads/                                             
+    85.406330831       27,73,46,140        cpu_core/L1-dcache-loads/                                               (66.39%)
+    85.406330831        7,78,19,148        cpu_atom/L1-dcache-stores/                                            
+    85.406330831          77,23,813        cpu_core/L1-dcache-stores/                                              (66.49%)
+    85.406330831           3,94,577        cpu_atom/LLC-loads/                                                   
+    85.406330831             52,812        cpu_core/LLC-loads/                                                     (66.81%)
+    85.406330831              7,803        cpu_atom/LLC-load-misses/        #    1.98% of all L1-icache accesses 
+    85.406330831              3,952        cpu_core/LLC-load-misses/        #    1.00% of all L1-icache accesses   (66.90%)
+stress-ng: info:  [34997] therm:  2.29  0.40  3.70  3.39  1.51  0.97   29.05  20.00  55.05  74.05  74.00  46.05  57.05  44.00  74.00
+    86.421755740              15.41 Joules power/energy-pkg/                                                     
+    86.421755740              11.70 Joules power/energy-cores/                                                   
+    86.421755740       41,16,08,784        cpu_atom/dTLB-loads/                                                  
+    86.421755740       29,77,65,268        cpu_core/dTLB-loads/                                                    (66.82%)
+    86.421755740           1,49,758        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    86.421755740             34,697        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.94%)
+    86.421755740       41,16,08,796        cpu_atom/L1-dcache-loads/                                             
+    86.421755740       30,11,52,436        cpu_core/L1-dcache-loads/                                               (66.85%)
+    86.421755740        7,17,56,238        cpu_atom/L1-dcache-stores/                                            
+    86.421755740        1,01,28,012        cpu_core/L1-dcache-stores/                                              (66.56%)
+    86.421755740           3,70,534        cpu_atom/LLC-loads/                                                   
+    86.421755740             80,625        cpu_core/LLC-loads/                                                     (66.32%)
+    86.421755740              7,828        cpu_atom/LLC-load-misses/        #    2.11% of all L1-icache accesses 
+    86.421755740              4,236        cpu_core/LLC-load-misses/        #    1.14% of all L1-icache accesses   (66.49%)
+stress-ng: info:  [34997] therm:  2.47  0.40  3.60  3.39  1.51  0.97   29.05  20.00  55.05  74.05  74.00  46.05  57.05  44.00  74.00
+    87.438321643              15.27 Joules power/energy-pkg/                                                     
+    87.438321643              11.54 Joules power/energy-cores/                                                   
+    87.438321643       54,42,72,602        cpu_atom/dTLB-loads/                                                  
+    87.438321643       28,99,56,092        cpu_core/dTLB-loads/                                                    (66.35%)
+    87.438321643           2,22,135        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    87.438321643             35,288        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.43%)
+    87.438321643       54,42,72,573        cpu_atom/L1-dcache-loads/                                             
+    87.438321643       28,81,11,856        cpu_core/L1-dcache-loads/                                               (66.77%)
+    87.438321643       15,56,98,181        cpu_atom/L1-dcache-stores/                                            
+    87.438321643          79,56,519        cpu_core/L1-dcache-stores/                                              (66.96%)
+    87.438321643           7,32,665        cpu_atom/LLC-loads/                                                   
+    87.438321643             53,167        cpu_core/LLC-loads/                                                     (66.89%)
+    87.438321643             25,783        cpu_atom/LLC-load-misses/        #    3.52% of all L1-icache accesses 
+    87.438321643              5,827        cpu_core/LLC-load-misses/        #    0.80% of all L1-icache accesses   (66.60%)
+stress-ng: info:  [34997] therm:  2.47  0.40  3.60  3.39  1.51  0.97   29.05  20.00  55.05  73.05  72.00  46.05  57.05  44.00  72.00
+    88.454319071              15.23 Joules power/energy-pkg/                                                     
+    88.454319071              11.52 Joules power/energy-cores/                                                   
+    88.454319071       41,69,05,473        cpu_atom/dTLB-loads/                                                  
+    88.454319071       28,72,59,303        cpu_core/dTLB-loads/                                                    (66.83%)
+    88.454319071           1,77,740        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    88.454319071             39,776        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.62%)
+    88.454319071       41,69,05,492        cpu_atom/L1-dcache-loads/                                             
+    88.454319071       28,65,39,539        cpu_core/L1-dcache-loads/                                               (66.37%)
+    88.454319071        7,20,00,707        cpu_atom/L1-dcache-stores/                                            
+    88.454319071          87,44,414        cpu_core/L1-dcache-stores/                                              (66.48%)
+    88.454319071           4,27,238        cpu_atom/LLC-loads/                                                   
+    88.454319071             54,599        cpu_core/LLC-loads/                                                     (66.79%)
+    88.454319071              6,104        cpu_atom/LLC-load-misses/        #    1.43% of all L1-icache accesses 
+    88.454319071              6,244        cpu_core/LLC-load-misses/        #    1.46% of all L1-icache accesses   (66.90%)
+stress-ng: info:  [34997] therm:  2.33  0.40  3.70  3.39  1.51  0.97   29.05  20.00  55.05  73.05  74.00  46.05  57.05  44.00  74.00
+    89.470318783              15.30 Joules power/energy-pkg/                                                     
+    89.470318783              11.59 Joules power/energy-cores/                                                   
+    89.470318783       35,77,87,909        cpu_atom/dTLB-loads/                                                  
+    89.470318783       35,06,00,344        cpu_core/dTLB-loads/                                                    (66.73%)
+    89.470318783           2,42,960        cpu_atom/dTLB-load-misses/       #    0.07% of all dTLB cache accesses
+    89.470318783             59,529        cpu_core/dTLB-load-misses/       #    0.02% of all dTLB cache accesses  (67.01%)
+    89.470318783       35,77,87,869        cpu_atom/L1-dcache-loads/                                             
+    89.470318783       35,47,66,933        cpu_core/L1-dcache-loads/                                               (66.96%)
+    89.470318783        4,06,77,241        cpu_atom/L1-dcache-stores/                                            
+    89.470318783        5,15,36,976        cpu_core/L1-dcache-stores/                                              (66.67%)
+    89.470318783           4,35,014        cpu_atom/LLC-loads/                                                   
+    89.470318783           3,93,304        cpu_core/LLC-loads/                                                     (66.31%)
+    89.470318783             12,447        cpu_atom/LLC-load-misses/        #    2.86% of all L1-icache accesses 
+    89.470318783             74,092        cpu_core/LLC-load-misses/        #   17.03% of all L1-icache accesses   (66.32%)
+stress-ng: info:  [34997] therm:  2.75  0.40  3.70  3.39  1.51  0.97   29.05  20.00  55.05  74.05  74.00  46.05  57.05  44.00  74.00
+    90.486320826              15.24 Joules power/energy-pkg/                                                     
+    90.486320826              11.53 Joules power/energy-cores/                                                   
+    90.486320826       38,98,85,809        cpu_atom/dTLB-loads/                                                  
+    90.486320826       31,47,64,975        cpu_core/dTLB-loads/                                                    (66.42%)
+    90.486320826           1,60,799        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    90.486320826             38,577        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.42%)
+    90.486320826       38,98,85,828        cpu_atom/L1-dcache-loads/                                             
+    90.486320826       31,96,03,046        cpu_core/L1-dcache-loads/                                               (66.74%)
+    90.486320826        5,77,92,764        cpu_atom/L1-dcache-stores/                                            
+    90.486320826        2,41,01,781        cpu_core/L1-dcache-stores/                                              (66.84%)
+    90.486320826           3,96,721        cpu_atom/LLC-loads/                                                   
+    90.486320826             75,197        cpu_core/LLC-loads/                                                     (66.84%)
+    90.486320826              7,956        cpu_atom/LLC-load-misses/        #    2.01% of all L1-icache accesses 
+    90.486320826              8,419        cpu_core/LLC-load-misses/        #    2.12% of all L1-icache accesses   (66.74%)
+stress-ng: info:  [34997] therm:  2.54  0.84  3.50  3.44  1.55  0.98   29.05  20.00  55.05  74.05  74.00  46.05  57.05  44.00  72.00
+    91.502327343              15.17 Joules power/energy-pkg/                                                     
+    91.502327343              11.44 Joules power/energy-cores/                                                   
+    91.502327343       55,22,36,535        cpu_atom/dTLB-loads/                                                  
+    91.502327343       29,61,82,658        cpu_core/dTLB-loads/                                                    (66.99%)
+    91.502327343           6,05,426        cpu_atom/dTLB-load-misses/       #    0.11% of all dTLB cache accesses
+    91.502327343           1,03,975        cpu_core/dTLB-load-misses/       #    0.02% of all dTLB cache accesses  (66.68%)
+    91.502327343       55,22,36,559        cpu_atom/L1-dcache-loads/                                             
+    91.502327343       29,06,97,649        cpu_core/L1-dcache-loads/                                               (66.36%)
+    91.502327343       12,65,12,033        cpu_atom/L1-dcache-stores/                                            
+    91.502327343        2,85,99,451        cpu_core/L1-dcache-stores/                                              (66.37%)
+    91.502327343          14,58,724        cpu_atom/LLC-loads/                                                   
+    91.502327343           4,25,998        cpu_core/LLC-loads/                                                     (66.66%)
+    91.502327343             28,994        cpu_atom/LLC-load-misses/        #    1.99% of all L1-icache accesses 
+    91.502327343             23,430        cpu_core/LLC-load-misses/        #    1.61% of all L1-icache accesses   (66.95%)
+stress-ng: info:  [34997] therm:  2.17  0.40  3.70  3.44  1.55  0.98   29.05  20.00  55.05  74.05  74.00  46.05  56.05  44.00  72.00
+    92.518318578              15.23 Joules power/energy-pkg/                                                     
+    92.518318578              11.55 Joules power/energy-cores/                                                   
+    92.518318578       40,93,39,117        cpu_atom/dTLB-loads/                                                  
+    92.518318578       29,04,60,334        cpu_core/dTLB-loads/                                                    (66.65%)
+    92.518318578           1,50,947        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    92.518318578             37,444        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.85%)
+    92.518318578       40,93,39,073        cpu_atom/L1-dcache-loads/                                             
+    92.518318578       29,68,57,347        cpu_core/L1-dcache-loads/                                               (66.84%)
+    92.518318578        6,75,47,580        cpu_atom/L1-dcache-stores/                                            
+    92.518318578        1,53,67,057        cpu_core/L1-dcache-stores/                                              (66.73%)
+    92.518318578           3,87,981        cpu_atom/LLC-loads/                                                   
+    92.518318578             72,405        cpu_core/LLC-loads/                                                     (66.51%)
+    92.518318578              7,956        cpu_atom/LLC-load-misses/        #    2.05% of all L1-icache accesses 
+    92.518318578             10,532        cpu_core/LLC-load-misses/        #    2.71% of all L1-icache accesses   (66.42%)
+stress-ng: info:  [34997] therm:  2.42  0.40  3.70  3.44  1.55  0.98   29.05  20.00  55.05  74.05  74.00  46.05  56.05  45.00  74.00
+    93.534241252              15.37 Joules power/energy-pkg/                                                     
+    93.534241252              11.65 Joules power/energy-cores/                                                   
+    93.534241252       51,14,99,375        cpu_atom/dTLB-loads/                                                  
+    93.534241252       28,17,08,942        cpu_core/dTLB-loads/                                                    (66.32%)
+    93.534241252           2,05,635        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    93.534241252             34,742        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.43%)
+    93.534241252       51,14,99,402        cpu_atom/L1-dcache-loads/                                             
+    93.534241252       28,41,45,997        cpu_core/L1-dcache-loads/                                               (66.82%)
+    93.534241252       13,01,37,844        cpu_atom/L1-dcache-stores/                                            
+    93.534241252          76,80,011        cpu_core/L1-dcache-stores/                                              (66.91%)
+    93.534241252           6,78,589        cpu_atom/LLC-loads/                                                   
+    93.534241252             55,587        cpu_core/LLC-loads/                                                     (66.86%)
+    93.534241252             11,688        cpu_atom/LLC-load-misses/        #    1.72% of all L1-icache accesses 
+    93.534241252              4,712        cpu_core/LLC-load-misses/        #    0.69% of all L1-icache accesses   (66.66%)
+stress-ng: info:  [34997] therm:  2.54  0.40  3.70  3.44  1.55  0.98   29.05  20.00  55.05  74.05  74.00  46.05  57.05  46.00  74.00
+    94.546313207              15.26 Joules power/energy-pkg/                                                     
+    94.546313207              11.57 Joules power/energy-cores/                                                   
+    94.546313207       42,46,12,055        cpu_atom/dTLB-loads/                                                  
+    94.546313207       29,08,77,606        cpu_core/dTLB-loads/                                                    (66.93%)
+    94.546313207           1,64,000        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    94.546313207             36,418        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.62%)
+    94.546313207       42,46,12,045        cpu_atom/L1-dcache-loads/                                             
+    94.546313207       29,11,43,810        cpu_core/L1-dcache-loads/                                               (66.33%)
+    94.546313207        7,65,01,960        cpu_atom/L1-dcache-stores/                                            
+    94.546313207          78,22,555        cpu_core/L1-dcache-stores/                                              (66.44%)
+    94.546313207           4,19,893        cpu_atom/LLC-loads/                                                   
+    94.546313207             54,292        cpu_core/LLC-loads/                                                     (66.74%)
+    94.546313207              9,720        cpu_atom/LLC-load-misses/        #    2.31% of all L1-icache accesses 
+    94.546313207              3,501        cpu_core/LLC-load-misses/        #    0.83% of all L1-icache accesses   (66.94%)
+stress-ng: info:  [34997] therm:  2.54  0.40  3.70  3.44  1.55  0.98   29.05  20.00  55.05  74.05  75.00  46.05  56.05  46.00  74.00
+    95.566336739              15.31 Joules power/energy-pkg/                                                     
+    95.566336739              11.60 Joules power/energy-cores/                                                   
+    95.566336739       39,09,16,596        cpu_atom/dTLB-loads/                                                  
+    95.566336739       31,61,00,119        cpu_core/dTLB-loads/                                                    (66.63%)
+    95.566336739           1,41,024        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    95.566336739             35,961        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.93%)
+    95.566336739       39,09,16,600        cpu_atom/L1-dcache-loads/                                             
+    95.566336739       31,82,25,461        cpu_core/L1-dcache-loads/                                               (66.93%)
+    95.566336739        5,78,37,223        cpu_atom/L1-dcache-stores/                                            
+    95.566336739        2,53,08,562        cpu_core/L1-dcache-stores/                                              (66.73%)
+    95.566336739           4,00,532        cpu_atom/LLC-loads/                                                   
+    95.566336739             62,475        cpu_core/LLC-loads/                                                     (66.44%)
+    95.566336739             17,818        cpu_atom/LLC-load-misses/        #    4.45% of all L1-icache accesses 
+    95.566336739              7,545        cpu_core/LLC-load-misses/        #    1.88% of all L1-icache accesses   (66.33%)
+stress-ng: info:  [34997] therm:  2.33  0.40  3.70  3.48  1.59  1.00   29.05  20.00  55.05  74.05  74.00  46.05  57.05  47.00  74.00
+    96.586273102              15.24 Joules power/energy-pkg/                                                     
+    96.586273102              11.52 Joules power/energy-cores/                                                   
+    96.586273102       41,89,79,412        cpu_atom/dTLB-loads/                                                  
+    96.586273102       28,49,82,235        cpu_core/dTLB-loads/                                                    (66.55%)
+    96.586273102           1,64,086        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    96.586273102             39,619        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.32%)
+    96.586273102       41,89,79,418        cpu_atom/L1-dcache-loads/                                             
+    96.586273102       28,10,87,799        cpu_core/L1-dcache-loads/                                               (66.51%)
+    96.586273102        7,41,47,654        cpu_atom/L1-dcache-stores/                                            
+    96.586273102          78,71,700        cpu_core/L1-dcache-stores/                                              (66.84%)
+    96.586273102           4,10,741        cpu_atom/LLC-loads/                                                   
+    96.586273102             53,776        cpu_core/LLC-loads/                                                     (66.94%)
+    96.586273102              7,618        cpu_atom/LLC-load-misses/        #    1.85% of all L1-icache accesses 
+    96.586273102              9,428        cpu_core/LLC-load-misses/        #    2.30% of all L1-icache accesses   (66.84%)
+stress-ng: info:  [34997] therm:  2.07  0.40  3.70  3.48  1.59  1.00   29.05  20.00  55.05  74.05  72.00  46.05  56.05  47.00  71.00
+    97.602355583              15.11 Joules power/energy-pkg/                                                     
+    97.602355583              11.40 Joules power/energy-cores/                                                   
+    97.602355583       36,65,59,175        cpu_atom/dTLB-loads/                                                  
+    97.602355583       28,21,37,328        cpu_core/dTLB-loads/                                                    (66.89%)
+    97.602355583           1,55,881        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+    97.602355583             39,782        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.92%)
+    97.602355583       36,65,59,199        cpu_atom/L1-dcache-loads/                                             
+    97.602355583       27,60,52,621        cpu_core/L1-dcache-loads/                                               (66.64%)
+    97.602355583        4,48,82,740        cpu_atom/L1-dcache-stores/                                            
+    97.602355583          84,95,024        cpu_core/L1-dcache-stores/                                              (66.38%)
+    97.602355583           2,78,134        cpu_atom/LLC-loads/                                                   
+    97.602355583             67,038        cpu_core/LLC-loads/                                                     (66.47%)
+    97.602355583              4,709        cpu_atom/LLC-load-misses/        #    1.69% of all L1-icache accesses 
+    97.602355583              9,460        cpu_core/LLC-load-misses/        #    3.40% of all L1-icache accesses   (66.70%)
+stress-ng: info:  [34997] therm:  2.54  0.40  3.70  3.48  1.59  1.00   29.05  20.00  55.05  74.05  74.00  46.05  56.05  47.00  74.00
+    98.622325305              15.30 Joules power/energy-pkg/                                                     
+    98.622325305              11.56 Joules power/energy-cores/                                                   
+    98.622325305       41,23,15,839        cpu_atom/dTLB-loads/                                                  
+    98.622325305       28,81,32,977        cpu_core/dTLB-loads/                                                    (66.37%)
+    98.622325305           1,92,735        cpu_atom/dTLB-load-misses/       #    0.05% of all dTLB cache accesses
+    98.622325305             39,123        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.57%)
+    98.622325305       41,23,15,834        cpu_atom/L1-dcache-loads/                                             
+    98.622325305       28,04,50,908        cpu_core/L1-dcache-loads/                                               (66.89%)
+    98.622325305        6,26,46,454        cpu_atom/L1-dcache-stores/                                            
+    98.622325305          82,00,555        cpu_core/L1-dcache-stores/                                              (66.93%)
+    98.622325305           9,80,635        cpu_atom/LLC-loads/                                                   
+    98.622325305             76,372        cpu_core/LLC-loads/                                                     (66.73%)
+    98.622325305             28,423        cpu_atom/LLC-load-misses/        #    2.90% of all L1-icache accesses 
+    98.622325305             22,542        cpu_core/LLC-load-misses/        #    2.30% of all L1-icache accesses   (66.50%)
+stress-ng: info:  [34997] therm:  2.25  0.40  4.00  3.48  1.59  1.00   29.05  20.00  54.05  74.05  76.00  46.05  56.05  47.00  75.00
+    99.634327989              17.36 Joules power/energy-pkg/                                                     
+    99.634327989              13.66 Joules power/energy-cores/                                                   
+    99.634327989       41,84,52,530        cpu_atom/dTLB-loads/                                                  
+    99.634327989       32,07,89,495        cpu_core/dTLB-loads/                                                    (66.92%)
+    99.634327989           1,41,937        cpu_atom/dTLB-load-misses/       #    0.03% of all dTLB cache accesses
+    99.634327989             37,099        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.62%)
+    99.634327989       41,84,52,501        cpu_atom/L1-dcache-loads/                                             
+    99.634327989       32,23,61,163        cpu_core/L1-dcache-loads/                                               (66.39%)
+    99.634327989        6,45,58,391        cpu_atom/L1-dcache-stores/                                            
+    99.634327989        1,60,16,220        cpu_core/L1-dcache-stores/                                              (66.49%)
+    99.634327989           3,86,722        cpu_atom/LLC-loads/                                                   
+    99.634327989             64,620        cpu_core/LLC-loads/                                                     (66.68%)
+    99.634327989              8,991        cpu_atom/LLC-load-misses/        #    2.32% of all L1-icache accesses 
+    99.634327989              9,952        cpu_core/LLC-load-misses/        #    2.57% of all L1-icache accesses   (66.88%)
+stress-ng: info:  [34996] skipped: 0
+stress-ng: info:  [34996] passed: 4: branch (4)
+stress-ng: info:  [34996] failed: 0
+stress-ng: info:  [34996] metrics untrustworthy: 0
+stress-ng: info:  [34996] successful run completed in 1 min, 40.00 secs
+   100.021114640               6.88 Joules power/energy-pkg/                                                     
+   100.021114640               5.46 Joules power/energy-cores/                                                   
+   100.021114640       21,43,13,808        cpu_atom/dTLB-loads/                                                  
+   100.021114640       11,47,08,217        cpu_core/dTLB-loads/                                                    (66.12%)
+   100.021114640             75,773        cpu_atom/dTLB-load-misses/       #    0.04% of all dTLB cache accesses
+   100.021114640             16,465        cpu_core/dTLB-load-misses/       #    0.01% of all dTLB cache accesses  (66.14%)
+   100.021114640       21,43,13,784        cpu_atom/L1-dcache-loads/                                             
+   100.021114640       11,55,16,413        cpu_core/L1-dcache-loads/                                               (66.91%)
+   100.021114640        5,96,92,176        cpu_atom/L1-dcache-stores/                                            
+   100.021114640          33,01,523        cpu_core/L1-dcache-stores/                                              (67.43%)
+   100.021114640           2,54,702        cpu_atom/LLC-loads/                                                   
+   100.021114640             32,613        cpu_core/LLC-loads/                                                     (66.97%)
+   100.021114640              4,364        cpu_atom/LLC-load-misses/        #    1.71% of all L1-icache accesses 
+   100.021114640              5,810        cpu_core/LLC-load-misses/        #    2.28% of all L1-icache accesses   (66.42%)
+

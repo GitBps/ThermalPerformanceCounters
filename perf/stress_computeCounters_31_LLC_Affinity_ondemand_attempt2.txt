@@ -1,4 +1,3 @@
-drdang@drdang-Inspiron-14-7430-2-in-1:~/phD/thesis/tools/perf$ vim stress_computeCounters_30_LLC_Affinity_ondemand_attempt1.txt 
 drdang@drdang-Inspiron-14-7430-2-in-1:~/phD/thesis/tools/perf$ sudo /home/drdang/phD/thesis/linux-6.6.8/tools/perf/perf stat -I 1000 -M TmaL3Mem /usr/bin/stress-ng --llc-affinity 8 --timeout 100s --thermalstat 1
 [sudo] password for drdang: 
 Not grouping metric tma_l3_bound's events.

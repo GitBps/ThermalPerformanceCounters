@@ -1,3 +1,4 @@
+drdang@drdang-Inspiron-14-7430-2-in-1:~/phD/thesis/tools/perf$ sudo /home/drdang/phD/thesis/linux-6.6.8/tools/perf/perf stat -I 1000 -M TopdownL5  /usr/bin/stress-ng --cpu 12 --cpu-method all  --timeout 100  --thermalstat 1
    32.230976046    10,80,40,95,637      cpu_core/topdown-bad-spec/                                              (1.65%)
     32.230976046    11,90,86,72,361      cpu_core/topdown-heavy-ops/                                             (1.65%)
     32.230976046    31,41,45,56,361      cpu_core/topdown-fe-bound/                                              (1.65%)
