@@ -1,0 +1,309 @@
+root@drdang-Inspiron-5482:~# perf stat -e power/energy-pkg/,power/energy-cores/ -I 1000  /usr/bin/stress-ng --matrix 8 --timeout 100s --thermalstat 1
+stress-ng: info:  [75260] setting to a 100 second (1 min, 40.00 secs) run per stressor
+stress-ng: info:  [75260] dispatching hogs: 8 matrix
+#           time             counts   unit events
+     1.001983539              45.40 Joules power/energy-pkg/                                                     
+     1.001983539              44.39 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:   GHz  LdA1  LdA5 LdA15  pch_ca   B0D4 x86_pk INT340   TSKN   NGFF iwlwif acpitz   TMEM
+stress-ng: info:  [75261] therm:  3.70  1.23  4.72  5.49   43.00  76.05  83.00  20.00  42.05  39.05  42.00  25.00  40.05
+     2.002985800              46.40 Joules power/energy-pkg/                                                     
+     2.002985800              45.46 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  3.70  1.23  4.72  5.49   45.00  84.05  86.00  20.00  43.05  39.05  44.00  25.00  40.05
+     3.003987041              46.07 Joules power/energy-pkg/                                                     
+     3.003987041              45.24 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  3.70  1.23  4.72  5.49   45.00  87.05  89.00  20.00  45.05  39.05  42.00  25.00  40.05
+     4.004985201              46.26 Joules power/energy-pkg/                                                     
+     4.004985201              45.39 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  3.70  1.23  4.72  5.49   47.00  89.05  90.00  20.00  45.05  39.05  42.00  25.00  40.05
+     5.005986107              46.45 Joules power/energy-pkg/                                                     
+     5.005986107              45.57 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  3.70  1.23  4.72  5.49   49.00  92.05  93.00  20.00  47.05  39.05  41.00  25.00  41.05
+     6.006986289              46.68 Joules power/energy-pkg/                                                     
+     6.006986289              45.81 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  3.70  1.78  4.78  5.50   51.00  93.05  96.00  20.00  49.05  39.05  42.00  25.00  41.05
+     7.007985745              46.67 Joules power/energy-pkg/                                                     
+     7.007985745              45.66 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  3.70  1.78  4.78  5.50   52.00  96.05  97.00  20.00  51.05  39.05  42.00  25.00  41.05
+     8.008987738              44.35 Joules power/energy-pkg/                                                     
+     8.008987738              43.43 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  3.60  1.78  4.78  5.50   53.00  96.05  97.00  20.00  51.05  39.05  41.00  25.00  41.05
+     9.010986194              42.31 Joules power/energy-pkg/                                                     
+     9.010986194              41.29 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  3.59  1.78  4.78  5.50   55.00  97.05  97.00  20.00  53.05  39.05  41.00  25.00  42.05
+    10.011986860              40.45 Joules power/energy-pkg/                                                     
+    10.011986860              39.61 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  3.50  1.78  4.78  5.50   58.00  97.05  96.00  20.00  55.05  39.05  41.00  25.00  42.05
+    11.012994634              27.65 Joules power/energy-pkg/                                                     
+    11.012994634              26.62 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  2.27  4.83  5.52   57.00  96.05  78.00  20.00  56.05  39.05  42.00  25.00  43.05
+    12.014987158              14.80 Joules power/energy-pkg/                                                     
+    12.014987158              13.93 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  2.27  4.83  5.52   58.00  78.05  77.00  20.00  58.05  39.05  41.00  25.00  43.05
+    13.015990911              14.61 Joules power/energy-pkg/                                                     
+    13.015990911              13.61 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  2.27  4.83  5.52   58.00  76.05  76.00  20.00  57.05  39.05  41.00  25.00  43.05
+    14.016990318              14.64 Joules power/energy-pkg/                                                     
+    14.016990318              13.77 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  2.27  4.83  5.52   58.00  76.05  76.00  20.00  57.05  39.05  41.00  25.00  44.05
+    15.017994864              14.76 Joules power/energy-pkg/                                                     
+    15.017994864              13.89 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  2.27  4.83  5.52   58.00  75.05  76.00  20.00  60.05  39.05  41.00  25.00  44.05
+    16.018990031              14.70 Joules power/energy-pkg/                                                     
+    16.018990031              13.82 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  2.73  4.88  5.53   59.00  75.05  76.00  20.00  59.05  40.05  41.00  25.00  44.05
+    17.021988126              14.83 Joules power/energy-pkg/                                                     
+    17.021988126              13.82 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  2.73  4.88  5.53   59.00  75.05  76.00  20.00  59.05  40.05  42.00  25.00  44.05
+    18.022992629              14.84 Joules power/energy-pkg/                                                     
+    18.022992629              13.97 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  2.73  4.88  5.53   58.00  75.05  76.00  20.00  59.05  40.05  42.00  25.00  45.05
+    19.023991196              14.81 Joules power/energy-pkg/                                                     
+    19.023991196              13.92 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  2.73  4.88  5.53   59.00  75.05  76.00  20.00  59.05  40.05  42.00  25.00  45.05
+    20.027008850              14.81 Joules power/energy-pkg/                                                     
+    20.027008850              13.94 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.10  2.73  4.88  5.53   59.00  75.05  75.00  20.00  60.05  40.05  41.00  25.00  45.05
+    21.027992197              14.84 Joules power/energy-pkg/                                                     
+    21.027992197              13.82 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  3.23  4.95  5.55   60.00  75.05  76.00  20.00  59.05  40.05  41.00  25.00  45.05
+    22.028992145              14.86 Joules power/energy-pkg/                                                     
+    22.028992145              14.01 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  3.23  4.95  5.55   59.00  75.05  76.00  20.00  59.05  40.05  42.00  25.00  46.05
+    23.029990950              14.83 Joules power/energy-pkg/                                                     
+    23.029990950              13.85 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  3.23  4.95  5.55   60.00  75.05  76.00  20.00  59.05  40.05  41.00  25.00  46.05
+    24.030993152              14.93 Joules power/energy-pkg/                                                     
+    24.030993152              14.08 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  3.23  4.95  5.55   59.00  75.05  76.00  20.00  59.05  40.05  41.00  25.00  46.05
+    25.031991087              14.84 Joules power/energy-pkg/                                                     
+    25.031991087              13.86 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  3.62  5.00  5.56   61.00  75.05  76.00  20.00  60.05  40.05  41.00  25.00  46.05
+    26.033019988              14.96 Joules power/energy-pkg/                                                     
+    26.033019988              14.09 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:   GHz  LdA1  LdA5 LdA15  pch_ca   B0D4 x86_pk INT340   TSKN   NGFF iwlwif acpitz   TMEM
+stress-ng: info:  [75261] therm:  2.20  3.62  5.00  5.56   60.00  75.05  76.00  20.00  59.05  40.05  42.00  25.00  46.05
+#           time             counts   unit events
+    27.035008146              14.86 Joules power/energy-pkg/                                                     
+    27.035008146              13.99 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.10  3.62  5.00  5.56   60.00  75.05  76.00  20.00  59.05  40.05  41.00  25.00  46.05
+    28.035989412              14.96 Joules power/energy-pkg/                                                     
+    28.035989412              14.10 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  3.62  5.00  5.56   59.00  75.05  76.00  20.00  59.05  40.05  41.00  25.00  47.05
+    29.036990137              14.96 Joules power/energy-pkg/                                                     
+    29.036990137              13.94 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  3.62  5.00  5.56   60.00  75.05  76.00  20.00  61.05  40.05  42.00  25.00  47.05
+    30.037991927              14.85 Joules power/energy-pkg/                                                     
+    30.037991927              13.96 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  3.97  5.05  5.58   60.00  75.05  76.00  20.00  60.05  41.05  42.00  25.00  47.05
+    31.038991060              15.01 Joules power/energy-pkg/                                                     
+    31.038991060              14.01 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.10  3.97  5.05  5.58   59.00  75.05  75.00  20.00  60.05  41.05  41.00  25.00  47.05
+    32.039995530              14.92 Joules power/energy-pkg/                                                     
+    32.039995530              14.04 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  3.97  5.05  5.58   59.00  75.05  76.00  20.00  61.05  41.05  41.00  25.00  47.05
+    33.040990287              14.82 Joules power/energy-pkg/                                                     
+    33.040990287              13.93 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  3.97  5.05  5.58   59.00  75.05  76.00  20.00  60.05  40.05  42.00  25.00  47.05
+    34.041990855              14.98 Joules power/energy-pkg/                                                     
+    34.041990855              14.10 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  3.97  5.05  5.58   60.00  75.05  76.00  20.00  60.05  41.05  41.00  25.00  47.05
+    35.042990041              14.98 Joules power/energy-pkg/                                                     
+    35.042990041              13.98 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  4.29  5.10  5.59   61.00  75.05  75.00  20.00  59.05  41.05  41.00  25.00  47.05
+    36.043990401              14.97 Joules power/energy-pkg/                                                     
+    36.043990401              14.10 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  4.29  5.10  5.59   59.00  75.05  76.00  20.00  60.05  41.05  41.00  25.00  48.05
+    37.044992428              15.00 Joules power/energy-pkg/                                                     
+    37.044992428              14.03 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.10  4.29  5.10  5.59   60.00  75.05  75.00  20.00  61.05  41.05  43.00  25.00  48.05
+    38.046051758              14.86 Joules power/energy-pkg/                                                     
+    38.046051758              13.95 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  4.29  5.10  5.59   60.00  75.05  76.00  20.00  61.05  41.05  41.00  25.00  48.05
+    39.047085959              14.93 Joules power/energy-pkg/                                                     
+    39.047085959              14.06 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  4.29  5.10  5.59   60.00  75.05  75.00  20.00  61.05  41.05  41.00  25.00  48.05
+    40.047991305              15.02 Joules power/energy-pkg/                                                     
+    40.047991305              14.16 Joules power/energy-cores/                                                   
+    41.049648960              14.98 Joules power/energy-pkg/                                                     
+    41.049648960              14.11 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  4.59  5.15  5.60   61.00  75.05  75.00  20.00  60.05  41.05  42.00  25.00  48.05
+    42.050989715              14.86 Joules power/energy-pkg/                                                     
+    42.050989715              14.00 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  4.59  5.15  5.60   60.00  75.05  75.00  20.00  60.05  41.05  41.00  25.00  48.05
+    43.051993258              15.02 Joules power/energy-pkg/                                                     
+    43.051993258              13.98 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  4.59  5.15  5.60   61.00  75.05  75.00  20.00  60.05  41.05  43.00  25.00  48.05
+    44.052993596              14.99 Joules power/energy-pkg/                                                     
+    44.052993596              14.00 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.10  4.59  5.15  5.60   60.00  75.05  75.00  20.00  60.05  41.05  42.00  25.00  48.05
+    45.056990938              14.99 Joules power/energy-pkg/                                                     
+    45.056990938              14.09 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.10  4.59  5.15  5.60   60.00  75.05  75.00  20.00  60.05  41.05  44.00  25.00  48.05
+    46.057998739              14.96 Joules power/energy-pkg/                                                     
+    46.057998739              14.08 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.10  4.86  5.20  5.62   60.00  75.05  75.00  20.00  61.05  41.05  43.00  25.00  48.05
+    47.058991059              14.89 Joules power/energy-pkg/                                                     
+    47.058991059              14.01 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  4.86  5.20  5.62   59.00  75.05  76.00  20.00  60.05  75.05  42.00  25.00  49.05
+    48.059993749              15.03 Joules power/energy-pkg/                                                     
+    48.059993749              14.16 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.10  4.86  5.20  5.62   61.00  75.05  75.00  20.00  60.05  42.05  42.00  25.00  48.05
+    49.060990629              14.81 Joules power/energy-pkg/                                                     
+    49.060990629              13.79 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  4.86  5.20  5.62   61.00  74.05  75.00  20.00  61.05  41.05  42.00  25.00  48.05
+    50.062045951              15.04 Joules power/energy-pkg/                                                     
+    50.062045951              14.16 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  4.86  5.20  5.62   59.00  75.05  76.00  20.00  61.05  41.05  41.00  25.00  49.05
+    51.062990281              15.02 Joules power/energy-pkg/                                                     
+    51.062990281              14.12 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  5.11  5.24  5.63   61.00  75.05  75.00  20.00  61.05  42.05  41.00  25.00  49.05
+    52.063990904              14.98 Joules power/energy-pkg/                                                     
+    52.063990904              14.10 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:   GHz  LdA1  LdA5 LdA15  pch_ca   B0D4 x86_pk INT340   TSKN   NGFF iwlwif acpitz   TMEM
+stress-ng: info:  [75261] therm:  2.20  5.11  5.24  5.63   60.00  75.05  75.00  20.00  60.05  42.05  41.00  25.00  49.05
+#           time             counts   unit events
+    53.064989921              14.94 Joules power/energy-pkg/                                                     
+    53.064989921              14.04 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.10  5.11  5.24  5.63   63.00  75.05  75.00  20.00  61.05  42.05  42.00  25.00  49.05
+    54.065990469              14.91 Joules power/energy-pkg/                                                     
+    54.065990469              13.89 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.10  5.11  5.24  5.63   63.00  75.05  75.00  20.00  62.05  42.05  41.00  25.00  49.05
+    55.066991804              14.97 Joules power/energy-pkg/                                                     
+    55.066991804              13.98 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.10  5.11  5.24  5.63   61.00  75.05  75.00  20.00  62.05  42.05  42.00  25.00  49.05
+    56.067990339              14.93 Joules power/energy-pkg/                                                     
+    56.067990339              14.05 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.10  5.34  5.29  5.64   61.00  75.05  75.00  20.00  61.05  42.05  42.00  25.00  49.05
+    57.068991357              15.06 Joules power/energy-pkg/                                                     
+    57.068991357              14.17 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.10  5.34  5.29  5.64   61.00  75.05  75.00  20.00  61.05  42.05  41.00  25.00  49.05
+    58.069991123              14.88 Joules power/energy-pkg/                                                     
+    58.069991123              13.98 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  5.34  5.29  5.64   61.00  75.05  75.00  20.00  61.05  42.05  42.00  25.00  49.05
+    59.070991162              15.01 Joules power/energy-pkg/                                                     
+    59.070991162              14.12 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.10  5.34  5.29  5.64   61.00  75.05  75.00  20.00  60.05  42.05  42.00  25.00  49.05
+    60.071991542              15.00 Joules power/energy-pkg/                                                     
+    60.071991542              14.01 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.10  5.34  5.29  5.64   61.00  75.05  75.00  20.00  61.05  42.05  41.00  25.00  49.05
+    61.072991345              15.00 Joules power/energy-pkg/                                                     
+    61.072991345              13.99 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.10  5.64  5.35  5.66   60.00  75.05  75.00  20.00  61.05  42.05  42.00  25.00  49.05
+    62.076991202              14.92 Joules power/energy-pkg/                                                     
+    62.076991202              14.01 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.10  5.64  5.35  5.66   62.00  75.05  75.00  20.00  62.05  42.05  42.00  25.00  50.05
+    63.077990176              15.01 Joules power/energy-pkg/                                                     
+    63.077990176              14.12 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.10  5.64  5.35  5.66   60.00  75.05  75.00  20.00  61.05  42.05  42.00  25.00  50.05
+    64.078990970              14.88 Joules power/energy-pkg/                                                     
+    64.078990970              14.00 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.10  5.64  5.35  5.66   60.00  75.05  75.00  20.00  61.05  42.05  41.00  25.00  49.05
+    65.079991596              15.06 Joules power/energy-pkg/                                                     
+    65.079991596              14.18 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  5.83  5.40  5.67   61.00  75.05  75.00  20.00  60.05  42.05  43.00  25.00  50.05
+    66.080990928              14.89 Joules power/energy-pkg/                                                     
+    66.080990928              14.02 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  5.83  5.40  5.67   61.00  75.05  75.00  20.00  61.05  42.05  43.00  25.00  50.05
+    67.081991176              15.04 Joules power/energy-pkg/                                                     
+    67.081991176              14.03 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  5.83  5.40  5.67   61.00  75.05  76.00  20.00  61.05  42.05  42.00  25.00  50.05
+    68.082990726              14.94 Joules power/energy-pkg/                                                     
+    68.082990726              14.06 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  5.83  5.40  5.67   61.00  75.05  75.00  20.00  61.05  42.05  41.00  25.00  50.05
+    69.083991638              14.98 Joules power/energy-pkg/                                                     
+    69.083991638              14.09 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  5.83  5.40  5.67   61.00  75.05  76.00  20.00  62.05  42.05  42.00  25.00  50.05
+    70.084990718              14.88 Joules power/energy-pkg/                                                     
+    70.084990718              13.99 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  6.00  5.44  5.69   61.00  75.05  76.00  20.00  62.05  42.05  42.00  25.00  50.05
+    71.085991182              14.97 Joules power/energy-pkg/                                                     
+    71.085991182              13.95 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  6.00  5.44  5.69   61.00  75.05  76.00  20.00  60.05  42.05  42.00  25.00  50.05
+    72.086991089              15.06 Joules power/energy-pkg/                                                     
+    72.086991089              14.18 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  6.00  5.44  5.69   63.00  75.05  76.00  20.00  62.05  42.05  42.00  25.00  50.05
+    73.087990397              14.95 Joules power/energy-pkg/                                                     
+    73.087990397              13.96 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  6.00  5.44  5.69   62.00  75.05  76.00  20.00  61.05  42.05  42.00  25.00  50.05
+    74.088992520              14.94 Joules power/energy-pkg/                                                     
+    74.088992520              14.08 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  6.00  5.44  5.69   62.00  75.05  76.00  20.00  61.05  43.05  42.00  25.00  50.05
+    75.090034610              14.97 Joules power/energy-pkg/                                                     
+    75.090034610              14.09 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.10  6.16  5.48  5.70   61.00  75.05  75.00  20.00  60.05  43.05  42.00  25.00  50.05
+    76.090995050              14.90 Joules power/energy-pkg/                                                     
+    76.090995050              14.02 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  6.16  5.48  5.70   62.00  75.05  76.00  20.00  61.05  42.05  41.00  25.00  50.05
+    77.095186672              15.11 Joules power/energy-pkg/                                                     
+    77.095186672              14.10 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:   GHz  LdA1  LdA5 LdA15  pch_ca   B0D4 x86_pk INT340   TSKN   NGFF iwlwif acpitz   TMEM
+stress-ng: info:  [75261] therm:  2.20  6.16  5.48  5.70   62.00  75.05  76.00  20.00  61.05  42.05  41.00  25.00  50.05
+    78.097012319              14.91 Joules power/energy-pkg/                                                     
+    78.097012319              14.04 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  6.16  5.48  5.70   61.00  75.05  76.00  20.00  61.05  43.05  42.00  25.00  50.05
+#           time             counts   unit events
+    79.097990316              15.00 Joules power/energy-pkg/                                                     
+    79.097990316              14.14 Joules power/energy-cores/                                                   
+    80.098992971              14.90 Joules power/energy-pkg/                                                     
+    80.098992971              14.05 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.10  6.16  5.48  5.70   61.00  75.05  75.00  20.00  61.05  43.05  42.00  25.00  50.05
+    81.099991530              15.01 Joules power/energy-pkg/                                                     
+    81.099991530              14.15 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  6.39  5.54  5.72   62.00  75.05  76.00  20.00  61.05  43.05  42.00  25.00  50.05
+    82.100991197              14.97 Joules power/energy-pkg/                                                     
+    82.100991197              13.85 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.10  6.39  5.54  5.72   63.00  75.05  75.00  20.00  62.05  43.05  42.00  25.00  50.05
+    83.101991098              14.95 Joules power/energy-pkg/                                                     
+    83.101991098              14.07 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  6.39  5.54  5.72   61.00  75.05  75.00  20.00  62.05  43.05  42.00  25.00  50.05
+    84.102990129              14.96 Joules power/energy-pkg/                                                     
+    84.102990129              14.07 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.10  6.39  5.54  5.72   62.00  75.05  76.00  20.00  61.05  43.05  42.00  25.00  51.05
+    85.103990369              15.00 Joules power/energy-pkg/                                                     
+    85.103990369              14.11 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.10  6.39  5.54  5.72   61.00  75.05  75.00  20.00  61.05  43.05  42.00  25.00  50.05
+    86.104992403              14.91 Joules power/energy-pkg/                                                     
+    86.104992403              14.02 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.10  6.52  5.58  5.73   61.00  75.05  76.00  20.00  61.05  43.05  43.00  25.00  50.05
+    87.105990669              15.00 Joules power/energy-pkg/                                                     
+    87.105990669              14.12 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.10  6.52  5.58  5.73   61.00  75.05  76.00  20.00  62.05  43.05  42.00  25.00  51.05
+    88.106993325              14.99 Joules power/energy-pkg/                                                     
+    88.106993325              14.11 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.10  6.52  5.58  5.73   62.00  75.05  75.00  20.00  63.05  43.05  42.00  25.00  50.05
+    89.107990170              14.93 Joules power/energy-pkg/                                                     
+    89.107990170              13.81 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  6.52  5.58  5.73   62.00  75.05  76.00  20.00  61.05  43.05  42.00  25.00  51.05
+    90.108992511              14.97 Joules power/energy-pkg/                                                     
+    90.108992511              14.10 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  6.52  5.58  5.73   61.00  75.05  76.00  20.00  63.05  43.05  42.00  25.00  50.05
+    91.109992269              14.99 Joules power/energy-pkg/                                                     
+    91.109992269              14.11 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.20  6.64  5.62  5.74   63.00  75.05  76.00  20.00  62.05  43.05  42.00  25.00  50.05
+    92.110991139              14.89 Joules power/energy-pkg/                                                     
+    92.110991139              14.01 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.10  6.64  5.62  5.74   62.00  75.05  75.00  20.00  62.05  43.05  42.00  25.00  51.05
+    93.111990547              15.01 Joules power/energy-pkg/                                                     
+    93.111990547              14.13 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.10  6.64  5.62  5.74   63.00  75.05  76.00  20.00  61.05  43.05  42.00  25.00  51.05
+    94.112990131              14.93 Joules power/energy-pkg/                                                     
+    94.112990131              14.04 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.10  6.64  5.62  5.74   63.00  75.05  76.00  20.00  61.05  43.05  42.00  25.00  51.05
+    95.113999357              15.02 Joules power/energy-pkg/                                                     
+    95.113999357              13.27 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.10  6.64  5.62  5.74   63.00  75.05  76.00  20.00  61.05  43.05  42.00  25.00  51.05
+    96.114993894              14.89 Joules power/energy-pkg/                                                     
+    96.114993894              13.15 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.10  7.71  5.86  5.82   61.00  76.05  76.00  20.00  62.05  43.05  42.00  25.00  51.05
+    97.115993589              15.08 Joules power/energy-pkg/                                                     
+    97.115993589              13.28 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.10  7.71  5.86  5.82   63.00  75.05  76.00  20.00  63.05  43.05  44.00  25.00  51.05
+    98.117024417              15.00 Joules power/energy-pkg/                                                     
+    98.117024417              13.04 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.10  7.71  5.86  5.82   62.00  75.05  76.00  20.00  61.05  43.05  43.00  25.00  51.05
+    99.120987919              15.01 Joules power/energy-pkg/                                                     
+    99.120987919              13.04 Joules power/energy-cores/                                                   
+stress-ng: info:  [75261] therm:  2.10  7.71  5.86  5.82   62.00  75.05  75.00  20.00  62.05  43.05  42.00  25.00  51.05
+stress-ng: info:  [75260] successful run completed in 100.00s (1 min, 40.00 secs)
+   100.009449248              13.40 Joules power/energy-pkg/                                                     
+   100.009449248              11.56 Joules power/energy-cores/   
